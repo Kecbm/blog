@@ -1,5 +1,6 @@
 # Meu portfolio
 
+- **Referência**: https://www.lukeberrypi.com/
 - Sem blog interno
 - Liquid Glass: https://github.com/rdev/liquid-glass-react
 - Backgroud Mac Book themes
