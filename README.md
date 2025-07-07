@@ -2,8 +2,11 @@
 
 - **Referência**: https://www.lukeberrypi.com/
 - Sem blog interno
-- Liquid Glass: https://github.com/rdev/liquid-glass-react
-- Backgroud Mac Book themes
+- Botão para mudar tema (defaul/liquid glass)
+    - Liquid Glass: https://github.com/rdev/liquid-glass-react
+    - Backgroud Mac Book themes
+- Página de not found
+    - jogos que estou jogando no PS3 e os que já finalizei
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
