@@ -5,6 +5,7 @@
 - Botão para mudar tema (defaul/liquid glass)
     - Liquid Glass: https://github.com/rdev/liquid-glass-react
     - Backgroud Mac Book themes
+    - Metalic: https://github.com/zarifpour/liquid-image
 - Página de not found
     - jogos que estou jogando no PS3 e os que já finalizei
 
