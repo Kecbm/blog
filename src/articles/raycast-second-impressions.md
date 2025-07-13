@@ -1,6 +1,8 @@
 ---
 title: "Raycast: Second Impressions"
-date: "2024-07-15"
+date: "2024-05-15"
+tags: ["raycast", "technology"]
+location: "Torino, Italy"
 ---
 
 When I first bought a MacBook, I came across Alfred: an app launcher to replace Apple's Spotlight. What I liked the most was:
@@ -20,7 +22,9 @@ Even if my first experience with Raycast wasn't convincing, I definitely saw the
 
 Still, out-of-the-box (OOTB) behavior plays a huge role on migrating to/from a similar tool. Most users won't have the patience to configure the new tool and will give up migrating altogether.
 
-I recently decided to give Raycast a second try. **Spoiler: I no longer use Alfred.** In this article I will explain why I came back, what I love and what I wish would change.
+I recently decided to give Raycast a second try. **Spoiler: I no longer use Alfred.**
+
+In this article I will explain why I came back, what I love and what I wish would change.
 
 ## Why I Tried it Again
 
@@ -74,14 +78,14 @@ Alfred opens it in Google Chrome and Raycast opens it in Safari. I much prefer t
 
 ### Navigating with Escape
 
-In Raycast, `esc` goes back to the previous page. I wish I could configure this to the more universal `cmd + [` and `cmd + ]`, which I've grown used to. And an option for `esc` to close the entire Raycast app would be amazing.
+In Raycast, `esc` goes back to the previous page. I wish I could configure this to the more universal `⌘ + [` and `⌘ + ]`, which I've grown used to. And an option for `esc` to close the entire Raycast app would be amazing.
 
 ### Using "fn" as a Modifier Key
 
-It is impossible to setup hotkeys for Raycast using the "globe/fn" key. This would be a nice addition since using `cmd` and `ctrl` often leads to conflicting hotkeys between different apps.
+It is impossible to setup hotkeys for Raycast using the "globe/fn" key. This would be a nice addition since using `⌘` and `ctrl` often leads to conflicting hotkeys between different apps.
 
 ## Conclusion
 
 Raycast is phenomenal. Huge shout out to [@peduarte](https://x.com/peduarte) and the team for developing such an impressive, all-encompassing application.
 
-As with any software, there are improvement points, but I wouldn't write about it to this length if I didn't love it! [Try it out yourself (MacOS only)](https://www.raycast.com/).
+As with any software, there are improvement points, but I wouldn't write about it to this length if I didn't love it! [Try it out yourself](https://www.raycast.com/).

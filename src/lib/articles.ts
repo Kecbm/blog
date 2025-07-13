@@ -7,26 +7,46 @@ import html from "remark-html";
 
 export type Article = {
   id: string;
+  tags: string[];
   title: string;
   date: string;
 };
 
 const ARTICLES_DIR = path.join(process.cwd(), "src/articles");
 
-export const getArticles = () => {
-  const fileNames = fs.readdirSync(ARTICLES_DIR);
+export function getAllTags() {
+  let tags = new Set();
+  const files = fs.readdirSync(ARTICLES_DIR);
 
-  const allArticlesData = fileNames.map((fileName) => {
-    const id = fileName.replace(/\.md$/, "");
-
-    const fullPath = path.join(ARTICLES_DIR, fileName);
+  for (const file of files) {
+    const fullPath = path.join(ARTICLES_DIR, file);
     const fileContents = fs.readFileSync(fullPath, "utf-8");
+    const matterResult = matter(fileContents);
+    const tagsInFile = matterResult.data.tags || [];
+    for (const tag of tagsInFile) {
+      if (tags.has(tag)) {
+        continue;
+      }
+      tags.add(tag);
+    }
+  }
 
+  return Array.from(tags);
+}
+
+export function getArticles() {
+  const files = fs.readdirSync(ARTICLES_DIR);
+
+  const allArticlesData = files.map((file) => {
+    const id = file.replace(/\.md$/, "");
+    const fullPath = path.join(ARTICLES_DIR, file);
+    const fileContents = fs.readFileSync(fullPath, "utf-8");
     const matterResult = matter(fileContents);
 
     return {
       id,
       title: matterResult.data.title,
+      tags: matterResult.data.tags,
       date: moment(matterResult.data.date).format("YYYY-MM-DD"),
     };
   });
@@ -40,9 +60,9 @@ export const getArticles = () => {
       return 0;
     }
   });
-};
+}
 
-export const getArticleData = async (id: string) => {
+export async function getArticleData(id: string) {
   const fullPath = path.join(ARTICLES_DIR, `${id}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf-8");
   const matterResult = matter(fileContents);
@@ -55,6 +75,8 @@ export const getArticleData = async (id: string) => {
     id,
     contentHtml,
     title: matterResult.data.title,
-    date: moment(matterResult.data.date, "YYYY-MM-DD").format("MMMM Do, YYYY"),
+    tags: matterResult.data.tags || [],
+    location: matterResult.data.location || "",
+    date: moment(matterResult.data.date, "YYYY-MM-DD").format("MMMM  Do, YYYY"),
   };
-};
+}

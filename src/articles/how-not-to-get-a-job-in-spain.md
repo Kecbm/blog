@@ -1,9 +1,11 @@
 ---
 title: "How (not) to get a job in Spain"
 date: "2024-09-15"
+tags: ["life", "travel"]
+location: "Steyning, United Kingdom"
 ---
 
-Earlier this year, I flew to Italy to visit my Dad for a couple of months. In that period, I also went to Málaga to see an old friend and to the UK to see my family.
+I flew to Italy to visit my Dad earlier this year. In that period, I also went to Málaga to see an old friend and to the UK to see my family.
 
 A day before going back to Brazil, I got an unexpected invite: my friend called me to live with him in Málaga. I cancelled my flight back home and two weeks later I was back in Spain.
 
@@ -27,7 +29,7 @@ This was a Frontend Developer hybrid position in Malaga, exactly what I was afte
 
 This was 30 minutes where we went over introductions, some questions such as "Talk a bit about yourself and your professional experience"
 
-She asked how much experience I had with the stack (React, React Native, TypeScript and GraphQL). I mentioned that I had personal projects in production with TypeScript and React. Namely, my website [css2wind](https://css2wind.com) and [phived](https://phived.com).
+She asked how much experience I had with the stack (React, React Native, TypeScript and GraphQL). I mentioned that I had personal projects in production with TypeScript and React. Namely, my websites [css2wind](https://css2wind.com) and [phived](https://phived.com).
 
 > Tip: Ask a question. I default to "What is the size of the developer team?" or "What is the happy path for this hiring process?" (as in, if everything works out perfectly, what will happen).
 
@@ -81,7 +83,7 @@ After a week, I got the positive feedback from the company and a final offer: �
 
 I moved onto the onboarding: documentation, signing contracts, and more.
 
-> Tip: Always ask for a bigger salary than your expectation. If you are participating in multiple hiring process, use that as leverage.
+> Tip: At this stage, always ask for a bigger salary than your expectation. You will never get disqualified for it. If you are participating in multiple hiring process, use that as leverage.
 
 ## Bad Ending
 
@@ -103,5 +105,3 @@ After I recovered, I had a big decision to make again:
 - Fly to the UK and try to find a job, since I wouldn't need a Visa to work there (I'm a British Citizen)
 
 I bought a ticket to the UK, with a few plans in mind.
-
-To be continued...

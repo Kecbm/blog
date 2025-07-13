@@ -1,162 +1,115 @@
-import { ArrowUpRight } from "lucide-react";
+import { GitBranch, Globe } from "lucide-react";
 import Image from "next/image";
+import { ReactNode } from "react";
+
+interface Project {
+  name: string;
+  description: string;
+  imageUrl: string;
+  githubUrl: string;
+  url: string;
+  technologies: ReactNode;
+}
+
+const projects: Project[] = [
+  {
+    name: "css2wind",
+    description:
+      "Learn TailwindCSS by playing a minigame: there are eight CSS properties that you must translate to the equivalent TailwindCSS utility. Bet you can't get 8/8.",
+    url: "https://css2wind.com",
+    imageUrl: "/projects/css2wind.png",
+    githubUrl: "https://github.com/LukeberryPi/css2wind",
+    technologies: (
+      <div className="flex items-center gap-x-3">
+        <span className="rounded-full bg-[#007ACC] px-2.5 py-0.5 text-sm text-zinc-100 dark:bg-inherit dark:text-zinc-200 dark:ring-1 dark:ring-zinc-500">
+          TypeScript
+        </span>
+        <span className="rounded-full bg-[#38BDF9] px-2.5 py-0.5 text-sm text-zinc-950 dark:bg-inherit dark:text-zinc-200 dark:ring-1 dark:ring-zinc-500">
+          TailwindCSS
+        </span>
+        <span className="rounded-full bg-black px-2.5 py-0.5 text-sm text-zinc-100 dark:bg-inherit dark:text-zinc-200 dark:ring-1 dark:ring-zinc-500">
+          Next.js
+        </span>
+      </div>
+    ),
+  },
+  {
+    name: "phived",
+    description:
+      "Stop procrastinating by dealing with five tasks at a time. If you want to add more tasks you need to resolve a previous one. Surprisingly effective.",
+    url: "https://phived.com",
+    imageUrl: "/projects/phived.png",
+    githubUrl: "https://github.com/LukeberryPi/phived",
+    technologies: (
+      <div className="flex items-center gap-x-3">
+        <span className="rounded-full bg-[#00D8FE] px-2.5 py-0.5 text-sm text-zinc-950 dark:bg-inherit dark:text-inherit dark:ring-1 dark:ring-zinc-500">
+          React
+        </span>
+        <span className="rounded-full bg-[#38BDF9] px-2.5 py-0.5 text-sm text-zinc-950 dark:bg-inherit dark:text-inherit dark:ring-1 dark:ring-zinc-500">
+          TailwindCSS
+        </span>
+        <span className="rounded-full bg-gradient-to-r from-[#926AFE] to-[#49C7FF] px-2.5 py-0.5 text-sm text-zinc-100 dark:bg-none dark:ring-1 dark:ring-zinc-500">
+          Vite
+        </span>
+      </div>
+    ),
+  },
+];
+
+function ProjectCard({
+  name,
+  description,
+  imageUrl,
+  githubUrl,
+  url,
+  technologies,
+}: Project) {
+  return (
+    <div className="flex-col divide-y divide-zinc-400 overflow-hidden rounded ring-1 ring-zinc-400 dark:divide-zinc-500 dark:ring-zinc-500">
+      <div className="flex items-center justify-between gap-4 p-4 max-sm:flex-col">
+        <h2 className="text-xl">{name}</h2>
+        {technologies}
+      </div>
+      <div>
+        <p className="p-4">{description}</p>
+      </div>
+      <Image
+        src={imageUrl}
+        width={620}
+        height={324}
+        alt="Logo for css2wind website"
+      />
+      <div className="flex w-full justify-between divide-x divide-zinc-400 dark:divide-zinc-500">
+        <a
+          href={url}
+          target="_blank"
+          className="flex grow items-center justify-center gap-2 py-4 transition-all sm:hover:bg-zinc-200 sm:dark:hover:bg-zinc-800"
+        >
+          <Globe strokeWidth={1.4} className="size-5" /> Visit website
+        </a>
+        <a
+          href={githubUrl}
+          target="_blank"
+          className="flex grow items-center justify-center gap-2 py-4 transition-all sm:hover:bg-zinc-200 sm:dark:hover:bg-zinc-800"
+        >
+          <GitBranch strokeWidth={1.4} className="size-5" /> View code
+        </a>
+      </div>
+    </div>
+  );
+}
 
 export default function ProjectsPage() {
   return (
     <>
-      <h1 className="font-bold my-12 max-sm:text-center">Projects</h1>
-      <section className="space-y-16">
-        <article>
-          <div className="mt-10 flex justify-between flex-col gap-4 sm:items-center sm:flex-row">
-            <h2 className="m-0 normal-case">A minigame to learn TailwindCSS</h2>
-            <div className="flex items-center gap-4">
-              <div className="ring-1 ring-zinc-950 dark:ring-zinc-300 px-2 py-1">
-                TypeScript
-              </div>
-              <div className="ring-1 ring-zinc-950 dark:ring-zinc-300 px-2 py-1">
-                TailwindCSS
-              </div>
-              <div className="ring-1 ring-zinc-950 dark:ring-zinc-300 px-2 py-1">
-                Next.js
-              </div>
-            </div>
-          </div>
-          <a
-            href="https://css2wind.com"
-            target="_blank"
-            className="group block overflow-hidden my-6 relative ring-1 ring-zinc-950"
-          >
-            <span className="z-10 absolute flex items-center transition-all gap-2 top-2 right-2 opacity-0 group-hover:opacity-100 text-zinc-100">
-              Click to visit website <ArrowUpRight className="size-5" />
-            </span>
-            <Image
-              className="size-full group-hover:scale-105 transition-all"
-              src="/projects/css2wind.png"
-              width={9999}
-              height={250}
-              alt="Logo for the css2wind website"
-            />
-          </a>
-          <p>
-            A website to teach people what TailwindCSS is and isn&apos;t. The
-            main feature is a minigame: there are eight CSS properties that you
-            must translate to the equivalent TailwindCSS utility. It also has:{" "}
-          </p>
-          <ul>
-            <li>
-              <span className="font-bold">Resources:</span> a page that details
-              the recommended tooling to maximize productivity and
-              maintainability while using TailwindCSS. It mentions libraries
-              such as{" "}
-              <a href="#" target="_blank">
-                prettier-plugin-tailwindcss
-              </a>{" "}
-              and{" "}
-              <a href="#" target="_blank">
-                shadcn/ui
-              </a>
-              .
-            </li>
-            <li>
-              <span className="font-bold">Frequently Asked Questions:</span> a
-              page that addresses common beginner questions about TailwindCSS.
-              It also exposes misconceptions about the framework, such as
-              recurring comparisons to Bootstrap.
-            </li>
-          </ul>
-          <div className="items-center flex gap-4">
-            <a
-              className="items-center flex gap-2"
-              href="https://css2wind.com"
-              target="_blank"
-            >
-              Visit website
-              <ArrowUpRight className="size-5" />
-            </a>
-            <a
-              className="items-center flex gap-2"
-              href="https://github.com/LukeberryPi/css2wind"
-              target="_blank"
-            >
-              View code
-              <ArrowUpRight className="size-5" />
-            </a>
-          </div>
-        </article>
-        <article>
-          <div className="mt-10 flex justify-between flex-col gap-4 sm:items-center sm:flex-row">
-            <h2 className="m-0 normal-case">
-              An anti-procrastination to-do list
-            </h2>
-            <div className="flex items-center gap-4">
-              <div className="ring-1 ring-zinc-950 dark:ring-zinc-300 px-2 py-1">
-                React
-              </div>
-              <div className="ring-1 ring-zinc-950 dark:ring-zinc-300 px-2 py-1">
-                TailwindCSS
-              </div>
-              <div className="ring-1 ring-zinc-950 dark:ring-zinc-300 px-2 py-1">
-                Vite
-              </div>
-            </div>
-          </div>
-          <a
-            href="https://phived.com"
-            className="group block overflow-hidden my-6 relative ring-1 ring-zinc-950"
-            target="_blank"
-          >
-            <span className="z-10 absolute flex items-center gap-2 top-2 right-2 opacity-0 transition-all dark:text-zinc-950 group-hover:opacity-100">
-              Click to visit website <ArrowUpRight className="size-5" />
-            </span>
-            <Image
-              className="size-full group-hover:scale-105 transition-all"
-              src="/projects/phived.png"
-              width={9999}
-              height={250}
-              alt="Logo for the phived website"
-            />
-          </a>
-          <p>
-            A website to help you stop procrastinating. It is a to-do list with
-            one premise: you can&apos;t have more than five tasks at the same
-            time. If you want to add more tasks, you have to complete one of the
-            previous tasks. It is beautiful, efficient and privacy-first (no
-            information is stored). It also has:
-          </p>
-          <ul>
-            <li>
-              <span className="font-bold">Daily tasks: </span>a page to list
-              five things you want to do everyday. Everyday, you can restore
-              these tasks to do them again. My five daily tasks are currently:
-              do skin care, take creatine, work out, do a duolingo lesson, and
-              solve 5 chess puzzles.
-            </li>
-            <li>
-              <span className="font-bold">Progressive Web App (PWA): </span>
-              download phived on any mobile device for free, so that you can
-              access your tasks from any device.
-            </li>
-          </ul>
-          <div className="items-center flex gap-4">
-            <a
-              className="items-center flex gap-2"
-              href="https://phived.com"
-              target="_blank"
-            >
-              Visit website
-              <ArrowUpRight className="size-5" />
-            </a>
-            <a
-              className="items-center flex gap-2"
-              href="https://github.com/LukeberryPi/phived"
-              target="_blank"
-            >
-              View code
-              <ArrowUpRight className="size-5" />
-            </a>
-          </div>
-        </article>
-      </section>
+      <h1 className="mb-16 mt-4 text-center text-5xl max-sm:text-4xl">
+        Projects
+      </h1>
+      <div className="space-y-20">
+        {projects.map((project) => (
+          <ProjectCard key={project.url} {...project} />
+        ))}
+      </div>
     </>
   );
 }

@@ -1,6 +1,8 @@
 ---
 title: "Frontend Debugging 101"
 date: "2024-07-23"
+tags: ["technology", "beginner"]
+location: "Málaga, Spain"
 ---
 
 I believe the cliché "there are no dumb questions". I even created a [website](https://possoperguntar.com.br) that is the Portuguese equivalent of [dontasktoask.com](https://dontasktoask.com). I heavily encourage asking in public and learning to formulate questions.
@@ -33,7 +35,7 @@ My favorite means to do this is X (formerly Twitter). Here is an example of [how
 
 It is said that the more code you copy, the more experienced you are. You might be attempting to write code that is very similar to other code in the same repository.
 
-Develop the habit of searching the codebase for the methods you are trying to implement. I do this with `cmd + shift + f` on VS Code. And search for `useInfiniteQuery()`, for example.
+Develop the habit of searching the codebase for the methods you are trying to implement. I do this with `⌘ + shift + f` on VS Code. And search for `useInfiniteQuery()`, for example.
 
 ### Have you accessed the documentation? (~15 minutes)
 
@@ -53,7 +55,7 @@ But what if you don't have an error message?
 
 ### Have you saved the file? (~5 seconds)
 
-VS Code has autosave disabled by default. This means you will have to save your file to see your changes reflected on the browser, usually via `cmd + s`.
+VS Code has autosave disabled by default. This means you will have to save your file to see your changes reflected on the browser, usually via `⌘ + s`.
 
 I highly recommend [turning on autosave](https://code.visualstudio.com/docs/editor/codebasics#_save-auto-save). I use the `afterDelay` option set to 1000ms.
 
@@ -116,7 +118,7 @@ You can accomplish it by running `rm -rf ./node_modules` in your project root. T
 
 Stale state is a big enemy of Frontend development. Often you can't see changes because you are accessing a cached (old) version of the whatever you're developing.
 
-You can use the `cmd + shift + r` hotkey for clearing the cache in most browsers.
+You can use the `⌘ + shift + r` hotkey for clearing the cache in most browsers.
 
 ### Are you using the correct file extension? (~10 seconds)
 
@@ -162,7 +164,7 @@ import {
 
 ### Does it happen in an anonymous window? (~2 minutes)
 
-You should always check if an error also occurs in an anonymous window. You might have browser extensions that are affecting your development. You can do this with `cmd + shift + n` on most browsers.
+You should always check if an error also occurs in an anonymous window. You might have browser extensions that are affecting your development. You can do this with `⌘ + shift + n` on most browsers.
 
 This can also surface issues with authentication, since you will be logged off.
 
@@ -178,7 +180,7 @@ I had this recently: I was developing with an admin user, and the Quality Assura
 
 I can't overstate the importance of this. Just take your eyes off screens. At this point, you've been debugging for a while. You can take the trash out, make a sandwich, pet your dog, floss your teeth, lie down. Anything goes.
 
-> Using your cellphone is complete self-sabotage and will make it harder to solve your problem. If you're serious about it, don't do it.
+> Using your phone is complete self-sabotage and will make it harder to solve your problem. If you're serious about it, don't do it.
 
 ### Write it down (~20 minutes)
 
