@@ -69,7 +69,7 @@ export default function Header() {
             {isDarkMode ? (
               <Moon
                 strokeWidth={1.4}
-                className="size-5 fill-gray-700 transition-all"
+                className="size-5 fill-gray-700 transition-all sm:hover:rotate-45"
               />
             ) : (
               <Sun
