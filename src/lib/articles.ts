@@ -39,6 +39,13 @@ export function getAllTags() {
   return [];
 }
 
+// https://dev.to/kecbm/pessoas-desenvolvedoras-precisam-estudar-todos-os-dias-5dea
+// r-das-tarefas-como-pequenas-entregas-levam-a-grandes-resultados-2of6
+// https://dev.to/kecbm/codigo-legado-razoes-para-respeitar-e-valorizar-4e9o
+// https://dev.to/kecbm/voce-deve-trabalhar-pra-voce-por-zarathon-viana-ldj
+// https://dev.to/kecbm/de-volta-ao-codigo-como-conquistei-minha-realocacao-no-mercado-de-tecnologia-4n5n
+// 
+
 export function getArticles(): Article[] {
   // Example of how you can manually define articles (slug auto-generated from title):
   return [
@@ -49,10 +56,10 @@ export function getArticles(): Article[] {
       "https://dev.to/your-username/frontend-debugging-101"
     ),
     createArticle(
-      "De Volta ao Código: Como Conquistei Minha Realocação no Mercado de Tecnologia",
+      "Como ser um dev fora da curva por Seraphini",
       ["career", "technology", "brasil"],
       "Jul/25",
-      "https://dev.to/your-username/de-volta-ao-codigo"
+      "https://dev.to/kecbm/como-ser-um-dev-fora-da-curva-por-sseraphini-4og2"
     )
   ];
 }
