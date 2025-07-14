@@ -66,11 +66,8 @@ export default function AboutPage() {
         </p>
         <p>
           In 2024, I traveled to Torino, Italy to visit my dad. My life flipped
-          upside down and I ended up living in Málaga for a while. After I{" "}
-          <a href="/articles/how-not-to-get-a-job-in-spain">
-            failed to get a job
-          </a>
-          , I moved to the UK and landed a job in London, where I currently
+          upside down and I ended up living in Málaga for a while. After I
+          failed to get a job, I moved to the UK and landed a job in London, where I currently
           live.
         </p>
         <p>
@@ -78,7 +75,7 @@ export default function AboutPage() {
           <a href="https://x.com/lukeberrypi">X</a> or an email{" "}
           <a href="mailto:lukeberrypi@gmail.com">lukeberrypi@gmail.com</a>.
         </p>
-        <p>Smile, you&apos;re alive :)</p>
+        <p>Life is good</p>
         <p>
           Best,
           <br />
