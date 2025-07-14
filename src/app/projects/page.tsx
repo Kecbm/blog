@@ -11,6 +11,12 @@ interface Project {
   technologies: ReactNode;
 }
 
+// Front: https://trivia-kecbm.vercel.app/
+// Back: https://github.com/Kecbm/car-shop
+// Full Stack: https://github.com/Kecbm/delivery-app
+
+// Para mais projetos acesse meu perfil no GitHub
+
 const projects: Project[] = [
   {
     name: "css2wind",
