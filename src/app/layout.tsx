@@ -1,15 +1,14 @@
 import type { Metadata } from "next";
 import { Karla } from "next/font/google";
-import Link from "next/link";
 import "./globals.css";
 import { ScrollToTop } from "../components/scroll-to-top";
 import Script from "next/script";
 import dynamic from "next/dynamic";
-import { Analytics } from "@vercel/analytics/next";
+// import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
-  title: "Luke Berry",
-  description: "Luke Berry's personal website",
+  title: "Klecianny Melo",
+  description: "Klecianny Melo's personal website",
 };
 
 const karla = Karla({
@@ -28,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="min-h-screen">
       <body className={`${karla.className} min-h-full px-6`}>
-        <Analytics />
+        {/* <Analytics /> */}
         <Script id="theme-toggle" strategy="afterInteractive">
           {`document.documentElement.classList.toggle("dark", localStorage.theme ===
         "dark" || (!("theme" in localStorage) &&
@@ -48,13 +47,7 @@ export default function RootLayout({
             >
               Code
             </a>
-            <Link
-              className="decoration-zinc-500 underline-offset-4 transition-all sm:hover:underline dark:decoration-zinc-400"
-              target="_blank"
-              href="/rss.xml"
-            >
-              RSS Feed
-            </Link>
+
             <a
               className="decoration-zinc-500 underline-offset-4 transition-all sm:hover:underline dark:decoration-zinc-400"
               href="https://x.com/LukeberryPi"
@@ -64,7 +57,7 @@ export default function RootLayout({
             </a>
           </div>
           <blockquote className="text-zinc-800 dark:text-zinc-300">
-            Smile, you&apos;re alive :)
+            Life is good
           </blockquote>
         </footer>
       </body>
