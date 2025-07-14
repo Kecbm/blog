@@ -2,7 +2,7 @@
 
 - **Referência**: https://www.lukeberrypi.com/
 - Sem blog interno
-- Botão para mudar tema (defaul/liquid glass)
+- Botão para mudar tema (default/liquid glass)
     - Liquid Glass: https://github.com/rdev/liquid-glass-react
     - Backgroud Mac Book themes
     - Metalic: https://github.com/zarifpour/liquid-image
