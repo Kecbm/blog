@@ -11,11 +11,17 @@
 
 # Pallete of collors
 
-- Amarelo: ffbe0b
-- Laranja: fb5607
-- Rosa: ff006e
-- Roxo: 8338ec
-- Azul: 3a86ff
+Header
+    - Amarelo: ffbe0b
+    - Laranja: fb5607
+
+Page
+    - Rosa: ff006e
+    - Roxo: 8338ec
+
+Footer
+    - Azul: 3a86ff
+    - Verde: 228b22
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
