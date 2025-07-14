@@ -9,6 +9,14 @@
 - Página de not found
     - jogos que estou jogando no PS3 e os que já finalizei
 
+# Pallete of collors
+
+- Amarelo: ffbe0b
+- Laranja: fb5607
+- Rosa: ff006e
+- Roxo: 8338ec
+- Azul: 3a86ff
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
