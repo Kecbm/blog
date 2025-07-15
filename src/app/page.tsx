@@ -7,12 +7,12 @@ import { ArrowUpRight, Copy, Download, Send } from "lucide-react";
 import Link from "next/link";
 import { ReactNode } from "react";
 
-const XLogo = () => {
+const XLogo = ({ className = "" }: { className?: string }) => {
   return (
     <svg viewBox="0 0 24 24" width="20" height="20" className="ml-1">
       <g>
         <path
-          className="fill-zinc-950 dark:fill-zinc-200"
+          className={`fill-zinc-950 dark:fill-zinc-200 ${className}`}
           d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
         ></path>
       </g>
@@ -50,19 +50,19 @@ const externalLinks: Link[] = [
     name: "LinkedIn",
     description: "follow my career",
     url: "https://linkedin.com/in/kecbm",
-    icon: <SiLinkedin className="fill-[#0077B5] dark:fill-zinc-200" />,
+    icon: <SiLinkedin className="fill-[#0077B5] dark:fill-zinc-200 group-hover:fill-[#8338ec] dark:group-hover:fill-[#ff006e] transition-colors" />,
   },
   {
     name: "GitHub",
     description: "steal my code",
     url: "https://github.com/Kecbm",
-    icon: <SiGithub />,
+    icon: <SiGithub className="group-hover:fill-[#8338ec] dark:group-hover:fill-[#ff006e] transition-colors" />,
   },
   {
     name: "X (formerly Twitter)",
     description: "read my mind",
     url: "https://x.com/kecbm",
-    icon: <XLogo />,
+    icon: <XLogo className="group-hover:fill-[#8338ec] dark:group-hover:fill-[#ff006e] transition-colors" />,
   }
 ];
 
@@ -72,7 +72,7 @@ const ExternalLink = (link: Link) => {
       key={link.description}
       href={link.url}
       target="_blank"
-      className="group flex items-center justify-between p-4 transition-all sm:hover:bg-zinc-200 sm:dark:hover:bg-zinc-800"
+      className="group flex items-center justify-between p-4 transition-all sm:hover:bg-[#8338ec]/10 sm:hover:text-[#8338ec] sm:hover:font-bold dark:sm:hover:bg-[#ff006e]/10 dark:sm:hover:text-[#ff006e]"
     >
       <span className="flex items-center gap-4">
         {link.icon} {link.name}
@@ -82,7 +82,7 @@ const ExternalLink = (link: Link) => {
       </span>
       <ArrowUpRight
         strokeWidth={1.4}
-        className="size-5 shrink-0 text-zinc-800 transition-all sm:group-hover:rotate-45 dark:text-zinc-200"
+        className="size-5 shrink-0 text-zinc-800 transition-all sm:group-hover:rotate-45 sm:group-hover:text-[#8338ec] dark:text-zinc-200 dark:sm:group-hover:text-[#ff006e]"
       />
     </a>
   );
@@ -126,12 +126,6 @@ export default function HomePage() {
             href="/luke-berry-cv.pdf"
             download="Luke-Berry-CV.pdf"
             className="flex flex-row items-center justify-center gap-3 rounded bg-sky-300 p-4 text-sky-800 ring-1 ring-sky-500 transition-all sm:hover:bg-sky-400 dark:bg-inherit dark:text-sky-500 dark:ring-sky-500 sm:sm:dark:hover:bg-zinc-800"
-            // Aplicar cores no padrao Tailwind
-            // style={{ 
-            //   backgroundColor: '#222055', 
-            //   color: 'white', 
-            //   borderColor: '#222055' 
-            // }}
           >
             <span className="text-nowrap">Download my CV</span>
             <Download strokeWidth={1.4} className="size-5 max-sm:hidden" />
