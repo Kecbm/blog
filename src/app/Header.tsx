@@ -44,7 +44,7 @@ export default function Header() {
     <header className="mx-auto max-w-prose py-8 max-sm:pt-4">
       <nav className="flex items-center justify-between max-sm:flex-col max-sm:gap-6">
         <Link
-          className={`group relative -m-12 -my-2 -mr-4 flex items-center rounded py-2 pl-12 pr-4 ${isHome ? "ring-0" : "ring-1"} ring-zinc-500 ring-opacity-0 transition-all max-sm:text-center sm:hover:ring-opacity-100 dark:ring-1 dark:ring-zinc-400 dark:ring-opacity-0`}
+          className={`group relative -m-12 -my-2 -mr-4 flex items-center rounded py-2 pl-12 pr-4 ${isHome ? "ring-0" : "ring-1"} ring-[#fb5607] ring-opacity-0 transition-all max-sm:text-center ${isHome ? "" : "sm:hover:ring-opacity-100 sm:hover:text-[#fb5607] sm:hover:font-bold"} dark:ring-1 dark:ring-[#ffbe0b] dark:ring-opacity-0 ${isHome ? "" : "dark:sm:hover:text-[#ffbe0b]"}`}
           href="/"
           aria-label="Back to home"
         >
@@ -79,7 +79,7 @@ export default function Header() {
             )}
           </button>
           <Link
-            className="group relative rounded px-2 py-px ring-1 ring-zinc-500 ring-opacity-0 transition-all sm:hover:ring-opacity-100 dark:ring-1 dark:ring-zinc-400 dark:ring-opacity-0"
+            className="group relative rounded px-2 py-px ring-1 ring-[#fb5607] ring-opacity-0 transition-all sm:hover:ring-opacity-100 sm:hover:text-[#fb5607] sm:hover:font-bold dark:ring-1 dark:ring-[#ffbe0b] dark:ring-opacity-0 dark:sm:hover:text-[#ffbe0b]"
             href="/projects"
             aria-label="View projects"
             aria-current={path === "/projects" ? "page" : undefined}
@@ -87,11 +87,11 @@ export default function Header() {
             /projects
             <Triangle
               aria-hidden="true"
-              className="absolute left-1/2 mt-1 hidden size-2 fill-sky-500 text-zinc-800 group-aria-[current=page]:block dark:fill-sky-600 dark:text-transparent"
+              className="absolute left-1/2 mt-1 hidden size-2 fill-[#fb5607] text-transparent group-aria-[current=page]:block dark:fill-[#ffbe0b] dark:text-transparent"
             />
           </Link>
           <Link
-            className="group relative rounded px-2 py-px ring-1 ring-zinc-500 ring-opacity-0 transition-all sm:hover:ring-opacity-100 dark:ring-1 dark:ring-zinc-400 dark:ring-opacity-0"
+            className="group relative rounded px-2 py-px ring-1 ring-[#fb5607] ring-opacity-0 transition-all sm:hover:ring-opacity-100 sm:hover:text-[#fb5607] sm:hover:font-bold dark:ring-1 dark:ring-[#ffbe0b] dark:ring-opacity-0 dark:sm:hover:text-[#ffbe0b]"
             href="/articles"
             aria-label="View articles"
             aria-current={path.startsWith("/articles") ? "page" : undefined}
@@ -99,11 +99,11 @@ export default function Header() {
             /articles
             <Triangle
               aria-hidden="true"
-              className="absolute left-1/2 mt-1 hidden size-2 fill-sky-500 text-zinc-800 group-aria-[current=page]:block dark:fill-sky-600 dark:text-transparent"
+              className="absolute left-1/2 mt-1 hidden size-2 fill-[#fb5607] text-transparent group-aria-[current=page]:block dark:fill-[#ffbe0b] dark:text-transparent"
             />
           </Link>
           <Link
-            className="group relative rounded px-2 py-px ring-1 ring-zinc-500 ring-opacity-0 transition-all sm:hover:ring-opacity-100 dark:ring-1 dark:ring-zinc-400 dark:ring-opacity-0"
+            className="group relative rounded px-2 py-px ring-1 ring-[#fb5607] ring-opacity-0 transition-all sm:hover:ring-opacity-100 sm:hover:text-[#fb5607] sm:hover:font-bold dark:ring-1 dark:ring-[#ffbe0b] dark:ring-opacity-0 dark:sm:hover:text-[#ffbe0b]"
             href="/about"
             aria-label="View about page"
             aria-current={path === "/about" ? "page" : undefined}
@@ -111,7 +111,7 @@ export default function Header() {
             /about
             <Triangle
               aria-hidden="true"
-              className="absolute left-1/2 mt-1 hidden size-2 fill-sky-500 text-zinc-800 group-aria-[current=page]:block dark:fill-sky-600 dark:text-transparent"
+              className="absolute left-1/2 mt-1 hidden size-2 fill-[#fb5607] text-transparent group-aria-[current=page]:block dark:fill-[#ffbe0b] dark:text-transparent"
             />
           </Link>
         </div>
