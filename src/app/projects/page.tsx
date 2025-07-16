@@ -89,16 +89,16 @@ function ProjectCard({
         <a
           href={url}
           target="_blank"
-          className="flex grow items-center justify-center gap-2 py-4 transition-all sm:hover:bg-zinc-200 sm:dark:hover:bg-zinc-800"
+          className="group flex grow items-center justify-center gap-2 py-4 transition-all sm:hover:bg-[#8338ec]/10 sm:hover:text-[#8338ec] sm:hover:font-bold dark:sm:hover:bg-[#ff006e]/10 dark:sm:hover:text-[#ff006e]"
         >
-          <Globe strokeWidth={1.4} className="size-5" /> Visit website
+          <Globe strokeWidth={1.4} className="size-5 group-hover:text-[#8338ec] dark:group-hover:text-[#ff006e] transition-colors" /> Visit website
         </a>
         <a
           href={githubUrl}
           target="_blank"
-          className="flex grow items-center justify-center gap-2 py-4 transition-all sm:hover:bg-zinc-200 sm:dark:hover:bg-zinc-800"
+          className="group flex grow items-center justify-center gap-2 py-4 transition-all sm:hover:bg-[#8338ec]/10 sm:hover:text-[#8338ec] sm:hover:font-bold dark:sm:hover:bg-[#ff006e]/10 dark:sm:hover:text-[#ff006e]"
         >
-          <GitBranch strokeWidth={1.4} className="size-5" /> View code
+          <GitBranch strokeWidth={1.4} className="size-5 group-hover:text-[#8338ec] dark:group-hover:text-[#ff006e] transition-colors" /> View code
         </a>
       </div>
     </div>
