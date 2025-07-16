@@ -44,7 +44,7 @@ export function getAllTags() {
 // https://dev.to/kecbm/codigo-legado-razoes-para-respeitar-e-valorizar-4e9o
 // https://dev.to/kecbm/voce-deve-trabalhar-pra-voce-por-zarathon-viana-ldj
 // https://dev.to/kecbm/de-volta-ao-codigo-como-conquistei-minha-realocacao-no-mercado-de-tecnologia-4n5n
-// 
+// Implementar o corte do title com "..." para nao quebrar o layout
 
 export function getArticles(): Article[] {
   // Example of how you can manually define articles (slug auto-generated from title):
