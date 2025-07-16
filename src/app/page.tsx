@@ -110,9 +110,9 @@ export default function HomePage() {
               </button> */}
               <a
                 href="mailto:kleciannymelo@gmail.com"
-                className="text-zinc-800 dark:text-zinc-200"
+                className="group text-zinc-800 dark:text-zinc-200"
               >
-                <Send strokeWidth={1.4} className="size-4" />
+                <Send strokeWidth={1.4} className="size-4 transition-all group-hover:text-[#228b22] dark:group-hover:text-[#3a86ff]" />
               </a>
             </div>
           </div>
@@ -125,7 +125,7 @@ export default function HomePage() {
           <a
             href="/luke-berry-cv.pdf"
             download="Luke-Berry-CV.pdf"
-            className="flex flex-row items-center justify-center gap-3 rounded bg-sky-300 p-4 text-sky-800 ring-1 ring-sky-500 transition-all sm:hover:bg-sky-400 dark:bg-inherit dark:text-sky-500 dark:ring-sky-500 sm:sm:dark:hover:bg-zinc-800"
+            className="flex flex-row items-center justify-center gap-3 rounded bg-transparent p-4 text-[#228b22] ring-1 ring-[#228b22] transition-all hover:bg-[#228b22] hover:text-white dark:text-[#3a86ff] dark:ring-[#3a86ff] dark:hover:bg-[#3a86ff] dark:hover:text-white"
           >
             <span className="text-nowrap">Download my CV</span>
             <Download strokeWidth={1.4} className="size-5 max-sm:hidden" />
