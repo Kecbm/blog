@@ -1,4 +1,8 @@
 export default function AboutPage() {
+  // MY ABOUT
+
+  // Garanhuns > Música (Orquestra Manuel Rabelo) > Faculdade > Algoritmos > Transicao de carreira (Turma XP e Série Além do Código) > bolha dev no twitter > entrevista da globo > artigo de volta ao código > palestra no GitHub Brasil > + pets, PS3, Bike/academia (Strava) e livros
+
   return (
     <>
       <h1 className="mb-16 mt-4 text-center text-5xl max-sm:text-4xl">
