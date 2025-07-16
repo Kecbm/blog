@@ -17,7 +17,7 @@ export default async function ArticlesPage() {
               href={article.devToUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-between px-4 py-2 transition-all sm:p-4 sm:hover:bg-zinc-200 sm:dark:hover:bg-zinc-800"
+              className="group flex items-center justify-between px-4 py-2 transition-all sm:p-4 sm:hover:bg-[#8338ec]/10 sm:hover:text-[#8338ec] sm:hover:font-bold dark:sm:hover:bg-[#ff006e]/10 dark:sm:hover:text-[#ff006e]"
               key={article.slug}
             >
               <div className="flex gap-1 gap-x-2 max-sm:flex-col sm:items-center">
