@@ -1,7 +1,7 @@
 export default function AboutPage() {
   // MY ABOUT
 
-  // Garanhuns > Música (Orquestra Manuel Rabelo) > Faculdade > Algoritmos > Transicao de carreira (Turma XP e Série Além do Código) > bolha dev no twitter > entrevista da globo > artigo de volta ao código > palestra no GitHub Brasil > + pets, PS3, Bike/academia (Strava) e livros
+  // Garanhuns > Música (Orquestra Manuel Rabelo) > Faculdade > Algoritmos > Transicao de carreira (Turma XP e Série Além do Código) > bolha dev no twitter > entrevista da globo > As a content creator on DEV Community, I share insights on careers, problem-solving, and growth in technology, with over 24 published articles, 12,200 views, and 3,580 followers > artigo de volta ao código > palestra no GitHub Brasil > + pets, PS3, Bike/academia (Strava) e livros
 
   return (
     <>
