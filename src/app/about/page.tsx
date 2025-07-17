@@ -1,8 +1,4 @@
 export default function AboutPage() {
-  // MY ABOUT
-
-  // Garanhuns > Música (Orquestra Manuel Rabelo) > Faculdade > Algoritmos > Transicao de carreira (Turma XP e Série Além do Código) > bolha dev no twitter > entrevista da globo > As a content creator on DEV Community, I share insights on careers, problem-solving, and growth in technology, with over 24 published articles, 12,200 views, and 3,580 followers > artigo de volta ao código > palestra no GitHub Brasil > + pets, PS3, Bike/academia (Strava) e livros
-
   return (
     <>
       <h1 className="mb-16 mt-4 text-center text-5xl max-sm:text-4xl">
@@ -10,105 +6,81 @@ export default function AboutPage() {
       </h1>
       <article>
         <p>
-          I was born in São Paulo and moved to{" "}
+          I'm an AI-First Software Engineer based in{" "}
           <a
-            href="https://en.wikipedia.org/wiki/Florian%C3%B3polis"
+            href="https://pt.wikipedia.org/wiki/Garanhuns"
             className="underline decoration-[#8338ec] underline-offset-4 transition-all hover:text-[#8338ec] hover:font-bold dark:decoration-[#ff006e] dark:hover:text-[#ff006e]"
           >
-            Florianópolis
-          </a>{" "}
-          as a 10 year old kid. I fell in love with the nature, sport and music
-          culture of the Magical Island.
+            Garanhuns
+          </a>, Pernambuco, Brazil.
         </p>
         <p>
-          In the next decade, I{" "}
+          Before working in tech, I spent 10 years as a professional musician, playing the saxophone in various groups, including the{" "}
           <a
-            href="https://open.spotify.com/artist/4ymHKBTThfeOL114lwCWPQ?si=c30897c35e404259"
+            href="https://pt.wikipedia.org/wiki/Garanhuns"
             className="underline decoration-[#8338ec] underline-offset-4 transition-all hover:text-[#8338ec] hover:font-bold dark:decoration-[#ff006e] dark:hover:text-[#ff006e]"
           >
-            became a singer-songwriter
+            Manoel Rabelo Orchestra
+          </a>.
+        </p>
+        <p>
+          I hold a degree in{" "}
+          <a
+            href="https://www.instagram.com/engenhariadealimentos.ufape/"
+            className="underline decoration-[#8338ec] underline-offset-4 transition-all hover:text-[#8338ec] hover:font-bold dark:decoration-[#ff006e] dark:hover:text-[#ff006e]"
+          >
+            Federal University of the Agreste of Pernambuco
+          </a>. It was during the core engineering courses that I had my first contact with programming logic, and I even became a teaching assistant for the Algorithms and Computer Programming course.
+        </p>
+        <p>
+          In 2021, I began my career transition into technology. I completed the{" "}
+          <a
+            href="https://www.betrybe.com/"
+            className="underline decoration-[#8338ec] underline-offset-4 transition-all hover:text-[#8338ec] hover:font-bold dark:decoration-[#ff006e] dark:hover:text-[#ff006e]"
+          >
+            Full Stack Web Development Bootcamp at Trybe
+          </a>in the{" "}
+          <a
+            href=""
+            className="underline decoration-[#8338ec] underline-offset-4 transition-all hover:text-[#8338ec] hover:font-bold dark:decoration-[#ff006e] dark:hover:text-[#ff006e]"
+          >
+            XP Class
+          </a>, where I served as an{" "}
+          <a
+            href="https://www.linkedin.com/posts/kecbm_tive-a-honra-de-ser-eleita-embaixatryber-activity-6905503717567598592-4Wrg?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAACtMpX0BMkf2Xh5O6zP34bZB84vMCGPU1YY"
+            className="underline decoration-[#8338ec] underline-offset-4 transition-all hover:text-[#8338ec] hover:font-bold dark:decoration-[#ff006e] dark:hover:text-[#ff006e]"
+          >
+            ambassador
+          </a>{" "}and participated in the series{" "}
+          <a
+            href="https://www.youtube.com/watch?v=Tonfpy4eQFY&list=PLw0GGb7tHTHv3gdy39NrOrLh7TrnqjUrL"
+            className="underline decoration-[#8338ec] underline-offset-4 transition-all hover:text-[#8338ec] hover:font-bold dark:decoration-[#ff006e] dark:hover:text-[#ff006e]"
+          >
+            Beyond the Code.
           </a>
-          , got a Karate blue belt, won back-to-back Carnavals with a samba
-          school and wasted thousands of hours playing League of Legends.
         </p>
-        <p>
-          Then I studied Economics at{" "}
-          <a
-            href="https://en.wikipedia.org/wiki/Federal_University_of_Santa_Catarina"
-            className="underline decoration-[#8338ec] underline-offset-4 transition-all hover:text-[#8338ec] hover:font-bold dark:decoration-[#ff006e] dark:hover:text-[#ff006e]"
-          >
-            Federal University of Santa Catarina
-          </a>
-          , mostly for my love for History and Math. I learned a lot of
-          Politics, Statistics and Macroeconomics.
-        </p>
-        <p>
-          But I&apos;d spent too long studying models that weren&apos;t
-          applicable in real-life. I felt disconnected from my studies which led
-          to me dropping out after 2 years.
-        </p>
-        <p>
-          Then came my first contact with programming: as a Data Analyst at a
-          Tech startup. We used Microsoft Excel and Power BI to generate our
-          reports.
-        </p>
-        <p>
-          With millions of data entries, it wasn&apos;t long until my Dell
-          notebook became unusably slow. This led me to learn Python and Pandas
-          to better deal with datasets, as well as Selenium and pyautogui.
-        </p>
-        <p>
-          I&apos;ve always been obsessed with user interfaces. My friends
-          couldn&apos;t bear me pointing out broken buttons and ugly websites
-          all the time.
-        </p>
-        <p>
-          When I found out what HTML was, I did a deep dive into the Frontend. I
-          completed FreeCodeCamp&apos;s{" "}
-          <a
-            href="https://www.freecodecamp.org/learn/2022/responsive-web-design/"
-            className="underline decoration-[#8338ec] underline-offset-4 transition-all hover:text-[#8338ec] hover:font-bold dark:decoration-[#ff006e] dark:hover:text-[#ff006e]"
-          >
-            Responsive Web Design
-          </a>{" "}
-          and swiftly progressed to Javascript and React soon after.
-        </p>
-        <p>
-          I became more active within the Brazilian Dev community, sharing
-          quirky UI bugs and building my projects in public such as{" "}
-          <a
-            href="https://phived.com"
-            className="underline decoration-[#8338ec] underline-offset-4 transition-all hover:text-[#8338ec] hover:font-bold dark:decoration-[#ff006e] dark:hover:text-[#ff006e]"
-          >
-            phived
-          </a> and{" "}
-          <a
-            href="https://css2wind.com"
-            className="underline decoration-[#8338ec] underline-offset-4 transition-all hover:text-[#8338ec] hover:font-bold dark:decoration-[#ff006e] dark:hover:text-[#ff006e]"
-          >
-            css2wind
-          </a>. I collaborated with
-          hundreds of developers and contributed a lot to Open Source.
-        </p>
-        <p>
-          In 2024, I traveled to Torino, Italy to visit my dad. My life flipped
-          upside down and I ended up living in Málaga for a while. After I
-          failed to get a job, I moved to the UK and landed a job in London, where I currently
-          live.
-        </p>
+        Even before joining Trybe, I started researching on Twitter what it was like to work as a developer. Since then, I’ve been active in the “Bolha Dev” (Dev Bubble), a vibrant community where I continuously learn, share my journey, and connect with amazing people in the field.
+
+        Being part of this community opened up incredible opportunities, including being interviewed by Globo, where I talked about my experience going through my first layoff.
+
+        As a content creator on DEV Community, I write about career development, problem-solving, and personal growth in tech. I’ve published over 24 articles, with more than 12,200 views and 3,580 followers.
+
+        My most impactful article documents everything that helped me quickly get back into the tech market after the layoff — and I had the honor of presenting its key takeaways at GitHub Brasil.
+
+        I have seven pets: one pinscher and six cats. In my free time, I enjoy playing PS3, riding my bike, going to the gym, and maintaining a daily reading habit.
         <p>
           If you want to get in touch, send me a DM on{" "}
           <a
-            href="https://x.com/lukeberrypi"
+            href="https://x.com/kecbm"
             className="underline decoration-[#8338ec] underline-offset-4 transition-all hover:text-[#8338ec] hover:font-bold dark:decoration-[#ff006e] dark:hover:text-[#ff006e]"
           >
-            X
+            Twitter
           </a> or an email{" "}
           <a
-            href="mailto:lukeberrypi@gmail.com"
+            href="mailto:kleciannymelo@gmail.com"
             className="underline decoration-[#8338ec] underline-offset-4 transition-all hover:text-[#8338ec] hover:font-bold dark:decoration-[#ff006e] dark:hover:text-[#ff006e]"
           >
-            lukeberrypi@gmail.com
+            kleciannymelo@gmail.com
           </a>.
         </p>
         <p>Life is good</p>
