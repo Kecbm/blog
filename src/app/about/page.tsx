@@ -1,4 +1,5 @@
 export default function AboutPage() {
+  // Pets: page (clone for projects page) with image, name and date of born
   return (
     <>
       <h1 className="mb-16 mt-4 text-center text-5xl max-sm:text-4xl">
@@ -17,7 +18,7 @@ export default function AboutPage() {
         <p>
           Before working in tech, I spent 10 years as a professional musician, playing the saxophone in various groups, including the{" "}
           <a
-            href="https://pt.wikipedia.org/wiki/Garanhuns"
+            href="https://www.facebook.com/share/p/1bCxoDSPSc/"
             className="underline decoration-[#8338ec] underline-offset-4 transition-all hover:text-[#8338ec] hover:font-bold dark:decoration-[#ff006e] dark:hover:text-[#ff006e]"
           >
             Manoel Rabelo Orchestra
@@ -38,7 +39,7 @@ export default function AboutPage() {
             href="https://www.betrybe.com/"
             className="underline decoration-[#8338ec] underline-offset-4 transition-all hover:text-[#8338ec] hover:font-bold dark:decoration-[#ff006e] dark:hover:text-[#ff006e]"
           >
-            Full Stack Web Development Bootcamp at Trybe
+            Full Stack Web Development Bootcamp at Trybe{" "}
           </a>in the{" "}
           <a
             href=""
@@ -59,15 +60,63 @@ export default function AboutPage() {
             Beyond the Code.
           </a>
         </p>
-        Even before joining Trybe, I started researching on Twitter what it was like to work as a developer. Since then, I’ve been active in the “Bolha Dev” (Dev Bubble), a vibrant community where I continuously learn, share my journey, and connect with amazing people in the field.
-
-        Being part of this community opened up incredible opportunities, including being interviewed by Globo, where I talked about my experience going through my first layoff.
-
-        As a content creator on DEV Community, I write about career development, problem-solving, and personal growth in tech. I’ve published over 24 articles, with more than 12,200 views and 3,580 followers.
-
-        My most impactful article documents everything that helped me quickly get back into the tech market after the layoff — and I had the honor of presenting its key takeaways at GitHub Brasil.
-
-        I have seven pets: one pinscher and six cats. In my free time, I enjoy playing PS3, riding my bike, going to the gym, and maintaining a daily reading habit.
+        <p>
+          Even before joining Trybe, I started researching on Twitter what it was like to work as a developer. Since then, I’ve been active in the{" "}
+          <a
+            href="https://dev.to/kecbm/como-participar-da-bolha-dev-no-twitter-um-guia-para-desenvolvedores-11ol"
+            className="underline decoration-[#8338ec] underline-offset-4 transition-all hover:text-[#8338ec] hover:font-bold dark:decoration-[#ff006e] dark:hover:text-[#ff006e]"
+          >
+            Dev Bubble
+          </a>, a vibrant community where I continuously learn, share my journey, and connect with amazing people in the field.
+        </p>
+        <p>
+          Being part of this community opened up incredible opportunities, including being{" "}
+          <a
+            href="https://g1.globo.com/tecnologia/noticia/2023/05/10/ja-incentivo-meus-filhos-comeco-pode-ser-frustrante-profissionais-contam-como-e-trabalhar-com-programacao.ghtml"
+            className="underline decoration-[#8338ec] underline-offset-4 transition-all hover:text-[#8338ec] hover:font-bold dark:decoration-[#ff006e] dark:hover:text-[#ff006e]"
+          >
+            interviewed by Globo
+          </a>, where I talked about my experience going through my first layoff.
+        </p>
+        <p>
+          As a content creator on{" "}
+          <a
+            href="https://dev.to/kecbm"
+            className="underline decoration-[#8338ec] underline-offset-4 transition-all hover:text-[#8338ec] hover:font-bold dark:decoration-[#ff006e] dark:hover:text-[#ff006e]"
+          >
+            DEV Community
+          </a>, I write about career development, problem-solving, and personal growth in tech. I’ve published over 24 articles, with more than 14,300 views and 3,600 followers.
+        </p>
+        <p>
+          My most impactful article documents everything that helped me quickly{" "}
+          <a
+            href="https://dev.to/kecbm"
+            className="underline decoration-[#8338ec] underline-offset-4 transition-all hover:text-[#8338ec] hover:font-bold dark:decoration-[#ff006e] dark:hover:text-[#ff006e]"
+          >
+            get back into the tech market after the layoff
+          </a>, and I had the honor of presenting its key takeaways at{" "}
+          <a
+            href="https://www.twitch.tv/videos/2435200518"
+            className="underline decoration-[#8338ec] underline-offset-4 transition-all hover:text-[#8338ec] hover:font-bold dark:decoration-[#ff006e] dark:hover:text-[#ff006e]"
+          >
+            GitHub Brasil
+          </a>.
+        </p>
+        <p>
+          I have seven pets: one pinscher and six cats. In my free time, I enjoy playing PS3, riding my{" "}
+          <a
+            href="https://www.strava.com/athletes/kecbm"
+            className="underline decoration-[#8338ec] underline-offset-4 transition-all hover:text-[#8338ec] hover:font-bold dark:decoration-[#ff006e] dark:hover:text-[#ff006e]"
+          >
+            bike
+          </a>, going to the{" "}
+          <a
+            href="https://www.strava.com/athletes/kecbm"
+            className="underline decoration-[#8338ec] underline-offset-4 transition-all hover:text-[#8338ec] hover:font-bold dark:decoration-[#ff006e] dark:hover:text-[#ff006e]"
+          >
+            gym
+          </a>, and maintaining a daily reading habit.
+        </p>
         <p>
           If you want to get in touch, send me a DM on{" "}
           <a
@@ -87,7 +136,7 @@ export default function AboutPage() {
         <p>
           Best,
           <br />
-          Luke
+          Klecianny
         </p>
       </article>
     </>
