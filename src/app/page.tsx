@@ -69,12 +69,12 @@ export default function HomePage() {
                 href="mailto:kleciannymelo@gmail.com"
                 className="group text-zinc-800 dark:text-zinc-200"
               >
-                <Send strokeWidth={1.4} className="size-4 transition-all group-hover:text-[#228b22] dark:group-hover:text-[#3a86ff]" />
+                <Send strokeWidth={1.4} className="size-4 transition-all group-hover:text-[#88d012] dark:group-hover:text-[#C4FC55]" />
               </a>
             </div>
           </div>
-          <span className="-mt-2 inline-flex w-fit items-center gap-1 rounded-full bg-green-100 px-2 py-0.5 text-sm text-green-600 ring-1 ring-green-500 dark:bg-transparent dark:text-emerald-500 dark:ring-emerald-500">
-            <div className="size-2 animate-pulse rounded-full bg-green-500 dark:bg-emerald-500" />
+          <span className="-mt-2 inline-flex w-fit items-center gap-1 rounded-full bg-[#88d012]/10 px-2 py-0.5 text-sm text-[#68a60a] ring-1 ring-[#68a60a] dark:bg-transparent dark:text-[#B1EC4A] dark:ring-[#B1EC4A]">
+            <div className="size-2 animate-pulse rounded-full bg-[#68a60a] dark:bg-[#B1EC4A]" />
             Online
           </span>
         </div>
@@ -82,7 +82,7 @@ export default function HomePage() {
           <a
             href="/luke-berry-cv.pdf"
             download="Luke-Berry-CV.pdf"
-            className="flex flex-row items-center justify-center gap-3 rounded bg-[#228b22]/10 p-4 text-[#228b22] ring-1 ring-[#228b22] transition-all hover:bg-[#228b22] hover:text-white dark:bg-transparent dark:text-[#3a86ff] dark:ring-[#3a86ff] dark:hover:bg-[#3a86ff] dark:hover:text-white"
+            className="flex flex-row items-center justify-center gap-3 rounded bg-[#68a60a]/10 p-4 text-[#68a60a] ring-1 ring-[#68a60a] transition-all hover:bg-[#88d012] hover:ring-transparent hover:text-white dark:bg-transparent dark:text-[#B1EC4A] dark:ring-[#B1EC4A] dark:hover:bg-[#C4FC55] dark:hover:text-zinc-900"
           >
             <span className="text-nowrap">Download my CV</span>
             <Download strokeWidth={1.4} className="size-5 max-sm:hidden" />
