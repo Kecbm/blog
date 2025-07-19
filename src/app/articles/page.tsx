@@ -28,7 +28,7 @@ export default async function ArticlesPage() {
             href={article.devToUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex items-center justify-between px-4 py-2 transition-all sm:p-4 sm:hover:bg-[#8338ec]/10 sm:hover:text-[#8338ec] sm:hover:font-bold dark:sm:hover:bg-[#ff006e]/10 dark:sm:hover:text-[#ff006e]"
+            className="group flex items-center justify-between px-4 py-2 transition-all sm:p-4 text-[#527b10] sm:hover:bg-[#6ca20e]/10 sm:hover:text-[#6ca20e] sm:hover:font-bold dark:text-[#AFEC4A] dark:sm:hover:bg-[#CDF37B]/10 dark:sm:hover:text-[#CDF37B]"
             key={article.slug}
           >
             <div className="flex gap-1 gap-x-2 max-sm:flex-col sm:items-center">
@@ -50,7 +50,7 @@ export default async function ArticlesPage() {
               <span className="text-zinc-500 max-sm:text-sm dark:text-zinc-400">
                 {article.date}
               </span>
-              <ArrowUpRight className="size-5 shrink-0 text-zinc-800 transition-all group-hover:rotate-45 group-hover:text-[#8338ec] dark:text-zinc-200 dark:group-hover:text-[#ff006e]" />
+              <ArrowUpRight className="size-5 shrink-0 text-[#527b10] transition-all group-hover:rotate-45 group-hover:text-[#6ca20e] dark:text-[#AFEC4A] dark:group-hover:text-[#CDF37B]" />
             </div>
           </a>
         ))}
