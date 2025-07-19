@@ -12,40 +12,72 @@
 # Pallete of collors
 
 **Light Theme**
-- Verde dos botões e sublinhados: #68a60a
-- Hover: #88d012
+    - Verde: #68a60a
+    - Hover: #88d012
 
 **Dark Theme**
-- Verde dos botões e sublinhados: #B1EC4A
-- Hover: #C4FC55
+    - Verde: #B1EC4A
+    - Hover: #C4FC55
 
 - Cinza
     - Claro: #C6D0E9
     - Escuro: #A5B1CA
 
-- Verde
-    - Claro: #CDF37B
-    - Escuro: #AFEC4A
+Home
+    - Vermelho
+        **Light Theme**
+            - Claro: #e25751
+            - Escuro: #ce3a34
+        **Dark Theme**
+            - Claro: #EF8A86
+            - Escuro: #EA5049
 
-- Azul
-    - Claro: #72AFF7
-    - Escuro: #3E6AF5
+Projects
+    - Amarelo
+        **Light Theme**
+            - Claro: #f2ad2d
+            - Escuro: #eb8c15
+        **Dark Theme**
+            - Claro: #F6CD6F
+            - Escuro: #F2B13E
 
-- Vermelho
-    - Claro: #EF8A86
-    - Escuro: #EA5049
+Articles
+    - Verde
+        **Light Theme**
+            - Claro: #6ca20e
+            - Escuro: #527b10
+        **Dark Theme**
+            - Claro: #CDF37B
+            - Escuro: #AFEC4A
 
-- Amarelo
-    - Claro: #F6CD6F
-    - Escuro: #F2B13E
+About
+    - Verde 2
+        **Light Theme**
+            - Claro: #39cea2
+            - Escuro: #15b48a
+        **Dark Theme**
+            - Claro: #85E7C7
+            - Escuro: #71E4B9
 
-- Roxo
-    - Claro: #C08FF2
-    - Escuro: #921CF5
+TODO:
 
-- Verde 2
-    - Claro: #85E7C7
-    - Escuro: #71E4B9
+PS3
+    - Azul
+        **Light Theme**
+        - Claro: #4085f1
+        - Escuro: #2a67e6
+        **Dark Theme**
+        - Claro: #72AFF7
+        - Escuro: #3E6AF5
+
+Pets
+    - Roxo
+        **Light Theme**
+        - Claro: #a763e9
+        - Escuro: #9142db
+        **Dark Theme**
+        - Claro: #C08FF2
+        - Escuro: #921CF5
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
