@@ -103,7 +103,13 @@ export default function AboutPage() {
           </a>.
         </p>
         <p>
-          I have seven pets: one pinscher and six cats. In my free time, I enjoy playing PS3, riding my{" "}
+          I have seven pets: one pinscher and six cats. In my free time, I enjoy playing{" "}
+          <a
+            href="/ps3"
+            className="about-highlight"
+          >
+            PS3
+          </a>, riding my{" "}
           <a
             href="https://www.strava.com/athletes/kecbm"
             className="about-highlight"
