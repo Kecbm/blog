@@ -30,6 +30,12 @@
   --project-button-text-dark: #F2B13E;
   --project-button-hover-light: #f2ad2d;
   --project-button-hover-dark: #F6CD6F;
+
+  /* About Page Highlight Colors */
+  --about-highlight-decoration-light: #15b48a;
+  --about-highlight-hover-light: #39cea2;
+  --about-highlight-decoration-dark: #71E4B9;
+  --about-highlight-hover-dark: #85E7C7;
 }
 
 @layer components {
@@ -158,6 +164,25 @@
 
   .dark .project-button:hover .project-button-icon {
     color: var(--project-button-hover-dark);
+  }
+
+  /* About Page Components */
+  .about-highlight {
+    @apply underline underline-offset-4 transition-all;
+    text-decoration-color: var(--about-highlight-decoration-light);
+  }
+
+  .about-highlight:hover {
+    color: var(--about-highlight-hover-light);
+    font-weight: bold;
+  }
+
+  .dark .about-highlight {
+    text-decoration-color: var(--about-highlight-decoration-dark);
+  }
+
+  .dark .about-highlight:hover {
+    color: var(--about-highlight-hover-dark);
   }
 }
 
