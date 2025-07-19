@@ -12,6 +12,14 @@
   --sh-string: #0891b2; /* cyan-600 */
   --sh-keyword: #ef4444; /* red-500 */
   --sh-comment: #64748b; /* slate-500 */
+
+  /* External Links Theme Colors */
+  --external-link-text-light: #e25751;
+  --external-link-text-dark: #EF8A86;
+  --external-link-hover-light: #ce3a34;
+  --external-link-hover-dark: #EA5049;
+  --external-link-bg-hover-light: #ce3a34;
+  --external-link-bg-hover-dark: #EA5049;
 }
 
 @layer components {
@@ -21,6 +29,75 @@
 
   .nav-triangle {
     @apply absolute left-1/2 mt-1 hidden size-2 fill-[#68a60a] text-transparent group-aria-[current=page]:block dark:fill-[#B1EC4A] dark:text-transparent;
+  }
+
+  /* External Links Components */
+  .external-link {
+    @apply flex items-center justify-between p-4 transition-all;
+    color: var(--external-link-text-light);
+  }
+
+  .external-link:hover {
+    background-color: color-mix(in srgb, var(--external-link-bg-hover-light) 10%, transparent);
+    color: var(--external-link-hover-light);
+    font-weight: bold;
+  }
+
+  .dark .external-link {
+    color: var(--external-link-text-dark);
+  }
+
+  .dark .external-link:hover {
+    background-color: color-mix(in srgb, var(--external-link-bg-hover-dark) 10%, transparent);
+    color: var(--external-link-hover-dark);
+  }
+
+  .external-link-icon {
+    transition: all 0.3s ease;
+  }
+
+  .external-link-icon.linkedin {
+    fill: #e25751;
+  }
+
+  .external-link-icon.github {
+    fill: #e25751;
+  }
+
+  .external-link-icon.twitter {
+    fill: #e25751;
+  }
+
+  .dark .external-link-icon.linkedin,
+  .dark .external-link-icon.github,
+  .dark .external-link-icon.twitter {
+    fill: var(--external-link-text-dark);
+  }
+
+  .external-link:hover .external-link-icon {
+    fill: var(--external-link-hover-light);
+  }
+
+  .dark .external-link:hover .external-link-icon {
+    fill: var(--external-link-hover-dark);
+  }
+
+  .external-link-arrow {
+    @apply size-5 shrink-0 transition-all;
+    color: var(--external-link-text-light);
+  }
+
+  .external-link:hover .external-link-arrow {
+    transform: rotate(45deg);
+    color: var(--external-link-hover-light);
+  }
+
+  .dark .external-link-arrow {
+    color: var(--external-link-text-dark);
+  }
+
+  .dark .external-link:hover .external-link-arrow {
+    color: var(--external-link-hover-dark);
   }
 }
 

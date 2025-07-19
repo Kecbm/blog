@@ -6,13 +6,14 @@ import {
 import { ArrowUpRight, Copy, Download, Send } from "lucide-react";
 import Link from "next/link";
 import { ReactNode } from "react";
+import ExternalLinkComponent from "@/src/components/ExternalLink";
 
 const XLogo = ({ className = "" }: { className?: string }) => {
   return (
     <svg viewBox="0 0 24 24" width="20" height="20" className="ml-1">
       <g>
         <path
-          className={`fill-zinc-950 dark:fill-zinc-200 ${className}`}
+          className={className}
           d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
         ></path>
       </g>
@@ -20,73 +21,29 @@ const XLogo = ({ className = "" }: { className?: string }) => {
   );
 };
 
-const RaycastLogo = () => {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width={26}
-      fill="none"
-      viewBox="0 0 48 48"
-    >
-      <path
-        className="fill-[#FF6362] dark:fill-zinc-200"
-        fillRule="evenodd"
-        d="M12 30.99V36L-.01 23.99l2.516-2.499zM17.01 36H12l12.011 12.01 2.506-2.505zm28.487-9.497L48 24 24 0l-2.503 2.503L30.98 12h-5.732l-6.62-6.614-2.506 2.503 4.122 4.122h-2.869v18.625H36V27.77l4.122 4.122 2.503-2.506L36 22.747v-5.732zM13.253 10.747l-2.503 2.506 2.686 2.686 2.503-2.506zm21.314 21.314-2.495 2.503 2.686 2.686 2.506-2.503zM7.878 16.121l-2.503 2.504L12 25.253v-5.012zM27.756 36h-5.009l6.628 6.625 2.503-2.503z"
-        clipRule="evenodd"
-      ></path>
-    </svg>
-  );
-};
-
-interface Link {
-  name: string;
-  description?: string;
-  url: string;
-  icon?: ReactNode;
-}
-
-const externalLinks: Link[] = [
+const externalLinksData = [
   {
     name: "LinkedIn",
     description: "follow my career",
     url: "https://linkedin.com/in/kecbm",
-    icon: <SiLinkedin className="fill-[#0077B5] dark:fill-zinc-200 group-hover:fill-[#8338ec] dark:group-hover:fill-[#ff006e] transition-colors" />,
+    icon: <SiLinkedin />,
+    iconType: 'linkedin' as const,
   },
   {
     name: "GitHub",
     description: "steal my code",
     url: "https://github.com/Kecbm",
-    icon: <SiGithub className="group-hover:fill-[#8338ec] dark:group-hover:fill-[#ff006e] transition-colors" />,
+    icon: <SiGithub />,
+    iconType: 'github' as const,
   },
   {
     name: "Twitter",
     description: "read my mind",
     url: "https://x.com/kecbm",
-    icon: <XLogo className="group-hover:fill-[#8338ec] dark:group-hover:fill-[#ff006e] transition-colors" />,
+    icon: <XLogo />,
+    iconType: 'twitter' as const,
   }
 ];
-
-const ExternalLink = (link: Link) => {
-  return (
-    <a
-      key={link.description}
-      href={link.url}
-      target="_blank"
-      className="group flex items-center justify-between p-4 transition-all sm:hover:bg-[#8338ec]/10 sm:hover:text-[#8338ec] sm:hover:font-bold dark:sm:hover:bg-[#ff006e]/10 dark:sm:hover:text-[#ff006e]"
-    >
-      <span className="flex items-center gap-4">
-        {link.icon} {link.name}
-        <span className="-translate-x-4 text-zinc-500 opacity-0 transition-all max-sm:hidden sm:group-hover:translate-x-0 sm:group-hover:opacity-100 dark:text-zinc-400">
-          {link.description}
-        </span>
-      </span>
-      <ArrowUpRight
-        strokeWidth={1.4}
-        className="size-5 shrink-0 text-zinc-800 transition-all sm:group-hover:rotate-45 sm:group-hover:text-[#8338ec] dark:text-zinc-200 dark:sm:group-hover:text-[#ff006e]"
-      />
-    </a>
-  );
-};
 
 export default function HomePage() {
   return (
@@ -95,8 +52,8 @@ export default function HomePage() {
         Brazilian, obsessed with growth. Working as a Software Engineer. I love React, Python, TailwindCSS, playing PS3, and solving problems.
       </p>
       <div className="divide-y divide-zinc-400 overflow-hidden rounded ring-1 ring-zinc-400 dark:divide-zinc-500 dark:ring-zinc-500">
-        {externalLinks.map((link: Link) => (
-          <ExternalLink key={link.url} {...link} />
+        {externalLinksData.map((link) => (
+          <ExternalLinkComponent key={link.url} {...link} />
         ))}
       </div>
       <div className="flex justify-center gap-6 max-sm:flex-col-reverse sm:justify-between">
