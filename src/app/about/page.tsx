@@ -7,7 +7,7 @@ export default function AboutPage() {
       </h1>
       <article>
         <p>
-          I'm an AI-First Software Engineer based in{" "}
+          I&apos;m an AI-First Software Engineer based in{" "}
           <a
             href="https://pt.wikipedia.org/wiki/Garanhuns"
             className="underline decoration-[#8338ec] underline-offset-4 transition-all hover:text-[#8338ec] hover:font-bold dark:decoration-[#ff006e] dark:hover:text-[#ff006e]"

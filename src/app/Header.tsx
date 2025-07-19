@@ -1,9 +1,10 @@
 "use client";
 
-import { ChevronLeft, Moon, Sun, Triangle } from "lucide-react";
+import { ChevronLeft, Moon, Sun } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import NavLink from "@/src/components/NavLink";
 
 function isThemeSetToDark() {
   if (window == undefined) return;
@@ -44,7 +45,7 @@ export default function Header() {
     <header className="mx-auto max-w-prose py-8 max-sm:pt-4">
       <nav className="flex items-center justify-between max-sm:flex-col max-sm:gap-6">
         <Link
-          className={`group relative -m-12 -my-2 -mr-4 flex items-center rounded py-2 pl-12 pr-4 ${isHome ? "ring-0" : "ring-1"} ring-[#fb5607] ring-opacity-0 transition-all max-sm:text-center ${isHome ? "" : "sm:hover:ring-opacity-100 sm:hover:text-[#fb5607] sm:hover:font-bold"} dark:ring-1 dark:ring-[#ffbe0b] dark:ring-opacity-0 ${isHome ? "" : "dark:sm:hover:text-[#ffbe0b]"}`}
+          className={`group relative -m-12 -my-2 -mr-4 flex items-center py-2 pl-12 pr-4 nav-link-base transition-all max-sm:text-center ${isHome ? "" : "ring-1 ring-transparent sm:hover:ring-opacity-100"}`}
           href="/"
           aria-label="Back to home"
         >
@@ -78,42 +79,27 @@ export default function Header() {
               />
             )}
           </button>
-          <Link
-            className="group relative rounded px-2 py-px ring-1 ring-[#fb5607] ring-opacity-0 transition-all sm:hover:ring-opacity-100 sm:hover:text-[#fb5607] sm:hover:font-bold dark:ring-1 dark:ring-[#ffbe0b] dark:ring-opacity-0 dark:sm:hover:text-[#ffbe0b]"
+          <NavLink
             href="/projects"
-            aria-label="View projects"
-            aria-current={path === "/projects" ? "page" : undefined}
+            label="View projects"
+            isActive={path === "/projects"}
           >
             /projects
-            <Triangle
-              aria-hidden="true"
-              className="absolute left-1/2 mt-1 hidden size-2 fill-[#fb5607] text-transparent group-aria-[current=page]:block dark:fill-[#ffbe0b] dark:text-transparent"
-            />
-          </Link>
-          <Link
-            className="group relative rounded px-2 py-px ring-1 ring-[#fb5607] ring-opacity-0 transition-all sm:hover:ring-opacity-100 sm:hover:text-[#fb5607] sm:hover:font-bold dark:ring-1 dark:ring-[#ffbe0b] dark:ring-opacity-0 dark:sm:hover:text-[#ffbe0b]"
+          </NavLink>
+          <NavLink
             href="/articles"
-            aria-label="View articles"
-            aria-current={path.startsWith("/articles") ? "page" : undefined}
+            label="View articles"
+            isActive={path.startsWith("/articles")}
           >
             /articles
-            <Triangle
-              aria-hidden="true"
-              className="absolute left-1/2 mt-1 hidden size-2 fill-[#fb5607] text-transparent group-aria-[current=page]:block dark:fill-[#ffbe0b] dark:text-transparent"
-            />
-          </Link>
-          <Link
-            className="group relative rounded px-2 py-px ring-1 ring-[#fb5607] ring-opacity-0 transition-all sm:hover:ring-opacity-100 sm:hover:text-[#fb5607] sm:hover:font-bold dark:ring-1 dark:ring-[#ffbe0b] dark:ring-opacity-0 dark:sm:hover:text-[#ffbe0b]"
+          </NavLink>
+          <NavLink
             href="/about"
-            aria-label="View about page"
-            aria-current={path === "/about" ? "page" : undefined}
+            label="View about page"
+            isActive={path === "/about"}
           >
             /about
-            <Triangle
-              aria-hidden="true"
-              className="absolute left-1/2 mt-1 hidden size-2 fill-[#fb5607] text-transparent group-aria-[current=page]:block dark:fill-[#ffbe0b] dark:text-transparent"
-            />
-          </Link>
+          </NavLink>
         </div>
       </nav>
     </header>

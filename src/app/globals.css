@@ -14,6 +14,16 @@
   --sh-comment: #64748b; /* slate-500 */
 }
 
+@layer components {
+  .nav-link-base {
+    @apply relative rounded px-2 py-px text-[#68a60a] transition-all sm:hover:bg-[#88d012] sm:hover:text-white sm:hover:font-bold dark:text-[#B1EC4A] dark:sm:hover:text-zinc-900 dark:sm:hover:bg-[#C4FC55];
+  }
+
+  .nav-triangle {
+    @apply absolute left-1/2 mt-1 hidden size-2 fill-[#68a60a] text-transparent group-aria-[current=page]:block dark:fill-[#B1EC4A] dark:text-transparent;
+  }
+}
+
 @layer base {
   html,
   body {
