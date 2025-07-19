@@ -1,6 +1,8 @@
 import { GitBranch, Globe } from "lucide-react";
 import Image from "next/image";
 import { ReactNode } from "react";
+import ProjectTag from "@/src/components/ProjectTag";
+import ProjectButton from "@/src/components/ProjectButton";
 
 interface Project {
   name: string;
@@ -27,15 +29,9 @@ const projects: Project[] = [
     githubUrl: "https://github.com/LukeberryPi/css2wind",
     technologies: (
       <div className="flex items-center gap-x-3">
-        <span className="rounded-full bg-[#007ACC] px-2.5 py-0.5 text-sm text-zinc-100 dark:bg-inherit dark:text-[#ff006e] dark:ring-1 dark:ring-[#ff006e]">
-          TypeScript
-        </span>
-        <span className="rounded-full bg-[#38BDF9] px-2.5 py-0.5 text-sm text-zinc-950 dark:bg-inherit dark:text-[#ff006e] dark:ring-1 dark:ring-[#ff006e]">
-          TailwindCSS
-        </span>
-        <span className="rounded-full bg-black px-2.5 py-0.5 text-sm text-zinc-100 dark:bg-inherit dark:text-[#ff006e] dark:ring-1 dark:ring-[#ff006e]">
-          Next.js
-        </span>
+        <ProjectTag>TypeScript</ProjectTag>
+        <ProjectTag>TailwindCSS</ProjectTag>
+        <ProjectTag>Next.js</ProjectTag>
       </div>
     ),
   },
@@ -48,15 +44,9 @@ const projects: Project[] = [
     githubUrl: "https://github.com/LukeberryPi/phived",
     technologies: (
       <div className="flex items-center gap-x-3">
-        <span className="rounded-full bg-[#00D8FE] px-2.5 py-0.5 text-sm text-zinc-950 dark:bg-inherit dark:text-[#ff006e] dark:ring-1 dark:ring-[#ff006e]">
-          React
-        </span>
-        <span className="rounded-full bg-[#38BDF9] px-2.5 py-0.5 text-sm text-zinc-950 dark:bg-inherit dark:text-[#ff006e] dark:ring-1 dark:ring-[#ff006e]">
-          TailwindCSS
-        </span>
-        <span className="rounded-full bg-gradient-to-r from-[#926AFE] to-[#49C7FF] px-2.5 py-0.5 text-sm text-zinc-100 dark:bg-none dark:text-[#ff006e] dark:ring-1 dark:ring-[#ff006e]">
-          Vite
-        </span>
+        <ProjectTag>React</ProjectTag>
+        <ProjectTag>TailwindCSS</ProjectTag>
+        <ProjectTag>Vite</ProjectTag>
       </div>
     ),
   },
@@ -86,20 +76,18 @@ function ProjectCard({
         alt="Logo for css2wind website"
       />
       <div className="flex w-full justify-between divide-x divide-zinc-400 dark:divide-zinc-500">
-        <a
+        <ProjectButton
           href={url}
-          target="_blank"
-          className="group flex grow items-center justify-center gap-2 py-4 transition-all sm:hover:bg-[#8338ec]/10 sm:hover:text-[#8338ec] sm:hover:font-bold dark:sm:hover:bg-[#ff006e]/10 dark:sm:hover:text-[#ff006e]"
+          icon={<Globe strokeWidth={1.4} />}
         >
-          <Globe strokeWidth={1.4} className="size-5 group-hover:text-[#8338ec] dark:group-hover:text-[#ff006e] transition-colors" /> Visit website
-        </a>
-        <a
+          Visit website
+        </ProjectButton>
+        <ProjectButton
           href={githubUrl}
-          target="_blank"
-          className="group flex grow items-center justify-center gap-2 py-4 transition-all sm:hover:bg-[#8338ec]/10 sm:hover:text-[#8338ec] sm:hover:font-bold dark:sm:hover:bg-[#ff006e]/10 dark:sm:hover:text-[#ff006e]"
+          icon={<GitBranch strokeWidth={1.4} />}
         >
-          <GitBranch strokeWidth={1.4} className="size-5 group-hover:text-[#8338ec] dark:group-hover:text-[#ff006e] transition-colors" /> View code
-        </a>
+          View code
+        </ProjectButton>
       </div>
     </div>
   );

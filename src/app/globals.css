@@ -20,6 +20,16 @@
   --external-link-hover-dark: #EA5049;
   --external-link-bg-hover-light: #ce3a34;
   --external-link-bg-hover-dark: #EA5049;
+
+  /* Projects Theme Colors */
+  --project-tag-bg-light: #eb8c15;
+  --project-tag-text-light: #ffffff;
+  --project-tag-text-dark: #F2B13E;
+  --project-tag-ring-dark: #F2B13E;
+  --project-button-text-light: #eb8c15;
+  --project-button-text-dark: #F2B13E;
+  --project-button-hover-light: #f2ad2d;
+  --project-button-hover-dark: #F6CD6F;
 }
 
 @layer components {
@@ -98,6 +108,56 @@
 
   .dark .external-link:hover .external-link-arrow {
     color: var(--external-link-hover-dark);
+  }
+
+  /* Project Components */
+  .project-tag {
+    @apply rounded-full px-2.5 py-0.5 text-sm;
+    background-color: var(--project-tag-bg-light);
+    color: var(--project-tag-text-light);
+  }
+
+  .dark .project-tag {
+    background-color: transparent;
+    color: var(--project-tag-text-dark);
+    border: 1px solid var(--project-tag-ring-dark);
+  }
+
+  .project-button {
+    @apply flex grow items-center justify-center gap-2 py-4 transition-all;
+    color: var(--project-button-text-light);
+  }
+
+  .project-button:hover {
+    background-color: color-mix(in srgb, var(--project-button-hover-light) 10%, transparent);
+    color: var(--project-button-hover-light);
+    font-weight: bold;
+  }
+
+  .dark .project-button {
+    color: var(--project-button-text-dark);
+  }
+
+  .dark .project-button:hover {
+    background-color: color-mix(in srgb, var(--project-button-hover-dark) 10%, transparent);
+    color: var(--project-button-hover-dark);
+  }
+
+  .project-button-icon {
+    @apply size-5 transition-colors;
+    color: var(--project-button-text-light);
+  }
+
+  .project-button:hover .project-button-icon {
+    color: var(--project-button-hover-light);
+  }
+
+  .dark .project-button-icon {
+    color: var(--project-button-text-dark);
+  }
+
+  .dark .project-button:hover .project-button-icon {
+    color: var(--project-button-hover-dark);
   }
 }
 
