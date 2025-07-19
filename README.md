@@ -11,25 +11,41 @@
 
 # Pallete of collors
 
-**Light theme**
-    Header
-        - Laranja: fb5607
+**Light Theme**
+- Verde dos botões e sublinhados: #68a60a
+- Hover: #88d012
 
-    Page
-        - Roxo: 8338ec
+**Dark Theme**
+- Verde dos botões e sublinhados: #B1EC4A
+- Hover: #C4FC55
 
-    Footer
-        - Verde: 228b22
+- Cinza
+    - Claro: #C6D0E9
+    - Escuro: #A5B1CA
 
-**Dark theme**
-    Header
-        - Amarelo: ffbe0b
+- Verde
+    - Claro: #CDF37B
+    - Escuro: #AFEC4A
 
-    Page
-        - Rosa: ff006e
+- Azul
+    - Claro: #72AFF7
+    - Escuro: #3E6AF5
 
-    Footer
-        - Azul: 3a86ff
+- Vermelho
+    - Claro: #EF8A86
+    - Escuro: #EA5049
+
+- Amarelo
+    - Claro: #F6CD6F
+    - Escuro: #F2B13E
+
+- Roxo
+    - Claro: #C08FF2
+    - Escuro: #921CF5
+
+- Verde 2
+    - Claro: #85E7C7
+    - Escuro: #71E4B9
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
