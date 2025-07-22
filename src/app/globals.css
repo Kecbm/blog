@@ -36,6 +36,12 @@
   --about-highlight-hover-light: #39cea2;
   --about-highlight-decoration-dark: #71E4B9;
   --about-highlight-hover-dark: #85E7C7;
+
+  /* Not Found Page Highlight Colors */
+  --notfound-highlight-decoration-light: #2a67e6;
+  --notfound-highlight-hover-light: #2a67e6;
+  --notfound-highlight-decoration-dark: #3E6AF5;
+  --notfound-highlight-hover-dark: #3E6AF5;
 }
 
 @layer components {
@@ -183,6 +189,25 @@
 
   .dark .about-highlight:hover {
     color: var(--about-highlight-hover-dark);
+  }
+
+  /* Not Found Page Components */
+  .notfound-highlight {
+    @apply underline underline-offset-4 transition-all;
+    text-decoration-color: var(--notfound-highlight-decoration-light);
+  }
+
+  .notfound-highlight:hover {
+    color: var(--notfound-highlight-hover-light);
+    font-weight: bold;
+  }
+
+  .dark .notfound-highlight {
+    text-decoration-color: var(--notfound-highlight-decoration-dark);
+  }
+
+  .dark .notfound-highlight:hover {
+    color: var(--notfound-highlight-hover-dark);
   }
 }
 
