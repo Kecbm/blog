@@ -57,8 +57,6 @@ About
             - Claro: #85E7C7
             - Escuro: #71E4B9
 
-TODO:
-
 PS3
     - Azul
         **Light Theme**
