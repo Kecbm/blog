@@ -9,6 +9,8 @@
 
 # Pallete of collors
 
+TODO: Pegar cores mais escurar pro light mode
+
 **Light Theme**
     - Verde: #68a60a
     - Hover: #88d012
