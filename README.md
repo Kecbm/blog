@@ -5,6 +5,7 @@
     - Liquid Glass: https://github.com/rdev/liquid-glass-react
     - Backgroud Mac Book themes
     - Metalic: https://github.com/zarifpour/liquid-image
+- Meu CV atualizado
 
 # Pallete of collors
 
