@@ -1,5 +1,15 @@
 import Image from "next/image";
-import FloatingHearts from "../../components/FloatingHearts";
+import FloatingIcons from "../../components/FloatingIcons";
+import { Heart } from "lucide-react";
+
+// Ícones de coração para a página pets
+const heartIcons = [
+  <Heart
+    key="heart"
+    className="text-[#9142db] fill-[#9142db] dark:text-[#921CF5] dark:fill-[#921CF5]"
+    size={24}
+  />
+];
 
 interface Pet {
   name: string;
@@ -57,7 +67,7 @@ function PetCard({ name, imageUrl }: Pet) {
 export default function PetsPage() {
   return (
     <>
-      <FloatingHearts />
+      <FloatingIcons icons={heartIcons} interval={600} />
       <div className="relative">
         <h1 className="mb-16 mt-4 text-center text-5xl max-sm:text-4xl">
           My Pets

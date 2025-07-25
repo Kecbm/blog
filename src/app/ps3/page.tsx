@@ -1,4 +1,6 @@
 import Image from "next/image";
+import FloatingIcons from "../../components/FloatingIcons";
+import { PlayStationIcons } from "../../components/PlayStationIcons";
 
 interface PS3Game {
   name: string;
@@ -37,13 +39,16 @@ function PS3GameCard({ name, imageUrl }: PS3Game) {
 export default function PS3Page() {
   return (
     <>
-      <h1 className="mb-16 mt-4 text-center text-5xl max-sm:text-4xl">
-        PS3
-      </h1>
-      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-6">
-        {ps3Games.map((game) => (
-          <PS3GameCard key={game.name} {...game} />
-        ))}
+      <FloatingIcons icons={PlayStationIcons} interval={700} />
+      <div className="relative">
+        <h1 className="mb-16 mt-4 text-center text-5xl max-sm:text-4xl">
+          PS3
+        </h1>
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-6">
+          {ps3Games.map((game) => (
+            <PS3GameCard key={game.name} {...game} />
+          ))}
+        </div>
       </div>
     </>
   );
