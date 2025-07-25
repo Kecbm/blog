@@ -42,7 +42,7 @@ export default function AboutPage() {
             Full Stack Web Development Bootcamp at Trybe{" "}
           </a>in the{" "}
           <a
-            href=""
+            href="https://www.infomoney.com.br/patrocinados/xp-investimentos/xp-inc-vai-formar-300-pessoas-em-curso-de-programacao-da-trybe/"
             className="about-highlight"
           >
             XP Class
@@ -90,7 +90,7 @@ export default function AboutPage() {
         <p>
           My most impactful article documents everything that helped me quickly{" "}
           <a
-            href="https://dev.to/kecbm"
+            href="https://dev.to/kecbm/de-volta-ao-codigo-como-conquistei-minha-realocacao-no-mercado-de-tecnologia-4n5n"
             className="about-highlight"
           >
             get back into the tech market after the layoff
