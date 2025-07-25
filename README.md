@@ -6,83 +6,76 @@
     - Backgroud Mac Book themes
     - Metalic: https://github.com/zarifpour/liquid-image
 - Meu CV atualizado
-- Pets: coracoes
-- PS3: icons do controle
-- Página de experiência profissional
-    Professional Performance
-    - 🎓 Mid Level Full Stack Developer - Eduzz (10/2024 - 05/2025)
-    - ⚡ Full Stack Developer - BR24 (05/2023 - 10/2024)
-    - 🏦 Software Engineer 1 - XP Inc. (09/2022 - 03/2023)
 
 # Pallete of collors
 
 TODO: Pegar cores mais escurar pro light mode
 
 **Light Theme**
-    - Verde: #68a60a
-    - Hover: #88d012
+    - Verde: #68a60a > 
+    - Hover: #88d012 > 
 
 **Dark Theme**
     - Verde: #B1EC4A
     - Hover: #C4FC55
 
 - Cinza
-    - Claro: #C6D0E9
-    - Escuro: #A5B1CA
+    - #C6D0E9
+    - hover: #A5B1CA
 
 Home
     - Vermelho
         **Light Theme**
-            - Claro: #e25751
-            - Escuro: #ce3a34
+            - #e25751
+            - hover: #ce3a34
         **Dark Theme**
-            - Claro: #EF8A86
-            - Escuro: #EA5049
+            - #EF8A86
+            - hover: #EA5049
 
 Projects
     - Amarelo
         **Light Theme**
-            - Claro: #f2ad2d
-            - Escuro: #eb8c15
+            - #f2ad2d
+            - hover: #eb8c15
         **Dark Theme**
-            - Claro: #F6CD6F
-            - Escuro: #F2B13E
+            - #F6CD6F
+            - hover: #F2B13E
 
 Articles
     - Verde
         **Light Theme**
-            - Claro: #6ca20e
-            - Escuro: #527b10
+            - #6ca20e
+            - hover: #527b10
         **Dark Theme**
-            - Claro: #CDF37B
-            - Escuro: #AFEC4A
+            - #CDF37B
+            - hover: #AFEC4A
 
 About
     - Verde 2
         **Light Theme**
-            - Claro: #39cea2
-            - Escuro: #15b48a
+            - #39cea2
+            - hover: #15b48a
         **Dark Theme**
-            - Claro: #85E7C7
-            - Escuro: #71E4B9
+            - #85E7C7
+            - hover: #71E4B9
 
 PS3
     - Azul
         **Light Theme**
-        - Claro: #4085f1
-        - Escuro: #2a67e6
+        - #4085f1
+        - hover: #2a67e6
         **Dark Theme**
-        - Claro: #72AFF7
-        - Escuro: #3E6AF5
+        - #72AFF7
+        - hover: #3E6AF5
 
 Pets
     - Roxo
         **Light Theme**
-        - Claro: #a763e9
-        - Escuro: #9142db
+        - #a763e9
+        - hover: #9142db
         **Dark Theme**
-        - Claro: #C08FF2
-        - Escuro: #921CF5
+        - #C08FF2
+        - hover: #921CF5
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
