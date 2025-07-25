@@ -6,6 +6,7 @@
     - Backgroud Mac Book themes
     - Metalic: https://github.com/zarifpour/liquid-image
 - Meu CV atualizado
+- Dados de visitacao na Vercel
 
 # Pallete of collors
 
