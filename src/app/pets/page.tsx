@@ -1,4 +1,5 @@
 import Image from "next/image";
+import FloatingHearts from "../../components/FloatingHearts";
 
 interface Pet {
   name: string;
@@ -56,13 +57,16 @@ function PetCard({ name, imageUrl }: Pet) {
 export default function PetsPage() {
   return (
     <>
-      <h1 className="mb-16 mt-4 text-center text-5xl max-sm:text-4xl">
-        My Pets
-      </h1>
-      <div className="grid grid-cols-1 gap-8">
-        {pets.map((pet) => (
-          <PetCard key={pet.name} {...pet} />
-        ))}
+      <FloatingHearts />
+      <div className="relative">
+        <h1 className="mb-16 mt-4 text-center text-5xl max-sm:text-4xl">
+          My Pets
+        </h1>
+        <div className="grid grid-cols-1 gap-8">
+          {pets.map((pet) => (
+            <PetCard key={pet.name} {...pet} />
+          ))}
+        </div>
       </div>
     </>
   );
