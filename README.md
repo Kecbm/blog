@@ -6,6 +6,13 @@
     - Backgroud Mac Book themes
     - Metalic: https://github.com/zarifpour/liquid-image
 - Meu CV atualizado
+- Pets: coracoes
+- PS3: icons do controle
+- Página de experiência profissional
+    Professional Performance
+    - 🎓 Mid Level Full Stack Developer - Eduzz (10/2024 - 05/2025)
+    - ⚡ Full Stack Developer - BR24 (05/2023 - 10/2024)
+    - 🏦 Software Engineer 1 - XP Inc. (09/2022 - 03/2023)
 
 # Pallete of collors
 
