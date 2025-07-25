@@ -8,6 +8,8 @@
 - Meu CV atualizado
 - Dados de visitacao na Vercel
 
+- Url Vercel: kecbm.vercel.app
+
 # Pallete of collors
 
 TODO: Pegar cores mais escurar pro light mode
