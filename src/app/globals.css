@@ -46,7 +46,7 @@
 
 @layer components {
   .nav-link-base {
-    @apply relative rounded px-2 py-px text-[#68a60a] transition-all sm:hover:bg-[#88d012] sm:hover:text-white sm:hover:font-bold dark:text-[#B1EC4A] dark:sm:hover:text-zinc-900 dark:sm:hover:bg-[#C4FC55];
+    @apply relative rounded px-2 py-px text-[#68a60a] transition-all sm:hover:bg-[#88d012] sm:hover:text-white sm:hover:font-bold dark:text-[#B1EC4A] dark:sm:hover:text-[#161D2A] dark:sm:hover:bg-[#C4FC55];
   }
 
   .nav-triangle {
@@ -214,7 +214,7 @@
 @layer base {
   html,
   body {
-    @apply min-h-screen bg-zinc-50 text-zinc-800 dark:bg-zinc-900 dark:text-zinc-200;
+    @apply min-h-screen bg-zinc-50 text-zinc-800 dark:bg-[#161D2A] dark:text-zinc-200;
   }
 
   article p {

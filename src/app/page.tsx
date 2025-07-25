@@ -82,7 +82,7 @@ export default function HomePage() {
           <a
             href="/luke-berry-cv.pdf"
             download="Luke-Berry-CV.pdf"
-            className="flex flex-row items-center justify-center gap-3 rounded bg-[#68a60a]/10 p-4 text-[#68a60a] ring-1 ring-[#68a60a] transition-all hover:bg-[#88d012] hover:ring-transparent hover:text-white dark:bg-transparent dark:text-[#B1EC4A] dark:ring-[#B1EC4A] dark:hover:bg-[#C4FC55] dark:hover:text-zinc-900"
+            className="flex flex-row items-center justify-center gap-3 rounded bg-[#68a60a]/10 p-4 text-[#68a60a] ring-1 ring-[#68a60a] transition-all hover:bg-[#88d012] hover:ring-transparent hover:text-white dark:bg-transparent dark:text-[#B1EC4A] dark:ring-[#B1EC4A] dark:hover:bg-[#C4FC55] dark:hover:text-[#161D2A]"
           >
             <span className="text-nowrap">Download my CV</span>
             <Download strokeWidth={1.4} className="size-5 max-sm:hidden" />
