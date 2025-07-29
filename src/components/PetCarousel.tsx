@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -11,6 +11,10 @@ interface PetCarouselProps {
 
 export default function PetCarousel({ name, images }: PetCarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
+  const startX = useRef(0);
+  const currentX = useRef(0);
+  const threshold = 50; // Distância mínima para considerar um swipe
 
   const nextImage = () => {
     setCurrentIndex((prev) => (prev + 1) % images.length);
@@ -24,19 +28,51 @@ export default function PetCarousel({ name, images }: PetCarouselProps) {
     setCurrentIndex(index);
   };
 
+  // Handlers para touch (mobile/tablet)
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setIsDragging(true);
+    startX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (!isDragging) return;
+    currentX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    if (!isDragging) return;
+    setIsDragging(false);
+
+    const diffX = startX.current - currentX.current;
+
+    if (Math.abs(diffX) > threshold) {
+      if (diffX > 0) {
+        nextImage(); // Swipe para esquerda = próxima imagem
+      } else {
+        prevImage(); // Swipe para direita = imagem anterior
+      }
+    }
+  };
+
   return (
     <div className="flex flex-col overflow-hidden rounded ring-1 ring-zinc-400 dark:ring-zinc-500">
       <div className="p-4">
         <h3 className="text-lg font-semibold">{name}</h3>
       </div>
       
-      <div className="relative group">
+      <div
+        className="relative group select-none"
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+      >
         <Image
           src={images[currentIndex]}
           width={620}
           height={324}
           alt={`Photo ${currentIndex + 1} of ${name}`}
-          className="aspect-video object-cover"
+          className="aspect-video object-cover pointer-events-none"
+          draggable={false}
         />
         
         {/* Seta esquerda */}
