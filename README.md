@@ -7,6 +7,8 @@
     - Metalic: https://github.com/zarifpour/liquid-image
 - Meu CV atualizado
 - Dados de visitacao na Vercel
+- Página de livros
+- Tag completed e in progress nos cards de livros e games
 
 - Url Vercel: kecbm.vercel.app
 
