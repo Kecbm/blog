@@ -9,6 +9,8 @@
 - Dados de visitacao na Vercel
 - Página de livros
 - Tag completed e in progress nos cards de livros e games
+- Página de livros com card da foto do livro, se clicar nele leva pra página com foto da capa, titulo, autor e trecho que eu destaquei
+- Página de not found e about com referência a página de livros
 
 - Url Vercel: kecbm.vercel.app
 
