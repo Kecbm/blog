@@ -127,7 +127,13 @@ export default function AboutPage() {
             className="about-highlight"
           >
             gym
-          </a>, and maintaining a daily reading habit.
+          </a>, and maintaining a daily{" "}
+          <a
+            href="https://www.strava.com/athletes/kecbm"
+            className="about-highlight"
+          >
+            reading
+          </a> habit.
         </p>
         <p>
           If you want to get in touch, send me a DM on{" "}
