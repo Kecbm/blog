@@ -1,4 +1,4 @@
-import { Check, Clock, Pause } from "lucide-react";
+import { Check, Clock, Hourglass } from "lucide-react";
 
 interface StatusBadgeProps {
   status: "in-progress" | "done" | "pending";
@@ -27,7 +27,7 @@ export default function StatusBadge({ status, inProgressLabel = "Playing" }: Sta
   if (status === "pending") {
     return (
       <div className="absolute top-3 right-3 flex items-center gap-1.5 bg-[#7f87ac]/80 dark:bg-[#A5B1CA]/80 text-white px-2.5 py-1.5 rounded-full text-xs font-bold shadow-lg transition-colors text-[#2c2e3a] dark:text-[#2c2e3a]">
-        <Pause size={14}/>
+        <Hourglass size={14}/>
         <span>Pending</span>
       </div>
     );
