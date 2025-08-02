@@ -44,7 +44,7 @@ const ps3Games: PS3Game[] = [
 
 function PS3GameCard({ name, imageUrl, status }: PS3Game) {
   return (
-    <div className="flex flex-col overflow-hidden rounded ring-1 ring-zinc-400 dark:ring-zinc-500 h-[324px] w-[281px] relative">
+    <div className="flex flex-col overflow-hidden rounded dark:ring-zinc-500 h-[324px] w-[281px] relative">
       <Image
         src={imageUrl}
         width={310}
