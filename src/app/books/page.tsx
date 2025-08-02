@@ -72,7 +72,7 @@ export default function BooksPage() {
         <h1 className="mb-16 mt-4 text-center text-5xl max-sm:text-4xl">
           Books
         </h1>
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-6">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-6 justify-items-center">
           {books.map((book) => (
             <BookCard key={book.name} {...book} />
           ))}
