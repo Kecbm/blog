@@ -65,7 +65,7 @@ export default function PS3Page() {
         <h1 className="mb-16 mt-4 text-center text-5xl max-sm:text-4xl">
           PS3
         </h1>
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-6">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-6 justify-items-center">
           {ps3Games.map((game) => (
             <PS3GameCard key={game.name} {...game} />
           ))}
