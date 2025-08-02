@@ -129,7 +129,7 @@ export default function AboutPage() {
             gym
           </a>, and maintaining a daily{" "}
           <a
-            href="https://www.strava.com/athletes/kecbm"
+            href="/books"
             className="about-highlight"
           >
             reading
