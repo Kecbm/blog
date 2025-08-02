@@ -7,11 +7,8 @@
     - Metalic: https://github.com/zarifpour/liquid-image
 - Meu CV atualizado
 - Dados de visitacao na Vercel
-- Tag completed e in progress nos cards de livros e games
 - Página de livros (apenas livros de programacao)
-    - Tag completed e in progress (in progress a foto aparece preto e branco)
-    - Para livros completed: com card da foto do livro, se clicar nele leva pra página com foto da capa, titulo, autor e trecho que eu destaquei
-- Página de not found e about com referência a página de livros
+   - Para livros completed: com card da foto do livro, se clicar nele leva pra página com foto da capa, titulo, autor e trecho que eu destaquei
 
 - Url Vercel: kecbm.vercel.app
 
@@ -28,9 +25,13 @@ TODO: Pegar cores mais escurar pro light mode
     - Hover: #C4FC55
 
 - Cinza
-    - #C6D0E9
-    - hover: #A5B1CA
-
+    **Light Theme**
+        - #7f87ac
+        - hover: #95a0bf
+    **Dark Theme**
+        - #A5B1CA
+        - hover: #C6D0E9
+        
 Home
     - Vermelho
         **Light Theme**
@@ -41,7 +42,7 @@ Home
             - hover: #EA5049
 
 Projects
-    - Amarelo
+    - Laranja
         **Light Theme**
             - #f2ad2d
             - hover: #eb8c15
@@ -84,6 +85,15 @@ Pets
         **Dark Theme**
         - #C08FF2
         - hover: #921CF5
+
+
+Amarelo
+    **Light Theme**
+    - #c59009
+    - hover: #f1c40f
+    **Dark Theme**
+    - #eca414
+    - hover: #f3c22c
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
