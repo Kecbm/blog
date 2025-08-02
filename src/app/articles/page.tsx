@@ -3,14 +3,18 @@ import { ArrowUpRight } from "lucide-react";
 
 // Para mais artigos acesse meu perfil no Dev.to
 
-function truncateTitle(title: string): { truncated: string; isLong: boolean } {
-  const MAX_LENGTH = 33;
+function truncateTitle(title: string, tags: string[]): { truncated: string; isLong: boolean } {
+  const tagsString = tags.map(tag => `#${tag}`).join(' ');
+  const tagsLength = tagsString.length;
 
-  if (title.length <= MAX_LENGTH) {
+  const MAX_TOTAL_LENGTH = 67;
+  const MAX_TITLE_LENGTH = MAX_TOTAL_LENGTH - tagsLength;
+
+  if (title.length <= MAX_TITLE_LENGTH) {
     return { truncated: title, isLong: false };
   }
 
-  const truncated = title.substring(0, MAX_LENGTH - 3) + "...";
+  const truncated = title.substring(0, MAX_TITLE_LENGTH - 3) + "...";
   return { truncated, isLong: true };
 }
 
@@ -33,7 +37,7 @@ export default async function ArticlesPage() {
           >
             <div className="flex gap-1 gap-x-2 max-sm:flex-col sm:items-center">
               {(() => {
-                const { truncated, isLong } = truncateTitle(article.title);
+                const { truncated, isLong } = truncateTitle(article.title, article.tags || []);
                 return isLong ? (
                   <span title={article.title} className="cursor-help">
                     {truncated}
