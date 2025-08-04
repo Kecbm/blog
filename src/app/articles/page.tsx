@@ -61,7 +61,7 @@ export default async function ArticlesPage() {
       </section>
 
       <p className="mt-8 text-center text-zinc-600 dark:text-zinc-400">
-        You'll find more of my articles on{" "}
+        You&apos;ll find more of my articles on{" "}
         <a
           href="https://dev.to/kecbm"
           className="underline underline-offset-4 transition-all hover:text-[#6ca20e] hover:font-bold decoration-[#6ca20e] dark:hover:text-[#CDF37B] dark:decoration-[#CDF37B]"
