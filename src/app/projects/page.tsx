@@ -104,6 +104,15 @@ export default function ProjectsPage() {
           <ProjectCard key={project.url} {...project} />
         ))}
       </div>
+      <p className="mt-8 text-center text-zinc-600 dark:text-zinc-400">
+        You&apos;ll find more of my projects on{" "}
+        <a
+          href="https://github.com/Kecbm"
+          className="underline underline-offset-4 transition-all hover:text-[#eb8c15] hover:font-bold decoration-[#eb8c15] dark:hover:text-[#F2B13E] dark:decoration-[#F2B13E]"
+        >
+          my GitHub profile
+        </a>, take a look!
+      </p>
     </>
   );
 }
