@@ -40,6 +40,26 @@ const ps3Games: PS3Game[] = [
     imageUrl: "https://m.media-amazon.com/images/I/71FVWhz78fL._UF894,1000_QL80_.jpg",
     status: "pending",
   },
+  {
+    name: "Red Dead Redemption",
+    imageUrl: "https://m.media-amazon.com/images/I/81bcTFXk-rL._UF894,1000_QL80_.jpg",
+    status: "pending",
+  },
+  {
+    name: "Farcry 3",
+    imageUrl: "https://m.media-amazon.com/images/I/71Shzi3bePL.jpg",
+    status: "pending",
+  },
+  {
+    name: "CSGO",
+    imageUrl: "https://m.media-amazon.com/images/I/81L8-mjNlrL._UF1000,1000_QL80_.jpg",
+    status: "pending",
+  },
+  {
+    name: "Batman Arkam City",
+    imageUrl: "https://m.media-amazon.com/images/I/81AvE75JPsL._UF894,1000_QL80_.jpg",
+    status: "pending",
+  },
 ];
 
 function PS3GameCard({ name, imageUrl, status }: PS3Game) {
