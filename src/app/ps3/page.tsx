@@ -46,8 +46,8 @@ const ps3Games: PS3Game[] = [
     status: "pending",
   },
   {
-    name: "Farcry 3",
-    imageUrl: "https://m.media-amazon.com/images/I/71Shzi3bePL.jpg",
+    name: "Killzone 3",
+    imageUrl: "https://m.media-amazon.com/images/I/71MNXLe0fAL._UF894,1000_QL80_.jpg",
     status: "pending",
   },
   {
