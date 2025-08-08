@@ -1,11 +1,9 @@
 import {
   SiGithub,
   SiLinkedin,
-  SiYoutube,
+  SiDevdotto,
 } from "@icons-pack/react-simple-icons";
 import { ArrowUpRight, Copy, Download, Send } from "lucide-react";
-import Link from "next/link";
-import { ReactNode } from "react";
 import ExternalLinkComponent from "@/src/components/ExternalLink";
 
 const XLogo = ({ className = "" }: { className?: string }) => {
@@ -42,6 +40,13 @@ const externalLinksData = [
     url: "https://x.com/kecbm",
     icon: <XLogo />,
     iconType: 'twitter' as const,
+  },
+  {
+    name: "Dev.to",
+    description: "decode my ideas",
+    url: "https://dev.to/kecbm",
+    icon: <SiDevdotto />,
+    iconType: 'dev.to' as const,
   }
 ];
 

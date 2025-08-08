@@ -6,7 +6,7 @@ interface ExternalLinkProps {
   description?: string;
   url: string;
   icon?: ReactNode;
-  iconType?: 'linkedin' | 'github' | 'twitter';
+  iconType?: 'linkedin' | 'github' | 'twitter' | 'dev.to';
 }
 
 export default function ExternalLink({ 
