@@ -9,6 +9,10 @@
 - Dados de visitacao na Vercel
 - Página de livros (apenas livros de programacao)
    - Para livros completed: com card da foto do livro e link para o repositótio no GitHub, se houver. Se clicar nele leva pra página com foto da capa, titulo, autor, trecho que eu destaquei e repositorio
+- Esteira de deploy no repositório
+    - Commit direto na main bloqueado: https://lucasmarques.dev/protegendo-sua-branch-principal-de-commits-diretos
+    - Pull request pra main: 
+    - Antes de auto aprovar o PR, verificar se o lint passa: 
 
 - Url Vercel: kecbm.vercel.app
 
