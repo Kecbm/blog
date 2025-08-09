@@ -19,6 +19,8 @@ interface Project {
 
 // Prompt para gerar as imagens
 
+// Testar geracao de GIF com elementos animados
+
   // Crie uma imagem no formato 16:9 para ilustrar um site sobre o jogo 'Trivia', inspirado em programas de perguntas e respostas no estilo 'Who Wants to Be a Millionaire'. A cena deve incluir o título 'Trivia' em destaque e elementos visuais que remetam a um quiz show (como perguntas, botões de múltipla escolha, luzes e um palco). A estética deve ser inspirada no estilo de animacao 3d, com cores vibrantes, cenários, mantendo um visual divertido e atraente para portfólio
 
   // Crie uma imagem no formato 16:9 para ilustrar um site chamado 'Car Shop', voltado para a gestão e venda de veículos em uma concessionária. A cena deve incluir o título 'Car Shop' em destaque e elementos visuais que representem um showroom de carros (como automóveis brilhantes, prateleiras de catálogos, balcão de atendimento e placas de preços). A estética deve ser inspirada no estilo de animacao 3d, com cores vibrantes, cenários, transmitindo um visual divertido e chamativo para portfólio
