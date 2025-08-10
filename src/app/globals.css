@@ -236,6 +236,17 @@
     @apply min-h-screen bg-zinc-50 text-zinc-800 dark:bg-[#161D2A] dark:text-zinc-200;
   }
 
+  /* Text Selection Colors */
+  ::selection {
+    background-color: #68a60a;
+    color: white;
+  }
+
+  .dark ::selection {
+    background-color: #B1EC4A;
+    color: #161D2A;
+  }
+
   article p {
     @apply leading-relaxed text-zinc-600 dark:text-zinc-300/80;
   }
