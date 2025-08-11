@@ -21,6 +21,11 @@ const ps3Games: PS3Game[] = [
     status: "in-progress",
   },
   {
+    name: "CSGO",
+    imageUrl: "https://m.media-amazon.com/images/I/81L8-mjNlrL._UF1000,1000_QL80_.jpg",
+    status: "in-progress",
+  },
+  {
     name: "FIFA 19",
     imageUrl: "https://m.media-amazon.com/images/I/813OLtvhFaL.jpg",
     status: "in-progress",
@@ -48,11 +53,6 @@ const ps3Games: PS3Game[] = [
   {
     name: "Killzone 3",
     imageUrl: "https://m.media-amazon.com/images/I/71MNXLe0fAL._UF894,1000_QL80_.jpg",
-    status: "pending",
-  },
-  {
-    name: "CSGO",
-    imageUrl: "https://m.media-amazon.com/images/I/81L8-mjNlrL._UF1000,1000_QL80_.jpg",
     status: "pending",
   },
   {
