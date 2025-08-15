@@ -36,9 +36,14 @@ function FilterButton({ children, isActive, onClick }: FilterButtonProps) {
 
 const books: Book[] = [
   {
+    name: "Django 5 By Example",
+    imageUrl: "https://m.media-amazon.com/images/I/81vUrx78p9L.jpg",
+    status: "in-progress",
+  },
+  {
     name: "Python e Django",
     imageUrl: "https://m.media-amazon.com/images/I/81RvLKtdlrL._UF894,1000_QL80_.jpg",
-    status: "in-progress",
+    status: "pending",
   },
   {
     name: "Fluent React",
