@@ -101,7 +101,7 @@ export default function PetCarousel({ name, images }: PetCarouselProps) {
               onClick={() => goToImage(index)}
               className={`w-3 h-3 rounded-full transition-colors ${
                 index === currentIndex
-                  ? "bg-[#9143da] dark:bg-[#921CF5]"
+                  ? "bg-[#9143da] dark:bg-[#c37cff]"
                   : "bg-white/50 hover:bg-white/70"
               }`}
               aria-label={`Go to image ${index + 1}`}
