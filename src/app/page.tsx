@@ -74,12 +74,12 @@ export default function HomePage() {
                 href="mailto:kleciannymelo@gmail.com"
                 className="group text-zinc-800 dark:text-zinc-200"
               >
-                <Send strokeWidth={1.4} className="size-4 transition-all group-hover:text-[#68a60a] dark:group-hover:text-[#C4FC55]" />
+                <Send strokeWidth={1.4} className="size-4 transition-all group-hover:text-[#68a60a] dark:group-hover:text-[#acf328]" />
               </a>
             </div>
           </div>
-          <span className="-mt-2 inline-flex w-fit items-center gap-1 rounded-full bg-[#68a60a]/10 px-2 py-0.5 text-sm text-[#4f7e0d] ring-1 ring-[#4f7e0d] dark:bg-transparent dark:text-[#B1EC4A] dark:ring-[#B1EC4A]">
-            <div className="size-2 animate-pulse rounded-full bg-[#4f7e0d] dark:bg-[#B1EC4A]" />
+          <span className="-mt-2 inline-flex w-fit items-center gap-1 rounded-full bg-[#68a60a]/10 px-2 py-0.5 text-sm text-[#4f7e0d] ring-1 ring-[#4f7e0d] dark:bg-transparent dark:text-[#8dd909] dark:ring-[#8dd909]">
+            <div className="size-2 animate-pulse rounded-full bg-[#4f7e0d] dark:bg-[#8dd909]" />
             Online
           </span>
         </div>
@@ -87,7 +87,7 @@ export default function HomePage() {
           <a
             href="/luke-berry-cv.pdf"
             download="Luke-Berry-CV.pdf"
-            className="flex flex-row items-center justify-center gap-3 rounded bg-[#4f7e0d]/10 p-4 text-[#4f7e0d] ring-1 ring-[#4f7e0d] transition-all hover:bg-[#68a60a] hover:ring-transparent hover:text-white dark:bg-transparent dark:text-[#B1EC4A] dark:ring-[#B1EC4A] dark:hover:bg-[#C4FC55] dark:hover:text-[#161D2A]"
+            className="flex flex-row items-center justify-center gap-3 rounded bg-[#4f7e0d]/10 p-4 text-[#4f7e0d] ring-1 ring-[#4f7e0d] transition-all hover:bg-[#68a60a] hover:ring-transparent hover:text-white dark:bg-transparent dark:text-[#8dd909] dark:ring-[#8dd909] dark:hover:bg-[#acf328] dark:hover:text-[#161D2A]"
           >
             <span className="text-nowrap">Download my CV</span>
             <Download strokeWidth={1.4} className="size-5 max-sm:hidden" />
