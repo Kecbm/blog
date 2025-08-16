@@ -25,7 +25,7 @@ function FilterButton({ children, isActive, onClick }: FilterButtonProps) {
       onClick={onClick}
       className={`w-full text-left transition-all hover:opacity-80 h-7 py-0 flex items-center justify-start pl-3 rounded-full px-2.5 text-sm ${
         isActive
-          ? "bg-[#88d012] text-white font-bold dark:bg-[#C4FC55] dark:text-[#161D2A]"
+          ? "bg-[#68a60a] text-white font-bold dark:bg-[#C4FC55] dark:text-[#161D2A]"
           : "border border-[#68a60a] text-[#68a60a] bg-[#fafafa] dark:border-[#B1EC4A] dark:text-[#B1EC4A] dark:bg-[#161D2A]"
       }`}
     >
@@ -151,7 +151,7 @@ export default function BooksPage() {
           <div className="relative" ref={dropdownRef}>
             <button
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-              className="flex items-center justify-between transition-all h-7 bg-[#88d012] text-white font-bold dark:bg-[#C4FC55] dark:text-[#161D2A] w-[140px] pl-3 pr-3 rounded-full px-2.5 py-0.5 text-sm"
+              className="flex items-center justify-between transition-all h-7 bg-[#68a60a] text-white font-bold dark:bg-[#C4FC55] dark:text-[#161D2A] w-[140px] pl-3 pr-3 rounded-full px-2.5 py-0.5 text-sm"
             >
               <div className="flex items-center gap-2">
                 {activeFilterOption?.icon}
