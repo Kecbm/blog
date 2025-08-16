@@ -19,15 +19,12 @@
 
 # Pallete of collors
 
-TODO: Pegar cores mais escurar pro light mode
-
 **Light Theme**
-    - Verde: #68a60a > 
-    - Hover: #88d012 > 
-
+    - Verde: #68a60a > #4f7e0d
+    - Hover: #88d012 > #68a60a
 **Dark Theme**
-    - Verde: #B1EC4A
-    - Hover: #C4FC55
+    - Verde: #B1EC4A > #8dd909
+    - Hover: #C4FC55 > #acf328
 
 - Cinza
     **Light Theme**
@@ -36,60 +33,60 @@ TODO: Pegar cores mais escurar pro light mode
     **Dark Theme**
         - #A5B1CA
         - hover: #C6D0E9
-        
+
 Home
     - Vermelho
         **Light Theme**
-            - #e25751
+            - #ad2e28
             - hover: #ce3a34
         **Dark Theme**
-            - #EF8A86
-            - hover: #EA5049
+            - #EF8A86 > #ea5049
+            - hover: #EA5049 > #f47b75
 
 Projects
     - Laranja
         **Light Theme**
-            - #f2ad2d
-            - hover: #eb8c15
+            - #f2ad2d > #ad4910
+            - hover: #eb8c15 > #d0680f
         **Dark Theme**
-            - #F6CD6F
-            - hover: #F2B13E
+            - #F6CD6F > #de8414
+            - hover: #F2B13E > #ee9c21
 
 Articles
     - Verde
         **Light Theme**
-            - #6ca20e
-            - hover: #527b10
+            - #6ca20e > #527b10
+            - hover: #527b10 > #6ca20e
         **Dark Theme**
-            - #CDF37B
-            - hover: #AFEC4A
+            - #CDF37B > #85d012
+            - hover: #AFEC4A > #afec4a
 
 About
     - Verde 2
         **Light Theme**
-            - #39cea2
-            - hover: #15b48a
+            - #39cea2 > #08745d
+            - hover: #15b48a > #0a9170
         **Dark Theme**
-            - #85E7C7
-            - hover: #71E4B9
+            - #85E7C7 > #14b584
+            - hover: #71E4B9 > #38cf9b
 
-PS3
+Not found
     - Azul
         **Light Theme**
-        - #4085f1
-        - hover: #2a67e6
+        - #4085f1 > #2252d3
+        - hover: #2a67e6 > #2a67e6
         **Dark Theme**
-        - #72AFF7
-        - hover: #3E6AF5
+        - #72AFF7 > #3e6af5
+        - hover: #3E6AF5 > #6190f9
 
 Pets
     - Roxo
         **Light Theme**
-        - #a763e9
-        - hover: #9142db
+        - #a763e9 > #7c31bf
+        - hover: #9142db > #9143da
         **Dark Theme**
-        - #C08FF2
-        - hover: #921CF5
+        - #C08FF2 > #ab4bff
+        - hover: #921CF5 > #c37cff
 
 
 Amarelo
