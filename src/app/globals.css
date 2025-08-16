@@ -14,43 +14,88 @@
   --sh-comment: #64748b; /* slate-500 */
 
   /* External Links Theme Colors */
-  --external-link-text-light: #e25751;
-  --external-link-text-dark: #EF8A86;
+  --external-link-text-light: #ad2e28;
   --external-link-hover-light: #ce3a34;
-  --external-link-hover-dark: #EA5049;
   --external-link-bg-hover-light: #ce3a34;
+
+  --external-link-text-dark: #EF8A86;
+  --external-link-hover-dark: #EA5049;
   --external-link-bg-hover-dark: #EA5049;
 
   /* Projects Theme Colors */
-  --project-tag-bg-light: #eb8c15;
+  --project-tag-bg-light: #ad4910;
   --project-tag-text-light: #ffffff;
+  --project-button-text-light: #ad4910;
+  --project-button-hover-light: #d0680f;
+
   --project-tag-text-dark: #F2B13E;
   --project-tag-ring-dark: #F2B13E;
-  --project-button-text-light: #eb8c15;
   --project-button-text-dark: #F2B13E;
-  --project-button-hover-light: #f2ad2d;
   --project-button-hover-dark: #F6CD6F;
 
   /* About Page Highlight Colors */
-  --about-highlight-decoration-light: #15b48a;
-  --about-highlight-hover-light: #39cea2;
+  --about-highlight-decoration-light: #0a9170;
+  --about-highlight-hover-light: #0a9170;
+
   --about-highlight-decoration-dark: #71E4B9;
   --about-highlight-hover-dark: #85E7C7;
 
   /* Not Found Page Highlight Colors */
   --notfound-highlight-decoration-light: #2a67e6;
   --notfound-highlight-hover-light: #2a67e6;
+
   --notfound-highlight-decoration-dark: #3E6AF5;
   --notfound-highlight-hover-dark: #3E6AF5;
+
+  /* Header Theme Colors */
+  --header-logo-text-light: #4f7e0d;
+  --header-nav-text-light: #4f7e0d;
+  --header-nav-hover-bg-light: #68a60a;
+  --header-nav-hover-text-light: white;
+  --header-triangle-fill-light: #4f7e0d;
+
+  --header-logo-text-dark: #B1EC4A;
+  --header-nav-text-dark: #B1EC4A;
+  --header-nav-hover-bg-dark: #C4FC55;
+  --header-nav-hover-text-dark: #161D2A;
+  --header-triangle-fill-dark: #B1EC4A;
 }
 
 @layer components {
+  .header-logo {
+    color: var(--header-logo-text-light);
+  }
+
+  .dark .header-logo {
+    color: var(--header-logo-text-dark);
+  }
+
   .nav-link-base {
-    @apply relative rounded px-2 py-px text-[#68a60a] transition-all sm:hover:bg-[#88d012] sm:hover:text-white sm:hover:font-bold dark:text-[#B1EC4A] dark:sm:hover:text-[#161D2A] dark:sm:hover:bg-[#C4FC55];
+    @apply relative rounded px-2 py-px transition-all sm:hover:font-bold;
+    color: var(--header-nav-text-light);
+  }
+
+  .nav-link-base:hover {
+    background-color: var(--header-nav-hover-bg-light);
+    color: var(--header-nav-hover-text-light);
+  }
+
+  .dark .nav-link-base {
+    color: var(--header-nav-text-dark);
+  }
+
+  .dark .nav-link-base:hover {
+    background-color: var(--header-nav-hover-bg-dark);
+    color: var(--header-nav-hover-text-dark);
   }
 
   .nav-triangle {
-    @apply absolute left-1/2 mt-1 hidden size-2 fill-[#68a60a] text-transparent group-aria-[current=page]:block dark:fill-[#B1EC4A] dark:text-transparent;
+    @apply absolute left-1/2 mt-1 hidden size-2 text-transparent group-aria-[current=page]:block;
+    fill: var(--header-triangle-fill-light);
+  }
+
+  .dark .nav-triangle {
+    fill: var(--header-triangle-fill-dark);
   }
 
   /* External Links Components */
@@ -238,7 +283,7 @@
 
   /* Text Selection Colors */
   ::selection {
-    background-color: #68a60a;
+    background-color: #4f7e0d;
     color: white;
   }
 
