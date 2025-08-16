@@ -140,7 +140,7 @@ export default function ProjectsPage() {
         You&apos;ll find more of my projects on{" "}
         <a
           href="https://github.com/Kecbm"
-          className="underline underline-offset-4 transition-all hover:text-[#d0680f] hover:font-bold decoration-[#d0680f] dark:hover:text-[#F2B13E] dark:decoration-[#F2B13E]"
+          className="underline underline-offset-4 transition-all hover:text-[#d0680f] hover:font-bold decoration-[#d0680f] dark:hover:text-[#ee9c21] dark:decoration-[#ee9c21]"
         >
           my GitHub profile
         </a>, take a look!
