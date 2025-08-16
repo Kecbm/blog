@@ -45,7 +45,7 @@ export default function Header() {
     <header className="mx-auto max-w-prose py-8 max-sm:pt-4">
       <nav className="flex items-center justify-between max-sm:flex-col max-sm:gap-6">
         <Link
-          className={`group relative -m-12 -my-2 -mr-4 flex items-center py-2 pl-12 pr-4 transition-all max-sm:text-center ${isHome ? "text-[#68a60a] dark:text-[#B1EC4A]" : "nav-link-base ring-1 ring-transparent sm:hover:ring-opacity-100"}`}
+          className={`group relative -m-12 -my-2 -mr-4 flex items-center py-2 pl-12 pr-4 transition-all max-sm:text-center ${isHome ? "header-logo" : "nav-link-base ring-1 ring-transparent sm:hover:ring-opacity-100"}`}
           href="/"
           aria-label="Back to home"
         >
