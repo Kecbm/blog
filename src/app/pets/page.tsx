@@ -6,7 +6,7 @@ import { Heart } from "lucide-react";
 const heartIcons = [
   <Heart
     key="heart"
-    className="text-[#9143da] fill-[#9143da] dark:text-[#921CF5] dark:fill-[#921CF5]"
+    className="text-[#9143da] fill-[#9143da] dark:text-[#c37cff] dark:fill-[#c37cff]"
     size={24}
   />
 ];
