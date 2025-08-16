@@ -41,7 +41,7 @@ export default function RootLayout({
         <footer className="mx-auto flex max-w-prose flex-col items-center gap-2 py-6 text-sm text-zinc-500 dark:text-zinc-400">
           <div className="flex items-center gap-4">
             <a
-              className="decoration-[#88d012] underline-offset-4 transition-all hover:underline hover:text-[#88d012] hover:font-bold dark:decoration-[#C4FC55] dark:hover:text-[#C4FC55]"
+              className="decoration-[#68a60a] underline-offset-4 transition-all hover:underline hover:text-[#68a60a] hover:font-bold dark:decoration-[#C4FC55] dark:hover:text-[#C4FC55]"
               href="https://github.com/Kecbm/blog"
               target="_blank"
             >
@@ -49,7 +49,7 @@ export default function RootLayout({
             </a>
 
             <a
-              className="decoration-[#88d012] underline-offset-4 transition-all hover:underline hover:text-[#88d012] hover:font-bold dark:decoration-[#C4FC55] dark:hover:text-[#C4FC55]"
+              className="decoration-[#68a60a] underline-offset-4 transition-all hover:underline hover:text-[#68a60a] hover:font-bold dark:decoration-[#C4FC55] dark:hover:text-[#C4FC55]"
               href="https://github.com/Kecbm"
               target="_blank"
             >
