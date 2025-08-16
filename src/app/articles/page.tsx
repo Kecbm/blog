@@ -32,7 +32,7 @@ export default async function ArticlesPage() {
             href={article.devToUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex items-center justify-between px-4 py-2 transition-all sm:p-4 text-[#527b10] sm:hover:bg-[#6ca20e]/10 sm:hover:text-[#6ca20e] sm:hover:font-bold dark:text-[#AFEC4A] dark:sm:hover:bg-[#CDF37B]/10 dark:sm:hover:text-[#CDF37B]"
+            className="group flex items-center justify-between px-4 py-2 transition-all sm:p-4 text-[#527b10] sm:hover:bg-[#6ca20e]/10 sm:hover:text-[#6ca20e] sm:hover:font-bold dark:text-[#85d012] dark:sm:hover:bg-[#85d012]/10 dark:sm:hover:text-[#afec4a]"
             key={article.slug}
           >
             <div className="flex gap-1 gap-x-2 max-sm:flex-col sm:items-center">
@@ -54,7 +54,7 @@ export default async function ArticlesPage() {
               <span className="text-zinc-500 max-sm:text-sm dark:text-zinc-400">
                 {article.date}
               </span>
-              <ArrowUpRight className="size-5 shrink-0 text-[#527b10] transition-all group-hover:rotate-45 group-hover:text-[#6ca20e] dark:text-[#AFEC4A] dark:group-hover:text-[#CDF37B]" />
+              <ArrowUpRight className="size-5 shrink-0 text-[#527b10] transition-all group-hover:rotate-45 group-hover:text-[#6ca20e] dark:text-[#85d012] dark:group-hover:text-[#afec4a]" />
             </div>
           </a>
         ))}
@@ -64,7 +64,7 @@ export default async function ArticlesPage() {
         You&apos;ll find more of my articles on{" "}
         <a
           href="https://dev.to/kecbm"
-          className="underline underline-offset-4 transition-all hover:text-[#6ca20e] hover:font-bold decoration-[#6ca20e] dark:hover:text-[#CDF37B] dark:decoration-[#CDF37B]"
+          className="underline underline-offset-4 transition-all hover:text-[#6ca20e] hover:font-bold decoration-[#6ca20e] dark:hover:text-[#afec4a] dark:decoration-[#afec4a]"
         >
           my Dev.to profile
         </a>, take a look!
