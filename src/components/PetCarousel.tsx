@@ -12,20 +12,36 @@ interface PetCarouselProps {
 export default function PetCarousel({ name, images }: PetCarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
+  const [isTransitioning, setIsTransitioning] = useState(false);
   const startX = useRef(0);
   const currentX = useRef(0);
   const threshold = 50; // Distância mínima para considerar um swipe
 
   const nextImage = () => {
-    setCurrentIndex((prev) => (prev + 1) % images.length);
+    if (isTransitioning) return; // Previne cliques múltiplos
+    setIsTransitioning(true);
+    setCurrentIndex((prev) => {
+      const newIndex = (prev + 1) % images.length;
+      setTimeout(() => setIsTransitioning(false), 150); // Reset após transição
+      return newIndex;
+    });
   };
 
   const prevImage = () => {
-    setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
+    if (isTransitioning) return; // Previne cliques múltiplos
+    setIsTransitioning(true);
+    setCurrentIndex((prev) => {
+      const newIndex = (prev - 1 + images.length) % images.length;
+      setTimeout(() => setIsTransitioning(false), 150); // Reset após transição
+      return newIndex;
+    });
   };
 
   const goToImage = (index: number) => {
+    if (isTransitioning || index === currentIndex) return;
+    setIsTransitioning(true);
     setCurrentIndex(index);
+    setTimeout(() => setIsTransitioning(false), 150);
   };
 
   // Handlers para touch (mobile/tablet)
@@ -45,7 +61,7 @@ export default function PetCarousel({ name, images }: PetCarouselProps) {
 
     const diffX = startX.current - currentX.current;
 
-    if (Math.abs(diffX) > threshold) {
+    if (Math.abs(diffX) > threshold && !isTransitioning) {
       if (diffX > 0) {
         nextImage(); // Swipe para esquerda = próxima imagem
       } else {
@@ -71,8 +87,9 @@ export default function PetCarousel({ name, images }: PetCarouselProps) {
           width={620}
           height={324}
           alt={`Photo ${currentIndex + 1} of ${name}`}
-          className="aspect-video object-cover pointer-events-none"
+          className="aspect-video object-cover pointer-events-none transition-opacity duration-150"
           draggable={false}
+          key={currentIndex} // Force re-render para garantir mudança de imagem
         />
         
         {/* Seta esquerda */}
