@@ -50,6 +50,8 @@ const externalLinksData = [
   }
 ];
 
+// Home page: https://v0.app/community/v0-me-Zz6mBLdU9bC
+
 export default function HomePage() {
   return (
     <div className="flex flex-col gap-6">
