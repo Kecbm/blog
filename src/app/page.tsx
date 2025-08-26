@@ -3,7 +3,7 @@ import {
   SiLinkedin,
   SiDevdotto,
 } from "@icons-pack/react-simple-icons";
-import { ArrowUpRight, Copy, Download, Send, Check } from "lucide-react";
+import { ArrowUpRight, Check } from "lucide-react";
 import Image from "next/image";
 import ExternalLinkComponent from "@/src/components/ExternalLink";
 
@@ -13,6 +13,7 @@ const XLogo = ({ className = "" }: { className?: string }) => {
       <g>
         <path
           className={className}
+          fill="currentColor"
           d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
         ></path>
       </g>
@@ -86,21 +87,6 @@ export default function HomePage() {
       </div>
       <div className="flex justify-center gap-6 max-sm:flex-col-reverse sm:justify-between">
         <div className="flex flex-col justify-center gap-4 max-sm:items-center">
-          <div className="group -m-8 flex select-all items-center gap-3 p-8 transition-all">
-            kleciannymelo@gmail.com
-            <div className="inline-flex items-center gap-3">
-              {/* TODO add copy email
-                <button className="text-zinc-800 sm:group-hover:inline-flex dark:text-zinc-200">
-                <Copy className="size-4" />
-              </button> */}
-              <a
-                href="mailto:kleciannymelo@gmail.com"
-                className="group text-zinc-800 dark:text-zinc-200"
-              >
-                <Send strokeWidth={1.4} className="size-4 transition-all group-hover:text-[#68a60a] dark:group-hover:text-[#acf328]" />
-              </a>
-            </div>
-          </div>
           <span className="-mt-2 inline-flex w-fit items-center gap-1 rounded-full bg-[#68a60a]/10 px-2 py-0.5 text-sm text-[#4f7e0d] ring-1 ring-[#4f7e0d] dark:bg-transparent dark:text-[#8dd909] dark:ring-[#8dd909]">
             <div className="size-2 animate-pulse rounded-full bg-[#4f7e0d] dark:bg-[#8dd909]" />
             Online
@@ -108,12 +94,11 @@ export default function HomePage() {
         </div>
         <div className="flex flex-col gap-2">
           <a
-            href="/luke-berry-cv.pdf"
-            download="Luke-Berry-CV.pdf"
+            href="mailto:kleciannymelo@gmail.com"
             className="flex flex-row items-center justify-center gap-3 rounded bg-[#4f7e0d]/10 p-4 text-[#4f7e0d] ring-1 ring-[#4f7e0d] transition-all hover:bg-[#68a60a] hover:ring-transparent hover:text-white dark:bg-transparent dark:text-[#8dd909] dark:ring-[#8dd909] dark:hover:bg-[#acf328] dark:hover:text-[#161D2A]"
           >
-            <span className="text-nowrap">Download my CV</span>
-            <Download strokeWidth={1.4} className="size-5 max-sm:hidden" />
+            <span className="text-nowrap">Contact Me</span>
+            <ArrowUpRight strokeWidth={1.4} className="size-5 max-sm:hidden" />
           </a>
         </div>
       </div>
