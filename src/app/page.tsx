@@ -65,7 +65,7 @@ export default function HomePage() {
             alt="Klecianny Melo"
             width={120}
             height={120}
-            className="rounded-full object-cover"
+            className="rounded-full object-cover ring-4 ring-[#68a60a] dark:ring-[#acf328] transition-all"
           />
         </div>
         <div className="flex items-center gap-2">
@@ -87,10 +87,11 @@ export default function HomePage() {
       </div>
       <div className="flex justify-center gap-6 max-sm:flex-col-reverse sm:justify-between">
         <div className="flex flex-col justify-center gap-4 max-sm:items-center">
-          <span className="-mt-2 inline-flex w-fit items-center gap-1 rounded-full bg-[#68a60a]/10 px-2 py-0.5 text-sm text-[#4f7e0d] ring-1 ring-[#4f7e0d] dark:bg-transparent dark:text-[#8dd909] dark:ring-[#8dd909]">
-            <div className="size-2 animate-pulse rounded-full bg-[#4f7e0d] dark:bg-[#8dd909]" />
-            Online
-          </span>
+          {/* Online Status Badge */}
+          <div className="flex items-center gap-1 rounded-full bg-[#68a60a]/90 px-2 py-1 text-xs font-bold shadow-lg dark:bg-[#acf328]/90 text-white dark:text-[#161D2A]">
+            <div className="size-2 animate-pulse rounded-full bg-white dark:bg-[#161D2A]" />
+            <span>Online</span>
+          </div>
         </div>
         <div className="flex flex-col gap-2">
           <a
