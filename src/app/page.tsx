@@ -52,8 +52,6 @@ const externalLinksData = [
   }
 ];
 
-// Home page: https://v0.app/community/v0-me-Zz6mBLdU9bC
-
 export default function HomePage() {
   return (
     <div className="flex flex-col gap-6">
@@ -61,7 +59,7 @@ export default function HomePage() {
       <div className="flex flex-col items-center gap-4">
         <div className="relative">
           <Image
-            src="https://avatars.githubusercontent.com/u/67391952?v=4"
+            src="https://avatars.githubusercontent.com/u/67391952?v=4&s=400"
             alt="Klecianny Melo"
             width={120}
             height={120}
