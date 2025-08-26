@@ -3,7 +3,8 @@ import {
   SiLinkedin,
   SiDevdotto,
 } from "@icons-pack/react-simple-icons";
-import { ArrowUpRight, Copy, Download, Send } from "lucide-react";
+import { ArrowUpRight, Copy, Download, Send, Check } from "lucide-react";
+import Image from "next/image";
 import ExternalLinkComponent from "@/src/components/ExternalLink";
 
 const XLogo = ({ className = "" }: { className?: string }) => {
@@ -55,6 +56,26 @@ const externalLinksData = [
 export default function HomePage() {
   return (
     <div className="flex flex-col gap-6">
+      {/* Profile Section */}
+      <div className="flex flex-col items-center gap-4">
+        <div className="relative">
+          <Image
+            src="https://avatars.githubusercontent.com/u/67391952?v=4"
+            alt="Klecianny Melo"
+            width={120}
+            height={120}
+            className="rounded-full object-cover"
+          />
+        </div>
+        <div className="flex items-center gap-2">
+          <h2 className="text-xl font-bold">Klecianny Melo</h2>
+          <div className="relative">
+            <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center">
+              <Check size={14} className="text-white" strokeWidth={3} />
+            </div>
+          </div>
+        </div>
+      </div>
       <p className="text-sm">
         Brazilian, obsessed with growth. Working as a Software Engineer. I love React, Python, TailwindCSS, playing PS3, and solving problems.
       </p>
