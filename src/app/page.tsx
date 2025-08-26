@@ -3,7 +3,7 @@ import {
   SiLinkedin,
   SiDevdotto,
 } from "@icons-pack/react-simple-icons";
-import { ArrowUpRight, Check } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import ExternalLinkComponent from "@/src/components/ExternalLink";
 
@@ -67,11 +67,25 @@ export default function HomePage() {
           />
         </div>
         <div className="flex items-center gap-2">
-          <h2 className="text-xl font-bold">Klecianny Melo</h2>
+          <h2 className="text-xl font-black">Klecianny Melo</h2>
           <div className="relative">
-            <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center">
-              <Check size={14} className="text-white" strokeWidth={3} />
-            </div>
+            <svg
+              width="30"
+              height="30"
+              viewBox="0 0 24 24"
+              className="relative"
+            >
+              {/* Twitter verification badge background */}
+              <path
+                d="M22.25 12c0-1.43-.88-2.67-2.19-3.34.46-1.39.2-2.9-.81-3.91s-2.52-1.27-3.91-.81c-.66-1.31-1.91-2.19-3.34-2.19s-2.67.88-3.33 2.19c-1.4-.46-2.91-.2-3.92.81s-1.26 2.52-.8 3.91c-1.31.67-2.19 1.91-2.19 3.34s.88 2.67 2.16 3.34c-.46 1.39-.21 2.9.8 3.91s2.52 1.26 3.91.81c.67 1.31 1.91 2.19 3.34 2.19s2.68-.88 3.34-2.19c1.39.45 2.9.2 3.91-.81s1.27-2.52.81-3.91c1.31-.67 2.19-1.91 2.19-3.34z"
+                fill="#3b82f6"
+              />
+              {/* White checkmark */}
+              <path
+                d="M10.54 16.2L6.8 12.46l1.41-1.42 2.26 2.26 4.8-5.23 1.47 1.36-6.2 6.77z"
+                fill="white"
+              />
+            </svg>
           </div>
         </div>
       </div>
