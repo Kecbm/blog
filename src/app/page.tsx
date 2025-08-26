@@ -99,7 +99,7 @@ export default function HomePage() {
             className="flex flex-row items-center justify-center gap-3 rounded bg-[#4f7e0d]/10 p-4 text-[#4f7e0d] ring-1 ring-[#4f7e0d] transition-all hover:bg-[#68a60a] hover:ring-transparent hover:text-white dark:bg-transparent dark:text-[#8dd909] dark:ring-[#8dd909] dark:hover:bg-[#acf328] dark:hover:text-[#161D2A]"
           >
             <span className="text-nowrap">Contact Me</span>
-            <ArrowUpRight strokeWidth={1.4} className="size-5 max-sm:hidden" />
+            <ArrowUpRight strokeWidth={1.4} className="size-5" />
           </a>
         </div>
       </div>
