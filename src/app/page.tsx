@@ -100,8 +100,25 @@ export default function HomePage() {
       <div className="flex justify-center gap-6 max-sm:flex-col-reverse sm:justify-between">
         <div className="flex flex-col justify-center gap-4 max-sm:items-center">
           {/* Online Status Badge */}
-          <div className="flex items-center gap-1 rounded-full bg-[#68a60a]/90 px-2 py-1 text-xs font-bold shadow-lg dark:bg-[#acf328]/90 text-white dark:text-[#161D2A]">
-            <div className="size-2 animate-pulse rounded-full bg-white dark:bg-[#161D2A]" />
+          <div className="flex items-center gap-3 rounded-full bg-[#4f7e0d]/90 px-2 py-1 text-xs font-bold shadow-lg dark:bg-[#8dd909]/90 text-white dark:text-[#161D2A]">
+            <div className="relative flex items-center justify-center">
+              {/* Ripple waves animation */}
+              <div className="absolute size-4 rounded-full bg-white/30 dark:bg-[#161D2A]/30 animate-ping" style={{
+                animationDuration: '4s'
+              }} />
+              <div className="absolute size-3 rounded-full bg-white/50 dark:bg-[#161D2A]/50 animate-ping" style={{
+                animationDuration: '4s',
+                animationDelay: '1s'
+              }} />
+              <div className="absolute size-2.5 rounded-full bg-white/70 dark:bg-[#161D2A]/70 animate-ping" style={{
+                animationDuration: '4s',
+                animationDelay: '2s'
+              }} />
+              {/* Inner dot with breathing effect */}
+              <div className="relative size-2 rounded-full bg-white dark:bg-[#161D2A] z-10" style={{
+                animation: 'breathe 5s ease-in-out infinite'
+              }} />
+            </div>
             <span>Online</span>
           </div>
         </div>

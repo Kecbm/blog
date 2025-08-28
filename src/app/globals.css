@@ -263,6 +263,18 @@
   .animate-float-up {
     animation: float-up linear forwards;
   }
+
+  /* Online Status Breathing Animation */
+  @keyframes breathe {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.2);
+      opacity: 0.8;
+    }
+  }
 }
 
 @layer base {
@@ -280,6 +292,23 @@
   .dark ::selection {
     background-color: #B1EC4A;
     color: #161D2A;
+  }
+
+  /* Online Status Gradient Animation */
+  .online-gradient-light {
+    background: conic-gradient(from 0deg, rgba(255,255,255,0.8), rgba(255,255,255,0.2), rgba(255,255,255,0.8));
+  }
+
+  .online-gradient-light-reverse {
+    background: conic-gradient(from 180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.1), rgba(255,255,255,0.6));
+  }
+
+  .dark .online-gradient-light {
+    background: conic-gradient(from 0deg, rgba(22,29,42,0.8), rgba(22,29,42,0.2), rgba(22,29,42,0.8));
+  }
+
+  .dark .online-gradient-light-reverse {
+    background: conic-gradient(from 180deg, rgba(22,29,42,0.6), rgba(22,29,42,0.1), rgba(22,29,42,0.6));
   }
 
   article p {
