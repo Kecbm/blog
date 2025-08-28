@@ -23,10 +23,8 @@ interface Project {
 
   // Crie uma imagem no formato 16:9 para ilustrar um site sobre o jogo 'Trivia', inspirado em programas de perguntas e respostas no estilo 'Who Wants to Be a Millionaire'. A cena deve incluir o título 'Trivia' em destaque e elementos visuais que remetam a um quiz show (como perguntas, botões de múltipla escolha, luzes e um palco). A estética deve ser inspirada no estilo de animacao 3d, com cores vibrantes, cenários, mantendo um visual divertido e atraente para portfólio
 
-  // Crie uma imagem no formato 16:9 para ilustrar um site chamado 'Car Shop', voltado para a gestão e venda de veículos em uma concessionária. A cena deve incluir o título 'Car Shop' em destaque e elementos visuais que representem um showroom de carros (como automóveis brilhantes, prateleiras de catálogos, balcão de atendimento e placas de preços). A estética deve ser inspirada no estilo de animacao 3d, com cores vibrantes, cenários, transmitindo um visual divertido e chamativo para portfólio
-
-  // Crie uma imagem no formato 16:9 para ilustrar um aplicativo chamado 'Delivery App', especializado na entrega de bebidas. A cena deve incluir o título 'Delivery App' em destaque e elementos visuais que representem o serviço de entrega de bebidas (como garrafas, copos, caixas de entrega e um entregador em movimento). A estética deve ser inspirada no estilo de animacao 3d, com cores vibrantes, cenários, transmitindo um visual divertido e atraente para portfólio
-
+// OBS: deixar apenas o Vocab Master, que é meu primeiro side project
+  
 const projects: Project[] = [
   {
    name: "Trivia",
@@ -42,35 +40,7 @@ const projects: Project[] = [
        <ProjectTag>CSS</ProjectTag>
      </div>
    ),
-  },
-  {
-   name: "Car Shop",
-   description:
-      "API with CRUD operations for the complete management of a car dealership",
-   imageUrl: "/projects/CarShop.png",
-   githubUrl: "https://github.com/Kecbm/car-shop",
-   technologies: (
-     <div className="flex items-center gap-x-3">
-       <ProjectTag>TypeScript</ProjectTag>
-       <ProjectTag>MongoDB</ProjectTag>
-       <ProjectTag>Docker</ProjectTag>
-     </div>
-   ),
-  },
-  {
-   name: "Delivery App",
-   description:
-      "App for ordering and fast delivery of beverages",
-   imageUrl: "/projects/DeliveryApp.png",
-   githubUrl: "https://github.com/Kecbm/delivery-app",
-   technologies: (
-     <div className="flex items-center gap-x-3">
-       <ProjectTag>React</ProjectTag>
-       <ProjectTag>Node.js</ProjectTag>
-       <ProjectTag>Sequelize</ProjectTag>
-     </div>
-   ),
-  },
+  }
 ];
 
 function ProjectCard({
