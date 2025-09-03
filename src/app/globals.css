@@ -60,6 +60,26 @@
     color: var(--header-logo-text-dark);
   }
 
+  /* Header logo link - only border hover effect */
+  .header-logo-link {
+    @apply relative rounded px-2 py-px transition-all;
+    color: var(--header-nav-text-light);
+  }
+
+  .header-logo-link:hover {
+    color: var(--header-nav-text-light);
+    /* No background color on hover, only border effect */
+  }
+
+  .dark .header-logo-link {
+    color: var(--header-nav-text-dark);
+  }
+
+  .dark .header-logo-link:hover {
+    color: var(--header-nav-text-dark);
+    /* No background color on hover, only border effect */
+  }
+
   .nav-link-base {
     @apply relative rounded px-2 py-px transition-all sm:hover:font-bold;
     color: var(--header-nav-text-light);
