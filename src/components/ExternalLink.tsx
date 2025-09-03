@@ -28,7 +28,7 @@ export default function ExternalLink({
           {icon}
         </span>
         {name}
-        <span className="-translate-x-4 text-zinc-500 opacity-0 transition-all max-sm:hidden sm:group-hover:translate-x-0 sm:group-hover:opacity-100 dark:text-zinc-400">
+        <span className="-translate-x-4 external-link-subtitle opacity-0 transition-all max-sm:hidden sm:group-hover:translate-x-0 sm:group-hover:opacity-100">
           {description}
         </span>
       </span>

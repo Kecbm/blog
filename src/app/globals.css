@@ -80,6 +80,15 @@
     /* No background color on hover, only border effect */
   }
 
+  /* External Link Subtitle Colors */
+  .external-link-subtitle {
+    color: #ce3a34;
+  }
+
+  .dark .external-link-subtitle {
+    color: #f47b75;
+  }
+
   .nav-link-base {
     @apply relative rounded px-2 py-px transition-all sm:hover:font-bold;
     color: var(--header-nav-text-light);
