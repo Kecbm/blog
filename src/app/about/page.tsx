@@ -1,5 +1,4 @@
 export default function AboutPage() {
-  // Pets: page (clone for projects page) with image, name and date of born
   return (
     <>
       <h1 className="mb-16 mt-4 text-center text-5xl max-sm:text-4xl">
@@ -103,13 +102,7 @@ export default function AboutPage() {
           </a>.
         </p>
         <p>
-          I have{" "}
-          <a
-            href="/pets"
-            className="about-highlight"
-          >
-            seven pets
-          </a>: one pinscher and six cats. In my free time, I enjoy playing{" "}
+          I have seven pets: one pinscher and six cats. In my free time, I enjoy playing{" "}
           <a
             href="/ps3"
             className="about-highlight"
