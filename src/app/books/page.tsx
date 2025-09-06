@@ -51,8 +51,8 @@ const books: Book[] = [
     status: "pending",
   },
   {
-    name: "Programação Utilizando IA",
-    imageUrl: "https://m.media-amazon.com/images/I/71OK9wZb1PL._UF1000,1000_QL80_.jpg",
+    name: "AI-Assisted Programming",
+    imageUrl: "https://m.media-amazon.com/images/I/81Q1ydwpYLL._UF1000,1000_QL80_.jpg",
     status: "pending",
   },
   {
