@@ -1,96 +1,73 @@
-import { GitBranch, Globe } from "lucide-react";
 import Image from "next/image";
-import { ReactNode } from "react";
-import ProjectTag from "@/src/components/ProjectTag";
-import ProjectButton from "@/src/components/ProjectButton";
 
-interface Project {
-  name: string;
+interface DemoMedia {
+  title: string;
   description: string;
-  imageUrl: string;
-  githubUrl: string;
-  url?: string;
-  technologies: ReactNode;
+  mediaUrl: string;
+  mediaType: 'gif' | 'video';
 }
 
-// Front: https://trivia-kecbm.vercel.app/
-// Back: https://github.com/Kecbm/car-shop
-// Full Stack: https://github.com/Kecbm/delivery-app
-
-// Prompt para gerar as imagens
-
-// Testar geracao de GIF com elementos animados
-
-  // Crie uma imagem no formato 16:9 para ilustrar um site sobre o jogo 'Trivia', inspirado em programas de perguntas e respostas no estilo 'Who Wants to Be a Millionaire'. A cena deve incluir o título 'Trivia' em destaque e elementos visuais que remetam a um quiz show (como perguntas, botões de múltipla escolha, luzes e um palco). A estética deve ser inspirada no estilo de animacao 3d, com cores vibrantes, cenários, mantendo um visual divertido e atraente para portfólio
-
-// OBS: deixar apenas o Vocab Master, que é meu primeiro side project
-  
-const projects: Project[] = [
+const demoMedias: DemoMedia[] = [
   {
-   name: "Trivia",
-   description:
-      "A question and answer game based on the game Trivia (like an American million show)",
-   url: "https://trivia-kecbm.vercel.app/",
-   imageUrl: "/projects/Trivia.png",
-   githubUrl: "https://github.com/Kecbm/trivia",
-   technologies: (
-     <div className="flex items-center gap-x-3">
-       <ProjectTag>JavaScript</ProjectTag>
-       <ProjectTag>HTML</ProjectTag>
-       <ProjectTag>CSS</ProjectTag>
-     </div>
-   ),
+    title: "📚 Adicione novas palavras e veja a mágica acontecer",
+    description: "Captura instantânea de palavras com tradução automática",
+    mediaUrl: "/projects/1.add.gif",
+    mediaType: "gif"
+  },
+  {
+    title: "🎮 Transforme seu aprendizado em um jogo",
+    description: "Interface interativa para edição e gerenciamento de vocabulário",
+    mediaUrl: "/projects/2.edit.gif",
+    mediaType: "gif"
+  },
+  {
+    title: "🔎 Encontre qualquer palavra em segundos",
+    description: "Sistema de filtros avançado para localizar palavras rapidamente",
+    mediaUrl: "/projects/3.filters.gif",
+    mediaType: "gif"
+  },
+  {
+    title: "🔊 Ouça e aprenda com um nativo",
+    description: "Pronúncia autêntica com vozes nativas",
+    mediaUrl: "/projects/4.pronuciation.mp4",
+    mediaType: "video"
   }
 ];
 
-function ProjectCard({
-  name,
-  description,
-  imageUrl,
-  githubUrl,
-  url,
-  technologies,
-}: Project) {
+function DemoCard({ title, description, mediaUrl, mediaType }: DemoMedia) {
   return (
-    <div className="flex-col divide-y divide-zinc-400 overflow-hidden rounded ring-1 ring-zinc-400 dark:divide-zinc-500 dark:ring-zinc-500">
+    <div className="flex flex-col divide-y divide-zinc-400 overflow-hidden rounded ring-1 ring-zinc-400 dark:divide-zinc-500 dark:ring-zinc-500">
       <div className="flex items-center justify-between gap-4 p-4 max-sm:flex-col">
-        <h2 className="text-xl">{name}</h2>
-        {technologies}
-      </div>
-      <div>
-        <p className="p-4">{description}</p>
-      </div>
-      <Image
-        src={imageUrl}
-        width={620}
-        height={324}
-        alt="Logo for css2wind website"
-      />
-      {url ? (
-        <div className="flex w-full justify-between divide-x divide-zinc-400 dark:divide-zinc-500">
-          <ProjectButton
-            href={url}
-            icon={<Globe strokeWidth={1.4} />}
-          >
-            Visit website
-          </ProjectButton>
-          <ProjectButton
-            href={githubUrl}
-            icon={<GitBranch strokeWidth={1.4} />}
-          >
-            View code
-          </ProjectButton>
+        <div className="flex-1">
+          <h3 className="text-xl font-semibold text-[var(--project-tag-bg-light)] dark:text-[var(--project-tag-text-dark)] mb-2">
+            {title}
+          </h3>
+          <p className="text-zinc-600 dark:text-zinc-400">
+            {description}
+          </p>
         </div>
-      ) : (
-        <div className="flex w-full">
-          <ProjectButton
-            href={githubUrl}
-            icon={<GitBranch strokeWidth={1.4} />}
+      </div>
+      <div className="bg-zinc-100 dark:bg-zinc-900">
+        {mediaType === 'gif' ? (
+          <Image
+            src={mediaUrl}
+            alt={description}
+            width={620}
+            height={324}
+            className="w-full h-auto object-contain"
+            unoptimized // Para GIFs animados
+          />
+        ) : (
+          <video
+            src={mediaUrl}
+            controls
+            className="w-full h-auto"
+            preload="metadata"
           >
-            View code
-          </ProjectButton>
-        </div>
-      )}
+            Seu navegador não suporta vídeos.
+          </video>
+        )}
+      </div>
     </div>
   );
 }
@@ -101,16 +78,66 @@ export default function ProjectsPage() {
       <h1 className="mb-16 mt-4 text-center text-5xl max-sm:text-4xl">
         Projects
       </h1>
-      <div className="space-y-20">
-        {projects.map((project) => (
-          <ProjectCard key={project.name} {...project} />
-        ))}
-      </div>
+      <article>
+        <h2 className="text-[var(--project-tag-bg-light)] dark:text-[var(--project-tag-text-dark)]">
+          📖 Vocab Master – Aprenda Vocabulário Sem Interromper Sua Leitura
+        </h2>
+
+        <p>
+          Transforme sua leitura em uma experiência de aprendizado de idiomas poderosa.
+          Com o Vocab Master, você não perde o ritmo: capture, traduza e estude novas palavras em inglês ou francês enquanto lê livros, artigos ou qualquer conteúdo.
+        </p>
+
+        <h2 className="text-[var(--project-tag-bg-light)] dark:text-[var(--project-tag-text-dark)]">
+          ✨ Principais Diferenciais
+        </h2>
+
+        <ul className="projects-list">
+          <li>🚀 <strong>Captura Instantânea</strong> → adicione palavras com um clique e obtenha tradução automática.</li>
+          <li>🧠 <strong>Aprendizado Inteligente</strong> → organize por status: New, Learning, Mastered.</li>
+          <li>📚 <strong>Foco no Contexto</strong> → relacione cada palavra ao livro ou artigo em que você a encontrou.</li>
+          <li>🎧 <strong>Pronúncia Autêntica</strong> → ouça como a palavra realmente soa com vozes nativas.</li>
+          <li>📊 <strong>Progresso Visível</strong> → estatísticas em tempo real sobre seu vocabulário e leitura.</li>
+        </ul>
+
+        <h2 className="text-[var(--project-tag-bg-light)] dark:text-[var(--project-tag-text-dark)]">
+          🎬 Demonstrações
+        </h2>
+
+        <div className="space-y-12">
+          {demoMedias.map((demo, index) => (
+            <DemoCard key={index} {...demo} />
+          ))}
+        </div>
+
+        <p>
+          Não deixe palavras desconhecidas atrapalharem sua leitura.
+          Com o Vocab Master, cada página vira uma oportunidade de aprender.
+        </p>
+
+        <p>
+          <a
+            href="https://mastervocab.vercel.app/"
+            className="text-[var(--project-button-text-light)] dark:text-[var(--project-button-text-dark)]
+                       hover:text-[var(--project-button-hover-light)] dark:hover:text-[var(--project-button-hover-dark)]
+                       underline underline-offset-4 transition-all hover:font-bold
+                       decoration-[var(--project-button-text-light)] dark:decoration-[var(--project-button-text-dark)]
+                       hover:decoration-[var(--project-button-hover-light)] dark:hover:decoration-[var(--project-button-hover-dark)]"
+          >
+            👉 Acesse o projeto
+          </a>
+        </p>
+      </article>
+
       <p className="mt-8 text-center text-zinc-600 dark:text-zinc-400">
         You&apos;ll find more of my projects on{" "}
         <a
           href="https://github.com/Kecbm"
-          className="underline underline-offset-4 transition-all hover:text-[#d0680f] hover:font-bold decoration-[#d0680f] dark:hover:text-[#ee9c21] dark:decoration-[#ee9c21]"
+          className="underline underline-offset-4 transition-all hover:font-bold
+                     text-[var(--project-button-text-light)] dark:text-[var(--project-button-text-dark)]
+                     hover:text-[var(--project-button-hover-light)] dark:hover:text-[var(--project-button-hover-dark)]
+                     decoration-[var(--project-button-text-light)] dark:decoration-[var(--project-button-text-dark)]
+                     hover:decoration-[var(--project-button-hover-light)] dark:hover:decoration-[var(--project-button-hover-dark)]"
         >
           my GitHub profile
         </a>, take a look!
