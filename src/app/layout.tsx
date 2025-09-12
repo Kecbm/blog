@@ -26,6 +26,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="min-h-screen">
+      <head>
+        <link rel="icon" href="https://fav.farm/👩🏾" />
+      </head>
       <body className={`${karla.className} min-h-full px-6`}>
         {/* <Analytics /> */}
         <Script id="theme-toggle" strategy="afterInteractive">
