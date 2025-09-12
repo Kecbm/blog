@@ -100,10 +100,6 @@ export default function ProjectsPage() {
           <li>📊 <strong>Progresso Visível</strong> → estatísticas em tempo real sobre seu vocabulário e leitura.</li>
         </ul>
 
-        <h2 className="text-[var(--project-tag-bg-light)] dark:text-[var(--project-tag-text-dark)]">
-          🎬 Demonstrações
-        </h2>
-
         <div className="space-y-12">
           {demoMedias.map((demo, index) => (
             <DemoCard key={index} {...demo} />
