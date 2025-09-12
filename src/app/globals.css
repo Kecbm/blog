@@ -274,6 +274,19 @@
     color: var(--notfound-highlight-hover-dark);
   }
 
+  /* Projects Page List Items */
+  .projects-list li {
+    @apply relative pl-4 before:absolute before:left-0 before:top-0 before:content-['>'];
+  }
+
+  .projects-list li::before {
+    color: var(--project-tag-bg-light);
+  }
+
+  .dark .projects-list li::before {
+    color: var(--project-tag-text-dark);
+  }
+
   /* Floating Hearts Animation */
   @keyframes float-up {
     0% {
