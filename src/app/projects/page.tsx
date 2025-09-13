@@ -9,26 +9,26 @@ interface DemoMedia {
 
 const demoMedias: DemoMedia[] = [
   {
-    title: "📚 Adicione novas palavras e veja a mágica acontecer",
-    description: "Captura instantânea de palavras com tradução automática",
+    title: "📚 Add new words and watch the magic happen",
+    description: "Instant word capture with automatic translation",
     mediaUrl: "/projects/1.add.gif",
     mediaType: "gif"
   },
   {
-    title: "🎮 Transforme seu aprendizado em um jogo",
-    description: "Interface interativa para edição e gerenciamento de vocabulário",
+    title: "🎮 Turn your learning into a game",
+    description: "Interactive interface for vocabulary editing and management",
     mediaUrl: "/projects/2.edit.gif",
     mediaType: "gif"
   },
   {
-    title: "🔎 Encontre qualquer palavra em segundos",
-    description: "Sistema de filtros avançado para localizar palavras rapidamente",
+    title: "🔎 Find any word in seconds",
+    description: "Advanced filtering system to locate words quickly",
     mediaUrl: "/projects/3.filters.gif",
     mediaType: "gif"
   },
   {
-    title: "🔊 Ouça e aprenda com um nativo",
-    description: "Pronúncia autêntica com vozes nativas",
+    title: "🔊 Listen and learn from a native speaker",
+    description: "Authentic pronunciation with native voices",
     mediaUrl: "/projects/4.pronuciation.mp4",
     mediaType: "video"
   }
@@ -80,25 +80,29 @@ export default function ProjectsPage() {
       </h1>
       <article>
         <h2 className="text-[var(--project-tag-bg-light)] dark:text-[var(--project-tag-text-dark)]">
-          📖 Vocab Master – Aprenda Vocabulário Sem Interromper Sua Leitura
+          📖 Vocab Master – Learn Vocabulary Without Interrupting Your Reading
         </h2>
 
         <p>
-          Transforme sua leitura em uma experiência de aprendizado de idiomas poderosa.
-          Com o Vocab Master, você não perde o ritmo: capture, traduza e estude novas palavras em inglês ou francês enquanto lê livros, artigos ou qualquer conteúdo.
+          Transform your reading into a powerful language learning experience.
+          With Vocab Master, you don't lose your rhythm: capture, translate, and study new words in English or French while reading books, articles, or any content.
         </p>
 
         <h2 className="text-[var(--project-tag-bg-light)] dark:text-[var(--project-tag-text-dark)]">
-          ✨ Principais Diferenciais
+          ✨ Key Features
         </h2>
 
         <ul className="projects-list">
-          <li>🚀 <strong>Captura Instantânea</strong> → adicione palavras com um clique e obtenha tradução automática.</li>
-          <li>🧠 <strong>Aprendizado Inteligente</strong> → organize por status: New, Learning, Mastered.</li>
-          <li>📚 <strong>Foco no Contexto</strong> → relacione cada palavra ao livro ou artigo em que você a encontrou.</li>
-          <li>🎧 <strong>Pronúncia Autêntica</strong> → ouça como a palavra realmente soa com vozes nativas.</li>
-          <li>📊 <strong>Progresso Visível</strong> → estatísticas em tempo real sobre seu vocabulário e leitura.</li>
+          <li>🚀 <strong>Instant Capture</strong> → add words with one click and get automatic translation.</li>
+          <li>🧠 <strong>Smart Learning</strong> → organize by status: New, Learning, Mastered.</li>
+          <li>📚 <strong>Context Focus</strong> → relate each word to the book or article where you found it.</li>
+          <li>🎧 <strong>Authentic Pronunciation</strong> → hear how the word really sounds with native voices.</li>
+          <li>📊 <strong>Visible Progress</strong> → real-time statistics about your vocabulary and reading.</li>
         </ul>
+
+        <div></div>
+        <div></div>
+        <div></div>
 
         <div className="space-y-12">
           {demoMedias.map((demo, index) => (
@@ -107,8 +111,8 @@ export default function ProjectsPage() {
         </div>
 
         <p>
-          Não deixe palavras desconhecidas atrapalharem sua leitura.
-          Com o Vocab Master, cada página vira uma oportunidade de aprender.
+          Don't let unknown words disrupt your reading.
+          With Vocab Master, every page becomes an opportunity to learn.
         </p>
 
         <p>
@@ -120,7 +124,7 @@ export default function ProjectsPage() {
                        decoration-[var(--project-button-text-light)] dark:decoration-[var(--project-button-text-dark)]
                        hover:decoration-[var(--project-button-hover-light)] dark:hover:decoration-[var(--project-button-hover-dark)]"
           >
-            👉 Acesse o projeto
+            👉 Access the project
           </a>
         </p>
       </article>
