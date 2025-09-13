@@ -85,7 +85,7 @@ export default function ProjectsPage() {
 
         <p>
           Transform your reading into a powerful language learning experience.
-          With Vocab Master, you don't lose your rhythm: capture, translate, and study new words in English or French while reading books, articles, or any content.
+          With Vocab Master, you don&apos;t lose your rhythm: capture, translate, and study new words in English or French while reading books, articles, or any content.
         </p>
 
         <h2 className="text-[var(--project-tag-bg-light)] dark:text-[var(--project-tag-text-dark)]">
@@ -111,7 +111,7 @@ export default function ProjectsPage() {
         </div>
 
         <p>
-          Don't let unknown words disrupt your reading.
+          Don&apos;t let unknown words disrupt your reading.
           With Vocab Master, every page becomes an opportunity to learn.
         </p>
 
