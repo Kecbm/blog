@@ -154,18 +154,34 @@
     fill: #e25751;
   }
 
+  .external-link-icon.vocabulary {
+    color: var(--external-link-text-light);
+  }
+
   .dark .external-link-icon.linkedin,
   .dark .external-link-icon.github,
   .dark .external-link-icon.twitter {
     fill: var(--external-link-text-dark);
   }
 
+  .dark .external-link-icon.vocabulary {
+    color: var(--external-link-text-dark);
+  }
+
   .external-link:hover .external-link-icon {
     fill: var(--external-link-hover-light);
   }
 
+  .external-link:hover .external-link-icon.vocabulary {
+    color: var(--external-link-hover-light);
+  }
+
   .dark .external-link:hover .external-link-icon {
     fill: var(--external-link-hover-dark);
+  }
+
+  .dark .external-link:hover .external-link-icon.vocabulary {
+    color: var(--external-link-hover-dark);
   }
 
   .external-link-arrow {

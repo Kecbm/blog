@@ -3,7 +3,7 @@ import {
   SiLinkedin,
   SiDevdotto,
 } from "@icons-pack/react-simple-icons";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, BookOpen } from "lucide-react";
 import Image from "next/image";
 import ExternalLinkComponent from "@/src/components/ExternalLink";
 
@@ -49,6 +49,13 @@ const externalLinksData = [
     url: "https://dev.to/kecbm",
     icon: <SiDevdotto />,
     iconType: 'dev.to' as const,
+  },
+  {
+    name: "Vocab Master",
+    description: "expand your vocabulary",
+    url: "https://mastervocab.vercel.app/",
+    icon: <BookOpen />,
+    iconType: 'vocabulary' as const,
   }
 ];
 
