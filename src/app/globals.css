@@ -389,6 +389,10 @@
     @apply pt-8 text-3xl max-sm:text-2xl;
   }
 
+  article h2:first-child {
+    @apply pt-0;
+  }
+
   article h3 {
     @apply pt-4 text-xl max-sm:text-lg;
   }
