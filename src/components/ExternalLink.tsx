@@ -24,7 +24,7 @@ export default function ExternalLink({
       className="group external-link"
     >
       <span className="flex items-center gap-4">
-        <span className={`external-link-icon ${iconType || ''}`}>
+        <span className={`external-link-icon ${iconType}`}>
           {icon}
         </span>
         {name}
