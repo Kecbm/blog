@@ -52,14 +52,13 @@ Projects
             - #F6CD6F > #de8414
             - hover: #F2B13E > #ee9c21
 
-Articles
-    - Verde
-        **Light Theme**
-            - #6ca20e > #527b10
-            - hover: #527b10 > #6ca20e
-        **Dark Theme**
-            - #CDF37B > #85d012
-            - hover: #AFEC4A > #afec4a
+- Verde
+    **Light Theme**
+        - #6ca20e > #527b10
+        - hover: #527b10 > #6ca20e
+    **Dark Theme**
+        - #CDF37B > #85d012
+        - hover: #AFEC4A > #afec4a
 
 About
     - Verde 2
@@ -79,7 +78,7 @@ Not found
         - #72AFF7 > #3e6af5
         - hover: #3E6AF5 > #6190f9
 
-Pets
+Articles
     - Roxo
         **Light Theme**
         - #a763e9 > #7c31bf
