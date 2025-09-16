@@ -15,6 +15,8 @@
     - Antes de auto aprovar o PR, verificar se o lint passa
 - Contagem de visitas no portfolio (igual o badge de contagem de visitas do Readme do meu perfil no GitHub)
 
+- Analytics na Vercel: https://vercel.com/docs/analytics/quickstart
+
 - Url Vercel: kecbm.vercel.app
 
 # Pallete of collors
