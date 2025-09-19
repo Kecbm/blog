@@ -1,5 +1,10 @@
 # Meu portfolio
 
+## Tasks
+
+- Novo tema
+    - Categoria de GIF's: natureza, cidade, mar, terra
+
 - **Referência**: https://www.lukeberrypi.com/
 - Botão para mudar tema (default/liquid glass)
     - Liquid Glass: https://github.com/rdev/liquid-glass-react
