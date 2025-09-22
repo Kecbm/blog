@@ -41,8 +41,8 @@ const books: Book[] = [
     status: "in-progress",
   },
   {
-    name: "Python e Django",
-    imageUrl: "https://m.media-amazon.com/images/I/81RvLKtdlrL._UF894,1000_QL80_.jpg",
+    name: "Django 5 by Example",
+    imageUrl: "https://m.media-amazon.com/images/I/81vUrx78p9L.jpg",
     status: "pending",
   },
   {
