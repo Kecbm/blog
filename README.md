@@ -3,7 +3,10 @@
 ## Tasks
 
 - Novo tema
-    - Categoria de GIF's: natureza, cidade, mar, terra
+    - Liquid glass
+    - Categorias: natureza, cidade, mar, terra
+    - Versão 1: imagens
+    - Versão 2: GIF`s
 
 - **Referência**: https://www.lukeberrypi.com/
 - Botão para mudar tema (default/liquid glass)
