@@ -36,13 +36,13 @@ function FilterButton({ children, isActive, onClick }: FilterButtonProps) {
 
 const books: Book[] = [
   {
-    name: "Classic Computer Science Problems With Python",
-    imageUrl: "https://m.media-amazon.com/images/I/81ltJW5jJmL.jpg",
+    name: "Django 5 by Example",
+    imageUrl: "https://m.media-amazon.com/images/I/81vUrx78p9L.jpg",
     status: "in-progress",
   },
   {
-    name: "Django 5 by Example",
-    imageUrl: "https://m.media-amazon.com/images/I/81vUrx78p9L.jpg",
+    name: "Classic Computer Science Problems With Python",
+    imageUrl: "https://m.media-amazon.com/images/I/81ltJW5jJmL.jpg",
     status: "pending",
   },
   {
