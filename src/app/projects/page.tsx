@@ -95,7 +95,6 @@ export default function ProjectsPage() {
         <ul className="projects-list">
           <li>🚀 <strong>Instant Capture</strong> → add words with one click and get automatic translation.</li>
           <li>🧠 <strong>Smart Learning</strong> → organize by status: New, Learning, Mastered.</li>
-          <li>📚 <strong>Context Focus</strong> → relate each word to the book or article where you found it.</li>
           <li>🎧 <strong>Authentic Pronunciation</strong> → hear how the word really sounds with native voices.</li>
           <li>📊 <strong>Visible Progress</strong> → real-time statistics about your vocabulary and reading.</li>
         </ul>
