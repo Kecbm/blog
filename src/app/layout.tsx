@@ -29,40 +29,42 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="https://fav.farm/👩🏾" />
       </head>
-      <body className={`${karla.className} min-h-full px-6`}>
+      <body className={`${karla.className} min-h-screen px-6 bg-[url('/nature.jpg')] bg-cover bg-center bg-no-repeat`}>
         {/* <Analytics /> */}
         <Script id="theme-toggle" strategy="afterInteractive">
           {`document.documentElement.classList.toggle("dark", localStorage.theme ===
         "dark" || (!("theme" in localStorage) &&
         window.matchMedia("(prefers-color-scheme: dark)").matches))`}
         </Script>
-        <Header />
-        <main className="mx-auto max-w-prose pb-4">
-          {children}
-          <ScrollToTop />
-        </main>
-        <footer className="mx-auto flex max-w-prose flex-col items-center gap-2 py-6 text-sm text-zinc-500 dark:text-zinc-400">
-          <div className="flex items-center gap-4">
-            <a
-              className="decoration-[#68a60a] underline-offset-4 transition-all hover:underline hover:text-[#68a60a] hover:font-bold dark:decoration-[#acf328] dark:hover:text-[#acf328]"
-              href="https://github.com/Kecbm/blog"
-              target="_blank"
-            >
-              Code
-            </a>
+        <div className="relative z-10">
+          <Header />
+          <main className="mx-auto max-w-prose pb-4">
+            {children}
+            <ScrollToTop />
+          </main>
+          <footer className="mx-auto flex max-w-prose flex-col items-center gap-2 py-6 text-sm text-zinc-500 dark:text-zinc-400">
+            <div className="flex items-center gap-4">
+              <a
+                className="decoration-[#68a60a] underline-offset-4 transition-all hover:underline hover:text-[#68a60a] hover:font-bold dark:decoration-[#acf328] dark:hover:text-[#acf328]"
+                href="https://github.com/Kecbm/blog"
+                target="_blank"
+              >
+                Code
+              </a>
 
-            <a
-              className="decoration-[#68a60a] underline-offset-4 transition-all hover:underline hover:text-[#68a60a] hover:font-bold dark:decoration-[#acf328] dark:hover:text-[#acf328]"
-              href="https://github.com/Kecbm"
-              target="_blank"
-            >
-              @Kecbm
-            </a>
-          </div>
-          <blockquote className="text-zinc-800 dark:text-zinc-300">
-            Life is good
-          </blockquote>
-        </footer>
+              <a
+                className="decoration-[#68a60a] underline-offset-4 transition-all hover:underline hover:text-[#68a60a] hover:font-bold dark:decoration-[#acf328] dark:hover:text-[#acf328]"
+                href="https://github.com/Kecbm"
+                target="_blank"
+              >
+                @Kecbm
+              </a>
+            </div>
+            <blockquote className="text-zinc-800 dark:text-zinc-300">
+              Life is good
+            </blockquote>
+          </footer>
+        </div>
       </body>
     </html>
   );
