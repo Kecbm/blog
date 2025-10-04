@@ -2,8 +2,6 @@
 
 ## Tasks
 
-- Deploy pelo Github pages
-
 - Novo tema
     - Liquid glass
     - Categorias: natureza, cidade, mar, terra
