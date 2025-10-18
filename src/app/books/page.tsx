@@ -51,8 +51,8 @@ const books: Book[] = [
     status: "pending",
   },
   {
-    name: "AI-Assisted Programming",
-    imageUrl: "https://m.media-amazon.com/images/I/81Q1ydwpYLL._UF1000,1000_QL80_.jpg",
+    name: "React Design Patterns and Best Practices",
+    imageUrl: "https://m.media-amazon.com/images/I/71ZOTiUqmuL.jpg",
     status: "pending",
   },
   {
@@ -84,6 +84,11 @@ const books: Book[] = [
     name: "Production-Ready Microservices",
     imageUrl: "https://m.media-amazon.com/images/I/81D4AHNvMsL._UF1000,1000_QL80_.jpg",
     status: "pending",
+  },
+  {
+    name: "AI-Assisted Programming",
+    imageUrl: "https://m.media-amazon.com/images/I/81Q1ydwpYLL._UF1000,1000_QL80_.jpg",
+    status: "done",
   },
   {
     name: "Product Backlog Building",
