@@ -4,6 +4,8 @@ import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 import { ChevronDown, Check, Clock, Hourglass, BookOpen, ExternalLink, X } from "lucide-react";
 import StatusBadge from "../../components/StatusBadge";
+import FloatingIcons from "../../components/FloatingIcons";
+import { ReadingIcons } from "../../components/ReadingIcons";
 
 interface Book {
   name: string;
@@ -294,6 +296,9 @@ export default function BooksPage() {
 
   return (
     <>
+      {/* Floating Icons Animation - only when modal is open */}
+      {isModalOpen && <FloatingIcons icons={ReadingIcons} interval={500} zIndex="z-[60]" />}
+
       <div className="relative">
         <h1 className="mb-8 mt-4 text-center text-5xl max-sm:text-4xl">
           Books
