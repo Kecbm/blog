@@ -120,7 +120,7 @@ function BookModal({ book, isOpen, onClose }: BookModalProps) {
             {/* Highlight Text */}
             <div className="flex-1">
               <blockquote className="text-lg leading-relaxed text-zinc-700 dark:text-zinc-300 italic border-l-4 border-[#68a60a] dark:border-[#acf328] pl-4">
-                "{book.highlight}"
+                &ldquo;{book.highlight}&rdquo;
               </blockquote>
             </div>
           </div>
