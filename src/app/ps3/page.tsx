@@ -18,17 +18,27 @@ const ps3Games: PS3Game[] = [
   {
     name: "Guitar Hero III",
     imageUrl: "https://m.media-amazon.com/images/I/81fa9l6X9aL.jpg",
-    status: "in-progress",
+    status: "pending",
+  },
+  {
+    name: "Need For Speed Underground",
+    imageUrl: "https://m.media-amazon.com/images/I/71LDdKquu4L._UF894,1000_QL80_.jpg",
+    status: "pending",
+  },
+  {
+    name: "Need For Speed Underground 2",
+    imageUrl: "https://m.media-amazon.com/images/I/813eYe6zO7L.jpg",
+    status: "pending",
+  },
+  {
+    name: "Need For Speed Most Wantead",
+    imageUrl: "https://m.media-amazon.com/images/I/71-WJMXvaLL._AC_UF1000,1000_QL80_.jpg",
+    status: "pending",
   },
   {
     name: "Gran Turismo 6",
     imageUrl: "https://m.media-amazon.com/images/I/714eNHubwSL._UF1000,1000_QL80_.jpg",
-    status: "in-progress",
-  },
-  {
-    name: "PES 2018",
-    imageUrl: "https://m.media-amazon.com/images/I/51T8ti8k8DL._UF1000,1000_QL80_.jpg",
-    status: "in-progress",
+    status: "pending",
   },
   {
     name: "The Last Of Us",
@@ -48,16 +58,6 @@ const ps3Games: PS3Game[] = [
   {
     name: "Red Dead Redemption",
     imageUrl: "https://m.media-amazon.com/images/I/81bcTFXk-rL._UF894,1000_QL80_.jpg",
-    status: "pending",
-  },
-  {
-    name: "Killzone 3",
-    imageUrl: "https://m.media-amazon.com/images/I/71MNXLe0fAL._UF894,1000_QL80_.jpg",
-    status: "pending",
-  },
-  {
-    name: "Batman Arkam City",
-    imageUrl: "https://m.media-amazon.com/images/I/81AvE75JPsL._UF894,1000_QL80_.jpg",
     status: "pending",
   },
 ];
