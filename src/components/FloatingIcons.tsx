@@ -29,7 +29,7 @@ export default function FloatingIcons({
       const newIcon: FloatingIcon = {
         id: Date.now() + Math.random(),
         left: Math.random() * 100, // Posição horizontal aleatória (0-100%)
-        animationDuration: 10, // Duração entre 5-8 segundos
+        animationDuration: 4, // Duração entre 3-5 segundos
         size: 20 + Math.random() * 10, // Tamanho entre 20-30px
         iconIndex: Math.floor(Math.random() * icons.length), // Ícone aleatório
       };
