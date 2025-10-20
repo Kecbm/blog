@@ -21,11 +21,6 @@ const ps3Games: PS3Game[] = [
     status: "pending",
   },
   {
-    name: "Need For Speed Underground",
-    imageUrl: "https://m.media-amazon.com/images/I/71LDdKquu4L._UF894,1000_QL80_.jpg",
-    status: "pending",
-  },
-  {
     name: "Need For Speed Underground 2",
     imageUrl: "https://m.media-amazon.com/images/I/813eYe6zO7L.jpg",
     status: "pending",
@@ -60,6 +55,11 @@ const ps3Games: PS3Game[] = [
     imageUrl: "https://m.media-amazon.com/images/I/81bcTFXk-rL._UF894,1000_QL80_.jpg",
     status: "pending",
   },
+  {
+    name: "Killzone 3",
+    imageUrl: "https://m.media-amazon.com/images/I/71MNXLe0fAL._UF894,1000_QL80_.jpg",
+    status: "pending",
+  }
 ];
 
 function PS3GameCard({ name, imageUrl, status }: PS3Game) {
