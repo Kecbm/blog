@@ -21,13 +21,13 @@ const ps3Games: PS3Game[] = [
     status: "pending",
   },
   {
-    name: "Need For Speed Underground 2",
-    imageUrl: "https://m.media-amazon.com/images/I/813eYe6zO7L.jpg",
+    name: "Midnight Club LA",
+    imageUrl: "https://m.media-amazon.com/images/I/81i6mWGgX5L._AC_UF1000,1000_QL80_.jpg",
     status: "pending",
   },
   {
-    name: "Need For Speed Most Wantead",
-    imageUrl: "https://m.media-amazon.com/images/I/71-WJMXvaLL._AC_UF1000,1000_QL80_.jpg",
+    name: "Burnout Paradise",
+    imageUrl: "https://m.media-amazon.com/images/I/61T9eWrgwhL.jpg",
     status: "pending",
   },
   {
