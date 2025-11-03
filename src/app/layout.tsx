@@ -43,7 +43,7 @@ export default function RootLayout({
           {children}
           <ScrollToTop />
         </main>
-        <footer className="mx-auto flex max-w-prose flex-col items-center gap-2 py-6 text-sm text-zinc-500 dark:text-zinc-400">
+        <footer className="relative z-10 mx-auto flex max-w-prose flex-col items-center gap-2 py-6 text-sm text-zinc-500 dark:text-zinc-400">
           <div className="flex items-center gap-4">
             <a
               className="decoration-[#68a60a] underline-offset-4 transition-all hover:underline hover:text-[#68a60a] hover:font-bold dark:decoration-[#acf328] dark:hover:text-[#acf328]"
