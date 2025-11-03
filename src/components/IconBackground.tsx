@@ -451,22 +451,6 @@ export default function IconBackground() {
   return (
     <div
       className="fixed inset-0 pointer-events-none z-0 overflow-hidden"
-      style={{
-        // Força o posicionamento fixo em mobile
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
-        // Previne problemas de scroll em mobile
-        WebkitTransform: 'translateZ(0)',
-        transform: 'translateZ(0)',
-        // Garante que não seja afetado pelo scroll
-        WebkitBackfaceVisibility: 'hidden',
-        backfaceVisibility: 'hidden',
-        // Força aceleração de hardware
-        willChange: 'transform',
-      }}
     >
       {iconPositions.map((item, index) => (
         <div
@@ -476,13 +460,6 @@ export default function IconBackground() {
             top: item.position.top,
             left: item.position.left,
             color: "var(--icon-bg-color)",
-            // Força posicionamento absoluto estável
-            position: 'absolute',
-            // Previne problemas de rendering em mobile
-            WebkitTransform: 'translateZ(0)',
-            transform: 'translateZ(0)',
-            WebkitBackfaceVisibility: 'hidden',
-            backfaceVisibility: 'hidden',
           }}
         >
           {item.icon}
