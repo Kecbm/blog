@@ -2,8 +2,6 @@
 
 ## Tasks
 
-- Bug: icon bg se move durante o scroll do mobile
-
 - Novo tema
     - Liquid glass
     - Categorias: natureza, cidade, mar, terra
