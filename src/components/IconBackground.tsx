@@ -460,6 +460,12 @@ export default function IconBackground() {
             top: item.position.top,
             left: item.position.left,
             color: "var(--icon-bg-color)",
+            // Garante que cada ícone também seja estático
+            position: 'absolute',
+            transform: 'translateZ(0)',
+            WebkitTransform: 'translateZ(0)',
+            backfaceVisibility: 'hidden',
+            WebkitBackfaceVisibility: 'hidden',
           }}
         >
           {item.icon}

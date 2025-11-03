@@ -144,12 +144,45 @@
     will-change: transform;
   }
 
-  /* Específico para mobile */
+  /* Específico para mobile - Previne movimento com barra de URL */
   @media (max-width: 768px) {
     .icon-background-fixed {
       position: fixed !important;
+      /* Usa viewport units que não mudam com a barra de URL */
+      width: 100vw !important;
+      height: 100vh !important;
+      /* Força altura mínima para cobrir toda a tela */
+      min-height: 100vh !important;
+      min-height: 100dvh !important; /* Dynamic viewport height - mais moderno */
       transform: translate3d(0, 0, 0);
       -webkit-transform: translate3d(0, 0, 0);
+      /* Previne qualquer overflow que possa causar movimento */
+      overflow: hidden !important;
+      /* Garante que não seja afetado por mudanças na viewport */
+      contain: layout style paint;
+    }
+  }
+
+  /* Fallback para navegadores muito antigos */
+  @media (max-width: 768px) and (-webkit-min-device-pixel-ratio: 1) {
+    .icon-background-fixed {
+      /* Usa altura fixa baseada na tela para iOS Safari antigo */
+      height: 100vh !important;
+      max-height: 100vh !important;
+    }
+  }
+
+  /* Ícones individuais - Máxima estabilidade no mobile */
+  @media (max-width: 768px) {
+    .icon-background-fixed .absolute {
+      /* Força posicionamento absoluto estável */
+      position: absolute !important;
+      transform: translateZ(0) !important;
+      -webkit-transform: translateZ(0) !important;
+      /* Previne qualquer mudança de layout */
+      contain: layout !important;
+      /* Garante que não seja afetado por mudanças na viewport */
+      will-change: auto !important;
     }
   }
 
