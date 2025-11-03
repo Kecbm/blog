@@ -49,6 +49,10 @@
   --header-nav-hover-bg-dark: #acf328;
   --header-nav-hover-text-dark: #161D2A;
   --header-triangle-fill-dark: #8dd909;
+
+  /* Icon Background Colors */
+  --icon-bg-color-light: #d1d1d1;
+  --icon-bg-color-dark: #2a3850;
 }
 
 @layer components {
@@ -115,6 +119,15 @@
 
   .dark .nav-triangle {
     fill: var(--header-triangle-fill-dark);
+  }
+
+  /* Icon Background Components */
+  :root {
+    --icon-bg-color: var(--icon-bg-color-light);
+  }
+
+  .dark {
+    --icon-bg-color: var(--icon-bg-color-dark);
   }
 
   /* External Links Components */
