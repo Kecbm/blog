@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Karla } from "next/font/google";
 import "./globals.css";
 import { ScrollToTop } from "../components/scroll-to-top";
+import IconBackground from "../components/IconBackground";
 import Script from "next/script";
 import dynamic from "next/dynamic";
 // import { Analytics } from "@vercel/analytics/next";
@@ -31,13 +32,14 @@ export default function RootLayout({
       </head>
       <body className={`${karla.className} min-h-full px-6`}>
         {/* <Analytics /> */}
+        <IconBackground />
         <Script id="theme-toggle" strategy="afterInteractive">
           {`document.documentElement.classList.toggle("dark", localStorage.theme ===
         "dark" || (!("theme" in localStorage) &&
         window.matchMedia("(prefers-color-scheme: dark)").matches))`}
         </Script>
         <Header />
-        <main className="mx-auto max-w-prose pb-4">
+        <main className="relative z-10 mx-auto max-w-prose pb-4">
           {children}
           <ScrollToTop />
         </main>
