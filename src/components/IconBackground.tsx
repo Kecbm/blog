@@ -450,7 +450,7 @@ export default function IconBackground() {
 
   return (
     <div
-      className="fixed inset-0 pointer-events-none z-0 overflow-hidden"
+      className="icon-background-fixed pointer-events-none z-0 overflow-hidden"
     >
       {iconPositions.map((item, index) => (
         <div

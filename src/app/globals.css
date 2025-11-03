@@ -130,6 +130,29 @@
     --icon-bg-color: var(--icon-bg-color-dark);
   }
 
+  /* Icon Background Fixed Position - Mobile Optimized */
+  .icon-background-fixed {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    will-change: transform;
+  }
+
+  /* Específico para mobile */
+  @media (max-width: 768px) {
+    .icon-background-fixed {
+      position: fixed !important;
+      transform: translate3d(0, 0, 0);
+      -webkit-transform: translate3d(0, 0, 0);
+    }
+  }
+
   /* External Links Components */
   .external-link {
     @apply flex items-center justify-between p-4 transition-all;
