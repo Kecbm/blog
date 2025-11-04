@@ -2,6 +2,8 @@
 
 ## Tasks
 
+- Bug: Icones do bg cortados na vertical direita da tela no mobile/tablet
+
 - Novo tema
     - Liquid glass
     - Categorias: natureza, cidade, mar, terra
