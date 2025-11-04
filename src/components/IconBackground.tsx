@@ -2,27 +2,45 @@
 
 import {
   // Programação (10 ícones)
-  Code2,
+  // Code2,
   Terminal,
-  Braces,
+  // Braces,
   FileCode,
-  GitBranch,
+  Binary,
+  Bot,
+  Bug,
   Database,
+  CodeXml,
+  Home,
+  GitBranch,
+  Coffee,
+  SquareTerminal,
+  BrainIcon,
   Server,
   Cpu,
+
+  // Tecnologia (10 ícones)
   Monitor,
   Smartphone,
+  Wifi,
+  Earth,
+  FlaskConical,
+  TestTubeDiagonal,
+  Satellite,
+  SigmaIcon,
+  Fingerprint,
+  Router,
 
   // Estudos (10 ícones)
   BookOpen,
   GraduationCap,
-  PenTool,
-  FileText,
+  // PenTool,
+  // FileText,
   Lightbulb,
   Brain,
-  Calculator,
-  Microscope,
-  Globe,
+  // Calculator,
+  // Microscope,
+  // Globe,
   Library,
 
   // Leitura (10 ícones)
@@ -30,12 +48,12 @@ import {
   BookMarked,
   Bookmark,
   Glasses,
-  Quote,
-  Scroll,
+  // Quote,
+  // Scroll,
   Newspaper,
-  FileImage,
-  Archive,
-  Feather,
+  // FileImage,
+  // Archive,
+  // Feather,
 
   // Academia (10 ícones)
   Dumbbell,
@@ -61,41 +79,39 @@ import {
   Flag,
   Milestone,
 
-  // Gato (10 ícones)
+  // Gato (2 ícones)
   Cat,
   PawPrint,
-  Fish,
-  Milk,
-  Home,
-  Bed,
-  Sun,
-  Moon,
-  Sparkles,
-  Heart as HeartCat,
 
-  // Cachorro (10 ícones)
+  // Cachorro (1 ícone)
   Dog,
-  Bone,
-  CircleDot,
-  Trees,
-  TreePine,
-  Footprints,
-  Shield,
-  Star,
-  Smile,
-  PlayCircle,
 
   // Jogos (10 ícones)
+  Castle,
   Gamepad2,
+  Ghost,
+  PuzzleIcon,
+  TrophyIcon,
+  Sword,
+  Star,
   Joystick,
-  Dice1,
-  Dice6,
-  Puzzle,
-  Swords,
-  Crown,
-  Gem,
-  Rocket,
-  Zap as ZapGame,
+  Gamepad,
+  Shapes,
+
+  // Música (13 ícones)
+  Mic,
+  Volume2,
+  Headphones,
+  Drum,
+  KeyboardMusic,
+  PianoIcon,
+  FileMusic,
+  Guitar,
+  Disc3Icon,
+  Music,
+  Music2,
+  Music3,
+  Music4,
 } from "lucide-react";
 
 interface IconPosition {
@@ -110,14 +126,14 @@ interface IconPosition {
 
 export default function IconBackground() {
   // Arrays organizados por tema
-  const programmingIcons = [Code2, Terminal, Braces, FileCode, GitBranch, Database, Server, Cpu, Monitor, Smartphone];
-  const studyIcons = [BookOpen, GraduationCap, PenTool, FileText, Lightbulb, Brain, Calculator, Microscope, Globe, Library];
-  const readingIcons = [Book, BookMarked, Bookmark, Glasses, Quote, Scroll, Newspaper, FileImage, Archive, Feather];
+  const programmingIcons = [Binary, Terminal, Bot, FileCode, GitBranch, Database, Server, Cpu, Monitor, Smartphone];
+  const studyIcons = [BookOpen, GraduationCap, Drum, KeyboardMusic, Lightbulb, Brain, PianoIcon, FileMusic, Guitar, Library];
+  const readingIcons = [Book, BookMarked, Bookmark, Disc3Icon, Music, Music2, Music3, Music4, Glasses, Newspaper];
   const gymIcons = [Dumbbell, Activity, Heart, Zap, Target, Timer, TrendingUp, Award, Trophy, Medal];
   const bikeIcons = [Bike, MapPin, Compass, Mountain, Wind, Route, Navigation, Map, Flag, Milestone];
-  const catIcons = [Cat, PawPrint, Fish, Milk, Home, Bed, Sun, Moon, Sparkles, HeartCat];
-  const dogIcons = [Dog, Bone, CircleDot, Trees, TreePine, Footprints, Shield, Star, Smile, PlayCircle];
-  const gameIcons = [Gamepad2, Joystick, Dice1, Dice6, Puzzle, Swords, Crown, Gem, Rocket, ZapGame];
+  const catIcons = [Cat, PawPrint, Bug, CodeXml, Home, Coffee, SquareTerminal, BrainIcon, Wifi, Earth];
+  const dogIcons = [Dog, Castle, FlaskConical, TestTubeDiagonal, Satellite, SigmaIcon, Fingerprint, Star, Router, Ghost];
+  const gameIcons = [Gamepad2, Joystick, PuzzleIcon, TrophyIcon, Sword, Gamepad, Shapes, Mic, Volume2, Headphones];
 
   // Função para criar ícone com componente
   const createIcon = (IconComponent: any) => <IconComponent />;
