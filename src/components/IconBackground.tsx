@@ -139,37 +139,37 @@ export default function IconBackground() {
   const createIcon = (IconComponent: any) => <IconComponent />;
 
   // Grid padronizado com espaçamento uniforme
-  // Colunas: 5%, 15%, 25%, 35%, 45%, 55%, 65%, 75%, 85%, 95%
-  // Linhas: 5%, 15%, 25%, 35%, 45%, 55%, 65%, 75%, 85%, 95%
+  // Colunas: 8%, 18%, 28%, 38%, 48%, 58%, 68%, 78%, 88% (espaçamento simétrico lateral)
+  // Linhas: 5%, 15%, 25%, 35%, 45%, 55%, 65%, 75%, 85%, 95% (valores originais)
   const iconPositions: IconPosition[] = [
     // Linha 1 - y: 5%
     {
       icon: createIcon(programmingIcons[0]), // Code2
-      position: { top: "5%", left: "5%" },
+      position: { top: "5%", left: "8%" },
       rotation: "rotate-12",
       size: "w-16 h-16 md:w-24 md:h-24 lg:w-32 lg:h-32",
     },
     {
       icon: createIcon(studyIcons[0]), // BookOpen
-      position: { top: "5%", left: "25%" },
+      position: { top: "5%", left: "28%" },
       rotation: "-rotate-6",
       size: "w-18 h-18 md:w-26 md:h-26 lg:w-34 lg:h-34",
     },
     {
       icon: createIcon(readingIcons[1]), // BookMarked
-      position: { top: "5%", left: "45%" },
+      position: { top: "5%", left: "48%" },
       rotation: "rotate-18",
       size: "w-20 h-20 md:w-28 md:h-28 lg:w-36 lg:h-36",
     },
     {
       icon: createIcon(gymIcons[0]), // Dumbbell
-      position: { top: "5%", left: "65%" },
+      position: { top: "5%", left: "68%" },
       rotation: "-rotate-24",
       size: "w-16 h-16 md:w-24 md:h-24 lg:w-32 lg:h-32",
     },
     {
       icon: createIcon(bikeIcons[0]), // Bike
-      position: { top: "5%", left: "85%" },
+      position: { top: "5%", left: "88%" },
       rotation: "rotate-8",
       size: "w-18 h-18 md:w-26 md:h-26 lg:w-34 lg:h-34",
     },
@@ -177,63 +177,57 @@ export default function IconBackground() {
     // Linha 2 - y: 15%
     {
       icon: createIcon(catIcons[0]), // Cat
-      position: { top: "15%", left: "15%" },
+      position: { top: "15%", left: "18%" },
       rotation: "-rotate-15",
       size: "w-20 h-20 md:w-28 md:h-28 lg:w-36 lg:h-36",
     },
     {
       icon: createIcon(dogIcons[0]), // Dog
-      position: { top: "15%", left: "35%" },
+      position: { top: "15%", left: "38%" },
       rotation: "rotate-30",
       size: "w-16 h-16 md:w-24 md:h-24 lg:w-32 lg:h-32",
     },
     {
       icon: createIcon(gameIcons[0]), // Gamepad2
-      position: { top: "15%", left: "55%" },
+      position: { top: "15%", left: "58%" },
       rotation: "rotate-45",
       size: "w-18 h-18 md:w-26 md:h-26 lg:w-34 lg:h-34",
     },
     {
       icon: createIcon(programmingIcons[1]), // Terminal
-      position: { top: "15%", left: "75%" },
+      position: { top: "15%", left: "78%" },
       rotation: "-rotate-12",
       size: "w-20 h-20 md:w-28 md:h-28 lg:w-36 lg:h-36",
-    },
-    {
-      icon: createIcon(studyIcons[1]), // GraduationCap
-      position: { top: "15%", left: "95%" },
-      rotation: "rotate-20",
-      size: "w-16 h-16 md:w-24 md:h-24 lg:w-32 lg:h-32",
     },
 
     // Linha 3 - y: 25%
     {
       icon: createIcon(readingIcons[2]), // Bookmark
-      position: { top: "25%", left: "5%" },
+      position: { top: "25%", left: "8%" },
       rotation: "-rotate-8",
       size: "w-18 h-18 md:w-26 md:h-26 lg:w-34 lg:h-34",
     },
     {
       icon: createIcon(gymIcons[1]), // Activity
-      position: { top: "25%", left: "25%" },
+      position: { top: "25%", left: "28%" },
       rotation: "rotate-36",
       size: "w-20 h-20 md:w-28 md:h-28 lg:w-36 lg:h-36",
     },
     {
       icon: createIcon(bikeIcons[1]), // MapPin
-      position: { top: "25%", left: "45%" },
+      position: { top: "25%", left: "48%" },
       rotation: "-rotate-18",
       size: "w-16 h-16 md:w-24 md:h-24 lg:w-32 lg:h-32",
     },
     {
       icon: createIcon(catIcons[1]), // PawPrint
-      position: { top: "25%", left: "65%" },
+      position: { top: "25%", left: "68%" },
       rotation: "rotate-15",
       size: "w-18 h-18 md:w-26 md:h-26 lg:w-34 lg:h-34",
     },
     {
       icon: createIcon(dogIcons[1]), // Bone
-      position: { top: "25%", left: "85%" },
+      position: { top: "25%", left: "88%" },
       rotation: "-rotate-25",
       size: "w-20 h-20 md:w-28 md:h-28 lg:w-36 lg:h-36",
     },
@@ -241,63 +235,57 @@ export default function IconBackground() {
     // Linha 4 - y: 35%
     {
       icon: createIcon(gameIcons[1]), // Joystick
-      position: { top: "35%", left: "15%" },
+      position: { top: "35%", left: "18%" },
       rotation: "rotate-40",
       size: "w-16 h-16 md:w-24 md:h-24 lg:w-32 lg:h-32",
     },
     {
       icon: createIcon(programmingIcons[2]), // Braces
-      position: { top: "35%", left: "35%" },
+      position: { top: "35%", left: "38%" },
       rotation: "-rotate-10",
       size: "w-18 h-18 md:w-26 md:h-26 lg:w-34 lg:h-34",
     },
     {
       icon: createIcon(studyIcons[2]), // PenTool
-      position: { top: "35%", left: "55%" },
+      position: { top: "35%", left: "58%" },
       rotation: "rotate-22",
       size: "w-20 h-20 md:w-28 md:h-28 lg:w-36 lg:h-36",
     },
     {
       icon: createIcon(readingIcons[3]), // Glasses
-      position: { top: "35%", left: "75%" },
+      position: { top: "35%", left: "78%" },
       rotation: "-rotate-14",
       size: "w-16 h-16 md:w-24 md:h-24 lg:w-32 lg:h-32",
-    },
-    {
-      icon: createIcon(gymIcons[2]), // Heart
-      position: { top: "35%", left: "95%" },
-      rotation: "rotate-28",
-      size: "w-18 h-18 md:w-26 md:h-26 lg:w-34 lg:h-34",
     },
 
     // Linha 5 - y: 45%
     {
       icon: createIcon(bikeIcons[2]), // Compass
-      position: { top: "45%", left: "5%" },
+      position: { top: "45%", left: "8%" },
       rotation: "-rotate-35",
       size: "w-20 h-20 md:w-28 md:h-28 lg:w-36 lg:h-36",
     },
     {
       icon: createIcon(catIcons[2]), // Fish
-      position: { top: "45%", left: "25%" },
+      position: { top: "45%", left: "28%" },
       rotation: "rotate-16",
       size: "w-16 h-16 md:w-24 md:h-24 lg:w-32 lg:h-32",
     },
     {
       icon: createIcon(dogIcons[2]), // CircleDot
-      position: { top: "45%", left: "45%" },
+      position: { top: "45%", left: "48%" },
       rotation: "-rotate-20",
       size: "w-18 h-18 md:w-26 md:h-26 lg:w-34 lg:h-34",
     },
     {
       icon: createIcon(gameIcons[2]), // Dice1
-      position: { top: "45%", left: "65%" },
+      position: { top: "45%", left: "68%" },
       rotation: "rotate-42",
       size: "w-20 h-20 md:w-28 md:h-28 lg:w-36 lg:h-36",
     },
     {
       icon: createIcon(programmingIcons[3]), // FileCode
-      position: { top: "45%", left: "85%" },
+      position: { top: "45%", left: "88%" },
       rotation: "-rotate-12",
       size: "w-16 h-16 md:w-24 md:h-24 lg:w-32 lg:h-32",
     },
@@ -305,63 +293,57 @@ export default function IconBackground() {
     // Linha 6 - y: 55%
     {
       icon: createIcon(studyIcons[3]), // FileText
-      position: { top: "55%", left: "15%" },
+      position: { top: "55%", left: "18%" },
       rotation: "rotate-8",
       size: "w-18 h-18 md:w-26 md:h-26 lg:w-34 lg:h-34",
     },
     {
       icon: createIcon(readingIcons[4]), // Quote
-      position: { top: "55%", left: "35%" },
+      position: { top: "55%", left: "38%" },
       rotation: "-rotate-18",
       size: "w-20 h-20 md:w-28 md:h-28 lg:w-36 lg:h-36",
     },
     {
       icon: createIcon(gymIcons[3]), // Zap
-      position: { top: "55%", left: "55%" },
+      position: { top: "55%", left: "58%" },
       rotation: "rotate-30",
       size: "w-16 h-16 md:w-24 md:h-24 lg:w-32 lg:h-32",
     },
     {
       icon: createIcon(bikeIcons[3]), // Mountain
-      position: { top: "55%", left: "75%" },
+      position: { top: "55%", left: "78%" },
       rotation: "-rotate-6",
       size: "w-18 h-18 md:w-26 md:h-26 lg:w-34 lg:h-34",
-    },
-    {
-      icon: createIcon(catIcons[3]), // Milk
-      position: { top: "55%", left: "95%" },
-      rotation: "rotate-24",
-      size: "w-20 h-20 md:w-28 md:h-28 lg:w-36 lg:h-36",
     },
 
     // Linha 7 - y: 65%
     {
       icon: createIcon(dogIcons[3]), // Trees
-      position: { top: "65%", left: "5%" },
+      position: { top: "65%", left: "8%" },
       rotation: "-rotate-16",
       size: "w-16 h-16 md:w-24 md:h-24 lg:w-32 lg:h-32",
     },
     {
       icon: createIcon(programmingIcons[4]), // GitBranch
-      position: { top: "65%", left: "25%" },
+      position: { top: "65%", left: "28%" },
       rotation: "rotate-25",
       size: "w-18 h-18 md:w-26 md:h-26 lg:w-34 lg:h-34",
     },
     {
       icon: createIcon(studyIcons[4]), // Lightbulb
-      position: { top: "65%", left: "45%" },
+      position: { top: "65%", left: "48%" },
       rotation: "-rotate-30",
       size: "w-20 h-20 md:w-28 md:h-28 lg:w-36 lg:h-36",
     },
     {
       icon: createIcon(readingIcons[5]), // Scroll
-      position: { top: "65%", left: "65%" },
+      position: { top: "65%", left: "68%" },
       rotation: "rotate-14",
       size: "w-16 h-16 md:w-24 md:h-24 lg:w-32 lg:h-32",
     },
     {
       icon: createIcon(gymIcons[4]), // Target
-      position: { top: "65%", left: "85%" },
+      position: { top: "65%", left: "88%" },
       rotation: "-rotate-40",
       size: "w-18 h-18 md:w-26 md:h-26 lg:w-34 lg:h-34",
     },
@@ -369,63 +351,57 @@ export default function IconBackground() {
     // Linha 8 - y: 75%
     {
       icon: createIcon(bikeIcons[4]), // Wind
-      position: { top: "75%", left: "15%" },
+      position: { top: "75%", left: "18%" },
       rotation: "rotate-10",
       size: "w-20 h-20 md:w-28 md:h-28 lg:w-36 lg:h-36",
     },
     {
       icon: createIcon(catIcons[4]), // Home
-      position: { top: "75%", left: "35%" },
+      position: { top: "75%", left: "38%" },
       rotation: "-rotate-22",
       size: "w-16 h-16 md:w-24 md:h-24 lg:w-32 lg:h-32",
     },
     {
       icon: createIcon(dogIcons[4]), // TreePine
-      position: { top: "75%", left: "55%" },
+      position: { top: "75%", left: "58%" },
       rotation: "rotate-35",
       size: "w-18 h-18 md:w-26 md:h-26 lg:w-34 lg:h-34",
     },
     {
       icon: createIcon(gameIcons[3]), // Dice6
-      position: { top: "75%", left: "75%" },
+      position: { top: "75%", left: "78%" },
       rotation: "-rotate-15",
       size: "w-20 h-20 md:w-28 md:h-28 lg:w-36 lg:h-36",
-    },
-    {
-      icon: createIcon(programmingIcons[5]), // Database
-      position: { top: "75%", left: "95%" },
-      rotation: "rotate-50",
-      size: "w-16 h-16 md:w-24 md:h-24 lg:w-32 lg:h-32",
     },
 
     // Linha 9 - y: 85%
     {
       icon: createIcon(studyIcons[5]), // Brain
-      position: { top: "85%", left: "5%" },
+      position: { top: "85%", left: "8%" },
       rotation: "-rotate-8",
       size: "w-18 h-18 md:w-26 md:h-26 lg:w-34 lg:h-34",
     },
     {
       icon: createIcon(readingIcons[6]), // Newspaper
-      position: { top: "85%", left: "25%" },
+      position: { top: "85%", left: "28%" },
       rotation: "rotate-28",
       size: "w-20 h-20 md:w-28 md:h-28 lg:w-36 lg:h-36",
     },
     {
       icon: createIcon(gymIcons[5]), // Timer
-      position: { top: "85%", left: "45%" },
+      position: { top: "85%", left: "48%" },
       rotation: "-rotate-45",
       size: "w-16 h-16 md:w-24 md:h-24 lg:w-32 lg:h-32",
     },
     {
       icon: createIcon(bikeIcons[5]), // Route
-      position: { top: "85%", left: "65%" },
+      position: { top: "85%", left: "68%" },
       rotation: "rotate-18",
       size: "w-18 h-18 md:w-26 md:h-26 lg:w-34 lg:h-34",
     },
     {
       icon: createIcon(catIcons[5]), // Bed
-      position: { top: "85%", left: "85%" },
+      position: { top: "85%", left: "88%" },
       rotation: "-rotate-32",
       size: "w-20 h-20 md:w-28 md:h-28 lg:w-36 lg:h-36",
     },
@@ -433,33 +409,27 @@ export default function IconBackground() {
     // Linha 10 - y: 95%
     {
       icon: createIcon(dogIcons[5]), // Footprints
-      position: { top: "95%", left: "15%" },
+      position: { top: "95%", left: "18%" },
       rotation: "rotate-42",
       size: "w-16 h-16 md:w-24 md:h-24 lg:w-32 lg:h-32",
     },
     {
       icon: createIcon(gameIcons[4]), // Puzzle
-      position: { top: "95%", left: "35%" },
+      position: { top: "95%", left: "38%" },
       rotation: "-rotate-12",
       size: "w-18 h-18 md:w-26 md:h-26 lg:w-34 lg:h-34",
     },
     {
       icon: createIcon(programmingIcons[6]), // Server
-      position: { top: "95%", left: "55%" },
+      position: { top: "95%", left: "58%" },
       rotation: "rotate-26",
       size: "w-20 h-20 md:w-28 md:h-28 lg:w-36 lg:h-36",
     },
     {
       icon: createIcon(studyIcons[6]), // Calculator
-      position: { top: "95%", left: "75%" },
+      position: { top: "95%", left: "78%" },
       rotation: "-rotate-38",
       size: "w-16 h-16 md:w-24 md:h-24 lg:w-32 lg:h-32",
-    },
-    {
-      icon: createIcon(readingIcons[7]), // FileImage
-      position: { top: "95%", left: "95%" },
-      rotation: "rotate-33",
-      size: "w-18 h-18 md:w-26 md:h-26 lg:w-34 lg:h-34",
     },
 
   ];
@@ -471,6 +441,7 @@ export default function IconBackground() {
       {iconPositions.map((item, index) => (
         <div
           key={index}
+          // clasName="border-2 border-red-500"
           className={`absolute ${item.size} ${item.rotation}`}
           style={{
             top: item.position.top,
