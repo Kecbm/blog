@@ -2,9 +2,7 @@
 
 ## Tasks
 
-- Bug: Icones do bg cortados na vertical direita da tela no mobile/tablet
-
-- Strava: vê se dá pra pegar minhas ultimas postagens lá e criar a página para bike e gym. Se der, pegar também as estatisticas desse esporte
+- Gemini canvas: criar uma nova versao do IconBackground
 
 - Novo tema
     - Liquid glass
