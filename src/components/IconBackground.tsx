@@ -183,35 +183,14 @@ export default function IconBackground() {
 
   // Todos os ícones organizados em um array único
   const allIcons = [
-    // Programação
-    Terminal, FileCode, Binary, Bot, Bug, Database, CodeXml, Home, GitBranch, Coffee,
-    SquareTerminal, BrainIcon, Server, Cpu,
-
-    // Tecnologia
-    Monitor, Smartphone, Wifi, Earth, FlaskConical, TestTubeDiagonal, Satellite,
-    SigmaIcon, Fingerprint, Router,
-
-    // Estudos
-    BookOpen, GraduationCap, Lightbulb, Brain, Library,
-
-    // Leitura
-    Book, BookMarked, Bookmark, Glasses, Newspaper,
-
-    // Academia
-    Dumbbell, Activity, Heart, Zap, Target, Timer, TrendingUp, Award, Trophy, Medal,
-
-    // Bicicleta
-    Bike, MapPin, Compass, Mountain, Wind, Route, Navigation, Map, Flag, Milestone,
-
-    // Animais
-    Cat, PawPrint, Dog,
-
-    // Jogos
-    Castle, Gamepad2, Ghost, PuzzleIcon, TrophyIcon, Sword, Star, Joystick, Gamepad, Shapes,
-
-    // Música
-    Mic, Volume2, Headphones, Drum, KeyboardMusic, PianoIcon, FileMusic, Guitar,
-    Disc3Icon, Music, Music2, Music3, Music4,
+    Terminal, Monitor, BookOpen, Dumbbell, Bike, Cat, Castle, Mic, SquareTerminal, Gamepad,
+    FileCode, Smartphone, GraduationCap, Activity, MapPin, PawPrint, Gamepad2, Volume2, Newspaper, Music,
+    Binary, Wifi, Lightbulb, Heart, Compass, Dog, Ghost, Headphones, Trophy, Shapes,
+    Bot, Earth, Brain, Zap, Mountain, PuzzleIcon, Drum, Home, Medal, Music2,
+    Bug, FlaskConical, Library, Target, Wind, TrophyIcon, KeyboardMusic, Fingerprint, Flag, Music3,
+    Database, TestTubeDiagonal, Book, Timer, Route, Sword, PianoIcon, Bookmark, Disc3Icon, Music4,
+    CodeXml, Satellite, SigmaIcon, BookMarked, TrendingUp, Navigation, Star, FileMusic, BrainIcon, Server,
+    GitBranch, Router, Glasses, Award, Map, Joystick, Guitar, Coffee, Milestone, Cpu,
   ];
 
   // Função para gerar ícones estáticos com tamanho padronizado
