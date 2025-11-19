@@ -2,7 +2,7 @@
 
 ## Tasks
 
-- Gemini canvas: criar uma nova versao do IconBackground
+- IconBackground: garantir que a disposicao de icones seja igual no desktop, mobile e tablet
 
 - Novo tema
     - Liquid glass
