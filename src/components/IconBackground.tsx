@@ -1,242 +1,165 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   // Programação
-  Terminal,
-  FileCode,
-  Binary,
-  Bot,
-  Bug,
-  Database,
-  CodeXml,
-  Home,
-  GitBranch,
-  Coffee,
-  SquareTerminal,
-  BrainIcon,
-  Server,
-  Cpu,
+  Terminal, FileCode, Binary, Bot, Bug, Database, CodeXml, Home, GitBranch, Coffee, SquareTerminal, BrainIcon, Server, Cpu,
 
   // Tecnologia
-  Monitor,
-  Smartphone,
-  Wifi,
-  Earth,
-  FlaskConical,
-  TestTubeDiagonal,
-  Satellite,
-  SigmaIcon,
-  Fingerprint,
-  Router,
+  Monitor, Smartphone, Wifi, Earth, FlaskConical, TestTubeDiagonal, Satellite, SigmaIcon, Fingerprint, Router,
 
   // Estudos
-  BookOpen,
-  GraduationCap,
-  Lightbulb,
-  Brain,
-  Library,
+  BookOpen, GraduationCap, Lightbulb, Brain, Library,
 
   // Leitura
-  Book,
-  BookMarked,
-  Bookmark,
-  Glasses,
-  Newspaper,
+  Book, BookMarked, Bookmark, Glasses, Newspaper,
 
   // Academia
-  Dumbbell,
-  Activity,
-  Heart,
-  Zap,
-  Target,
-  Timer,
-  TrendingUp,
-  Award,
-  Trophy,
-  Medal,
+  Dumbbell, Activity, Heart, Zap, Target, Timer, TrendingUp, Award, Trophy, Medal,
 
   // Bicicleta
-  Bike,
-  MapPin,
-  Compass,
-  Mountain,
-  Wind,
-  Route,
-  Navigation,
-  Map,
-  Flag,
-  Milestone,
+  Bike, MapPin, Compass, Mountain, Wind, Route, Navigation, Map, Flag, Milestone,
 
   // Animais
-  Cat,
-  PawPrint,
-  Dog,
+  Cat, PawPrint, Dog,
 
   // Jogos
-  Castle,
-  Gamepad2,
-  Ghost,
-  PuzzleIcon,
-  TrophyIcon,
-  Sword,
-  Star,
-  Joystick,
-  Gamepad,
-  Shapes,
+  Castle, Gamepad2, Ghost, Sword, Star, Joystick, Gamepad, Shapes,
 
   // Música
-  Mic,
-  Volume2,
-  Headphones,
-  Drum,
-  KeyboardMusic,
-  PianoIcon,
-  FileMusic,
-  Guitar,
-  Disc3Icon,
-  Music,
-  Music2,
-  Music3,
-  Music4,
+  Mic, Volume2, Headphones, Drum, KeyboardMusic, PianoIcon, FileMusic, Guitar, Disc3Icon, Music, Music2, Music3, Music4,
 } from "lucide-react";
 
-interface AnimatedIcon {
-  IconComponent: any;
-  id: string;
-  size: 'small' | 'medium' | 'large';
+// Lista de todos os ícones disponíveis
+const allIcons = [
+  Terminal, Monitor, BookOpen, Dumbbell, Bike, Cat, Castle, Mic, SquareTerminal, Gamepad,
+  FileCode, Smartphone, GraduationCap, Activity, MapPin, PawPrint, Gamepad2, Volume2, Newspaper, Music,
+  Binary, Wifi, Lightbulb, Heart, Compass, Dog, Ghost, Headphones, Trophy, Shapes,
+  Bot, Earth, Brain, Zap, Mountain, Wind, Drum, Home, Medal, Music2,
+  Bug, FlaskConical, Library, Target, Route, Sword, KeyboardMusic, Fingerprint, Flag, Music3,
+  Database, TestTubeDiagonal, Book, Timer, Navigation, Star, PianoIcon, Bookmark, Disc3Icon, Music4,
+  CodeXml, Satellite, SigmaIcon, BookMarked, TrendingUp, Map, Joystick, FileMusic, BrainIcon, Server,
+  GitBranch, Router, Glasses, Award, Mountain, Milestone, Guitar, Coffee, Milestone, Cpu,
+];
+
+// Configurações da grade para distribuição uniforme
+const GRID_ROWS = 10;
+const GRID_COLS = 10;
+const TOTAL_POSITIONS = GRID_ROWS * GRID_COLS;
+const ICON_COUNT = allIcons.length;
+
+// Interface para o estado do ícone (apenas casas pretas do xadrez)
+interface BackgroundIcon {
+  IconComponent: React.ElementType;
+  x: number;
+  y: number;
   rotation: number;
+  isLightSquare: boolean; // Sempre false, mantido para compatibilidade
 }
+
+// CSS para os ícones nas casas pretas do xadrez
+const customCss = `
+  .icon-chess-black {
+    transition: opacity 0.3s ease;
+    opacity: 0.25;
+  }
+
+  .icon-chess-black:hover {
+    opacity: 0.8;
+  }
+`;
 
 export default function IconBackground() {
   const [isClient, setIsClient] = useState(false);
-  const [icons, setIcons] = useState<AnimatedIcon[]>([]);
+  const [icons, setIcons] = useState<BackgroundIcon[]>([]);
 
-  // Função para criar grade de ícones preenchendo 100% da tela
-  const createFullScreenIcons = () => {
-    const iconsArray: AnimatedIcon[] = [];
-    const totalIcons = allIcons.length; // 80 ícones disponíveis
+  // 1. Geração de Ícones e Posições (apenas casas pretas)
+  const generateIcons = () => {
+    const generated: BackgroundIcon[] = [];
+    let iconIndex = 0; // Contador separado para os ícones
 
-    // Calcular grade para máxima distribuição por toda a tela
-    const screenWidth = typeof window !== 'undefined' ? window.innerWidth : 1200;
-    const screenHeight = typeof window !== 'undefined' ? window.innerHeight : 800;
+    for (let i = 0; i < TOTAL_POSITIONS; i++) {
+      // Determina a posição na grade (0 a 100%)
+      const row = Math.floor(i / GRID_COLS);
+      const col = i % GRID_COLS;
 
-    // Forçar uma grade maior para garantir distribuição completa
-    // Calcular baseado em espaçamento generoso
-    const targetSpacingX = 150; // Espaçamento horizontal muito maior
-    const targetSpacingY = 120; // Espaçamento vertical muito maior
+      // Determina se é uma casa clara ou escura (padrão xadrez)
+      // Casa escura quando a soma de row + col é ímpar
+      const isLightSquare = (row + col) % 2 === 0;
 
-    // Calcular grade mínima baseada na tela
-    const minCols = Math.max(8, Math.floor(screenWidth / targetSpacingX));
-    const minRows = Math.max(6, Math.floor(screenHeight / targetSpacingY));
+      // Só adiciona ícones nas casas escuras (pretas)
+      if (!isLightSquare) {
+        // Distribuição percentual com margem (5% a 95%)
+        const xPercent = 5 + (col / (GRID_COLS - 1)) * 90;
+        const yPercent = 5 + (row / (GRID_ROWS - 1)) * 90;
 
-    // Para garantir que todos os 80 ícones apareçam, calcular grade necessária
-    const totalPositionsNeeded = totalIcons * 2; // Padrão xadrez
-    const calculatedCols = Math.ceil(Math.sqrt(totalPositionsNeeded * 1.5));
-    const calculatedRows = Math.ceil(totalPositionsNeeded / calculatedCols);
+        // Seleciona um ícone da lista, repetindo se necessário (loop)
+        const IconComponent = allIcons[iconIndex % ICON_COUNT];
 
-    // Usar a maior grade para garantir distribuição completa
-    const cols = Math.max(minCols, calculatedCols);
-    const finalRows = Math.max(minRows, calculatedRows);
+        // Randomiza apenas a rotação inicial
+        const randomRotation = Math.floor(Math.random() * 360);
 
-    let iconIndex = 0;
+        generated.push({
+          IconComponent,
+          x: xPercent,
+          y: yPercent,
+          rotation: randomRotation,
+          isLightSquare: false, // Sempre false, pois só geramos casas escuras
+        });
 
-    for (let row = 0; row < finalRows && iconIndex < totalIcons; row++) {
-      for (let col = 0; col < cols && iconIndex < totalIcons; col++) {
-        // Efeito xadrez: só coloca ícone nas posições alternadas
-        const isEvenRow = row % 2 === 0;
-        const isEvenCol = col % 2 === 0;
-        const shouldPlaceIcon = (isEvenRow && isEvenCol) || (!isEvenRow && !isEvenCol);
-
-        if (shouldPlaceIcon && iconIndex < totalIcons) {
-          // Cada ícone aparece apenas uma vez
-          const staticIcon = generateStaticIcon(allIcons[iconIndex], iconIndex);
-
-          // Posições distribuídas por toda a tela com espaçamento máximo
-          const xPercent = 2 + ((col / Math.max(cols - 1, 1)) * 96); // 2% a 98%
-          const yPercent = 2 + ((row / Math.max(finalRows - 1, 1)) * 96); // 2% a 98%
-
-          // Adiciona posição à estrutura do ícone
-          (staticIcon as any).position = {
-            x: xPercent,
-            y: yPercent,
-          };
-
-          iconsArray.push(staticIcon);
-          iconIndex++;
-        }
+        iconIndex++; // Incrementa apenas quando adiciona um ícone
       }
     }
 
-    return iconsArray;
+    return generated;
   };
 
   useEffect(() => {
     setIsClient(true);
-
-    // Criar ícones apenas no cliente
+    // Cria ícones apenas uma vez no cliente
     if (typeof window !== 'undefined') {
-      const createdIcons = createFullScreenIcons();
-      setIcons(createdIcons);
+      setIcons(generateIcons());
     }
   }, []);
 
-  // Todos os ícones organizados em um array único
-  const allIcons = [
-    Terminal, Monitor, BookOpen, Dumbbell, Bike, Cat, Castle, Mic, SquareTerminal, Gamepad,
-    FileCode, Smartphone, GraduationCap, Activity, MapPin, PawPrint, Gamepad2, Volume2, Newspaper, Music,
-    Binary, Wifi, Lightbulb, Heart, Compass, Dog, Ghost, Headphones, Trophy, Shapes,
-    Bot, Earth, Brain, Zap, Mountain, PuzzleIcon, Drum, Home, Medal, Music2,
-    Bug, FlaskConical, Library, Target, Wind, TrophyIcon, KeyboardMusic, Fingerprint, Flag, Music3,
-    Database, TestTubeDiagonal, Book, Timer, Route, Sword, PianoIcon, Bookmark, Disc3Icon, Music4,
-    CodeXml, Satellite, SigmaIcon, BookMarked, TrendingUp, Navigation, Star, FileMusic, BrainIcon, Server,
-    GitBranch, Router, Glasses, Award, Map, Joystick, Guitar, Coffee, Milestone, Cpu,
-  ];
-
-  // Função para gerar ícones estáticos com tamanho padronizado
-  const generateStaticIcon = (IconComponent: any, index: number): AnimatedIcon => {
-    const randomRotation = Math.floor(Math.random() * 360);
-
-    return {
-      IconComponent,
-      id: `icon-${index}`,
-      size: 'small', // Tamanho padronizado
-      rotation: randomRotation,
-    };
-  };
-
-
-  // Classes de tamanho padronizado para todos os ícones
-  const standardIconSize = 'w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6';
-
-  // Não renderizar no servidor para evitar hidration mismatch
+  // 2. Renderização
   if (!isClient) {
     return null;
   }
 
   return (
-    <div className="icon-background-fixed pointer-events-none z-0 overflow-hidden">
-      {icons.map((icon, index) => {
-        const IconComponent = icon.IconComponent;
-        const position = (icon as any).position;
+    <>
+      {/* Estilos CSS personalizados para o efeito de xadrez */}
+      <style>{customCss}</style>
 
-        return (
-          <div
-            key={`${icon.id}-${index}`}
-            className={`absolute ${standardIconSize}`}
-            style={{
-              left: `${position.x}%`,
-              top: `${position.y}%`,
-              transform: `translate(-50%, -50%) rotate(${icon.rotation}deg)`,
-              color: 'var(--icon-bg-color)',
-            }}
-          >
-            <IconComponent className="w-full h-full" />
-          </div>
-        );
-      })}
+      <div 
+        className="fixed inset-0 pointer-events-none z-0 overflow-hidden bg-white/5 dark:bg-black/5"
+        aria-hidden="true"
+      >
+        {icons.map((icon, index) => {
+          const IconComponent = icon.IconComponent;
 
-
-    </div>
+          return (
+            <div
+              key={index}
+              className="absolute text-gray-500 dark:text-gray-400 icon-chess-black"
+              style={{
+                left: `${icon.x}%`,
+                top: `${icon.y}%`,
+                // Aplica apenas a rotação inicial estática e centraliza o elemento
+                transform: `translate(-50%, -50%) rotate(${icon.rotation}deg)`,
+                // Garante que o ícone é sutil e não rouba o foco
+                color: 'currentColor',
+              }}
+            >
+              <IconComponent
+                // Tamanho responsivo para os ícones
+                className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6"
+              />
+            </div>
+          );
+        })}
+      </div>
+    </>
   );
 }
