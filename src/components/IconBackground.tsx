@@ -68,21 +68,13 @@ const customCss = `
     opacity: 0.8;
   }
 
-  /* Estabilidade para mobile - apenas propriedades que previnem movimento */
+  /* Estabilidade para mobile */
   @media (max-width: 768px) {
-    .icon-background-container {
-      /* Apenas propriedades essenciais para estabilidade */
-      transform: translate3d(0, 0, 0) !important;
-      -webkit-transform: translate3d(0, 0, 0) !important;
-      backface-visibility: hidden !important;
-      -webkit-backface-visibility: hidden !important;
-    }
-
     .icon-chess-black {
-      /* Força estabilidade dos ícones individuais */
+      /* Força estabilidade dos ícones individuais e previne repintura */
       backface-visibility: hidden !important;
       -webkit-backface-visibility: hidden !important;
-      will-change: auto !important;
+      will-change: opacity !important;
     }
   }
 `;
@@ -147,11 +139,17 @@ export default function IconBackground() {
 
   return (
     <>
-      {/* Estilos CSS personalizados para o efeito de xadrez */}
+      {/* Estilos CSS personalizados */}
       <style>{customCss}</style>
 
       <div
-        className="fixed inset-0 pointer-events-none z-0 overflow-hidden bg-white/5 dark:bg-black/5 icon-background-container"
+        /* FIX MOBILE:
+           Alterado de 'inset-0' para 'top-0 left-0 w-full h-screen'.
+           'inset-0' inclui 'bottom: 0', que se move quando a barra de URL do mobile aparece/some,
+           causando o redimensionamento do container e o "pulo" dos ícones.
+           'h-screen' mantém uma altura estável (100vh) que ignora o redimensionamento da barra de URL em navegadores modernos.
+        */
+        className="fixed top-0 left-0 w-full h-screen pointer-events-none z-0 overflow-hidden bg-white/5 dark:bg-black/5 icon-background-container"
         aria-hidden="true"
       >
         {icons.map((icon, index) => {
