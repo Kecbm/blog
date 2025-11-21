@@ -57,7 +57,7 @@ interface BackgroundIcon {
   isLightSquare: boolean; // Sempre false, mantido para compatibilidade
 }
 
-// CSS para os ícones nas casas pretas do xadrez
+// CSS para os ícones nas casas pretas do xadrez com estabilidade mobile
 const customCss = `
   .icon-chess-black {
     transition: opacity 0.3s ease;
@@ -66,6 +66,24 @@ const customCss = `
 
   .icon-chess-black:hover {
     opacity: 0.8;
+  }
+
+  /* Estabilidade para mobile - apenas propriedades que previnem movimento */
+  @media (max-width: 768px) {
+    .icon-background-container {
+      /* Apenas propriedades essenciais para estabilidade */
+      transform: translate3d(0, 0, 0) !important;
+      -webkit-transform: translate3d(0, 0, 0) !important;
+      backface-visibility: hidden !important;
+      -webkit-backface-visibility: hidden !important;
+    }
+
+    .icon-chess-black {
+      /* Força estabilidade dos ícones individuais */
+      backface-visibility: hidden !important;
+      -webkit-backface-visibility: hidden !important;
+      will-change: auto !important;
+    }
   }
 `;
 
@@ -132,8 +150,8 @@ export default function IconBackground() {
       {/* Estilos CSS personalizados para o efeito de xadrez */}
       <style>{customCss}</style>
 
-      <div 
-        className="fixed inset-0 pointer-events-none z-0 overflow-hidden bg-white/5 dark:bg-black/5"
+      <div
+        className="fixed inset-0 pointer-events-none z-0 overflow-hidden bg-white/5 dark:bg-black/5 icon-background-container"
         aria-hidden="true"
       >
         {icons.map((icon, index) => {
