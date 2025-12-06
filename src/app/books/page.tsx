@@ -167,8 +167,8 @@ const books: Book[] = [
     status: "pending",
   },
   {
-    name: "Self-Taught Programmer",
-    imageUrl: "https://m.media-amazon.com/images/I/51+Z8QVq+WL.jpg",
+    name: "The Passionate Programmer",
+    imageUrl: "https://m.media-amazon.com/images/I/71FVngNCLGL._UF1000,1000_QL80_.jpg",
     status: "pending",
   },
   {
