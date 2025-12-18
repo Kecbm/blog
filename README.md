@@ -1,8 +1,15 @@
 # Meu portfolio
 
+## Referências
+
+- https://lucasmagnum.com.br/
+
 ## Tasks
 
-- IconBackground: garantir que a disposicao de icones seja igual no desktop, mobile e tablet
+- Tragetória profissional
+- Learning (cursos, certificados e etc)
+- Community Work (abrir minha agenda 1x no mês para trocar ideia com a galera e metrificar como Mentoring)
+- Awards (badge da XP, minha placa de graduação)
 
 - Novo tema
     - Liquid glass
