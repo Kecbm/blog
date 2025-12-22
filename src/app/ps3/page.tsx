@@ -1,7 +1,11 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
 import FloatingIcons from "../../components/FloatingIcons";
 import { PlayStationIcons } from "../../components/PlayStationIcons";
 import GameStatusBadge from "../../components/StatusBadge";
+import StatusFilter, { FilterStatus } from "../../components/StatusFilter";
 
 interface PS3Game {
   name: string;
@@ -16,8 +20,8 @@ const ps3Games: PS3Game[] = [
     status: "in-progress",
   },
   {
-    name: "Guitar Hero III",
-    imageUrl: "https://m.media-amazon.com/images/I/81fa9l6X9aL.jpg",
+    name: "Guitar Hero II",
+    imageUrl: "https://m.media-amazon.com/images/I/51WBNE8Q34L._AC_UF1000,1000_QL80_.jpg",
     status: "pending",
   },
   {
@@ -59,7 +63,12 @@ const ps3Games: PS3Game[] = [
     name: "Killzone 3",
     imageUrl: "https://m.media-amazon.com/images/I/71MNXLe0fAL._UF894,1000_QL80_.jpg",
     status: "pending",
-  }
+  },
+  {
+    name: "Guitar Hero III",
+    imageUrl: "https://m.media-amazon.com/images/I/81fa9l6X9aL.jpg",
+    status: "done",
+  },
 ];
 
 function PS3GameCard({ name, imageUrl, status }: PS3Game) {
@@ -78,15 +87,30 @@ function PS3GameCard({ name, imageUrl, status }: PS3Game) {
 }
 
 export default function PS3Page() {
+  const [activeFilter, setActiveFilter] = useState<FilterStatus>("all");
+
+  const filteredGames = ps3Games.filter((game) => {
+    if (activeFilter === "all") return true;
+    return game.status === activeFilter;
+  });
+
   return (
     <>
       <FloatingIcons icons={PlayStationIcons} interval={700} />
       <div className="relative">
-        <h1 className="mb-16 mt-4 text-center text-5xl max-sm:text-4xl">
+        <h1 className="mb-8 mt-4 text-center text-5xl max-sm:text-4xl">
           PS3
         </h1>
+
+        {/* Status Filter */}
+        <StatusFilter
+          activeFilter={activeFilter}
+          onFilterChange={setActiveFilter}
+          type="games"
+        />
+
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-6 justify-items-center">
-          {ps3Games.map((game) => (
+          {filteredGames.map((game) => (
             <PS3GameCard key={game.name} {...game} />
           ))}
         </div>
