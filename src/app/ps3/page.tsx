@@ -20,8 +20,8 @@ const ps3Games: PS3Game[] = [
     status: "in-progress",
   },
   {
-    name: "Guitar Hero II",
-    imageUrl: "https://m.media-amazon.com/images/I/51WBNE8Q34L._AC_UF1000,1000_QL80_.jpg",
+    name: "Far Cry 3",
+    imageUrl: "https://m.media-amazon.com/images/I/91l1+rbikqL._AC_UF1000,1000_QL80_.jpg",
     status: "pending",
   },
   {
