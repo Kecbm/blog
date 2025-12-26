@@ -6,6 +6,8 @@
 
 ## Tasks
 
+- Not found: incluir vídeos meus tocando sax 
+
 - Tragetória profissional
 - Learning (cursos, certificados e etc)
 - Community Work (abrir minha agenda 1x no mês para trocar ideia com a galera e metrificar como Mentoring)
