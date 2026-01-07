@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import NavLink from "@/src/components/NavLink";
+import PageSelector from "@/src/components/PageSelector";
 
 function isThemeSetToDark() {
   if (window == undefined) return;
@@ -79,27 +80,7 @@ export default function Header() {
               />
             )}
           </button>
-          <NavLink
-            href="/projects"
-            label="View projects"
-            isActive={path === "/projects"}
-          >
-            /projects
-          </NavLink>
-          <NavLink
-            href="/articles"
-            label="View articles"
-            isActive={path.startsWith("/articles")}
-          >
-            /articles
-          </NavLink>
-          <NavLink
-            href="/about"
-            label="View about page"
-            isActive={path === "/about"}
-          >
-            /about
-          </NavLink>
+          <PageSelector />
         </div>
       </nav>
     </header>
