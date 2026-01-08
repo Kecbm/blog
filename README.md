@@ -7,7 +7,7 @@
 ## Tasks
 
 - Not found: incluir vídeos meus tocando sax 
-- Expirience (tragetória profissional)
+- Expirience (tragetória profissional): copiar do currículo com as palavras-chave
 - Learning (cursos, certificados e etc)
 - Community Work (abrir minha agenda 1x no mês para trocar ideia com a galera e metrificar como Mentoring)
 - Awards (badge da XP, minha placa de graduação)
