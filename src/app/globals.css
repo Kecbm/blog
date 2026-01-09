@@ -284,6 +284,41 @@
     border: 1px solid var(--project-tag-ring-dark);
   }
 
+  /* Tech Tag Components for Experience Page */
+  .tech-tag {
+    @apply rounded-full px-2.5 py-0.5 text-sm font-medium transition-colors;
+    background-color: #c59009;
+    color: white;
+  }
+
+  .dark .tech-tag {
+    background-color: #eca414;
+    color: #161D2A;
+  }
+
+  /* Tech Tag Hover States */
+  .group:hover .tech-tag {
+    background-color: #f1c40f;
+    color: white;
+  }
+
+  .dark .group:hover .tech-tag {
+    background-color: #f3c22c;
+    color: #161D2A;
+  }
+
+  /* Tech Tag Components for Professional Performance */
+  .tech-tag {
+    @apply rounded-full px-2.5 py-0.5 text-sm font-medium;
+    background-color: #c59009;
+    color: white;
+  }
+
+  .dark .tech-tag {
+    background-color: #eca414;
+    color: #161D2A;
+  }
+
   .project-button {
     @apply flex grow items-center justify-center gap-2 py-4 transition-all;
     color: var(--project-button-text-light);
