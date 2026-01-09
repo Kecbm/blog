@@ -23,7 +23,6 @@
     - Liquid Glass: https://github.com/rdev/liquid-glass-react
     - Backgroud Mac Book themes
     - Metalic: https://github.com/zarifpour/liquid-image
-- Meu CV atualizado
 - Dados de visitacao na Vercel
 - Página de livros (apenas livros de programacao)
    - Para livros completed: com card da foto do livro e link para o repositótio no GitHub, se houver. Se clicar nele leva pra página com foto da capa, titulo, autor, trecho que eu destaquei e repositorio
@@ -107,14 +106,14 @@ Articles
         - #C08FF2 > #ab4bff
         - hover: #921CF5 > #c37cff
 
-
-Amarelo
-    **Light Theme**
-    - #c59009
-    - hover: #f1c40f
-    **Dark Theme**
-    - #eca414
-    - hover: #f3c22c
+Expirience
+    - Amarelo
+        **Light Theme**
+        - #c59009
+        - hover: #f1c40f
+        **Dark Theme**
+        - #eca414
+        - hover: #f3c22c
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
