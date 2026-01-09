@@ -15,9 +15,14 @@ interface PS3Game {
 
 const ps3Games: PS3Game[] = [
   {
+    name: "GTA 5",
+    imageUrl: "https://m.media-amazon.com/images/I/71FVWhz78fL._UF894,1000_QL80_.jpg",
+    status: "in-progress",
+  },
+  {
     name: "CSGO",
     imageUrl: "https://m.media-amazon.com/images/I/81L8-mjNlrL._UF1000,1000_QL80_.jpg",
-    status: "in-progress",
+    status: "pending",
   },
   {
     name: "Far Cry 3",
@@ -47,11 +52,6 @@ const ps3Games: PS3Game[] = [
   {
     name: "God Of War",
     imageUrl: "https://m.media-amazon.com/images/I/71DG2S+Y+DL.jpg",
-    status: "pending",
-  },
-  {
-    name: "GTA 5",
-    imageUrl: "https://m.media-amazon.com/images/I/71FVWhz78fL._UF894,1000_QL80_.jpg",
     status: "pending",
   },
   {
