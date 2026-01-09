@@ -1,10 +1,10 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { ChevronDown, Home, FolderOpen, FileText, User, BookOpen, Gamepad2 } from "lucide-react";
+import { ChevronDown, Home, FolderOpen, FileText, User, BookOpen, Gamepad2, Briefcase } from "lucide-react";
 import { useRouter, usePathname } from "next/navigation";
 
-export type PageOption = "home" | "projects" | "articles" | "about" | "books" | "ps3";
+export type PageOption = "home" | "projects" | "articles" | "about" | "books" | "ps3" | "experience";
 
 interface PageOptionConfig {
   value: PageOption;
@@ -68,6 +68,7 @@ export default function PageSelector({ className = "" }: PageSelectorProps) {
       { value: "home", label: "Home", icon: <Home size={16} />, href: "/", showInDropdown: true },
       { value: "projects", label: "Projects", icon: <FolderOpen size={16} />, href: "/projects", showInDropdown: true },
       { value: "articles", label: "Articles", icon: <FileText size={16} />, href: "/articles", showInDropdown: true },
+      { value: "experience", label: "Experience", icon: <Briefcase size={16} />, href: "/experience", showInDropdown: true },
       { value: "about", label: "About", icon: <User size={16} />, href: "/about", showInDropdown: true },
       { value: "books", label: "Books", icon: <BookOpen size={16} />, href: "/books", showInDropdown: false },
       { value: "ps3", label: "PS3", icon: <Gamepad2 size={16} />, href: "/ps3", showInDropdown: false },
@@ -80,9 +81,10 @@ export default function PageSelector({ className = "" }: PageSelectorProps) {
     if (pathname === "/") return pageOptions[0]; // home
     if (pathname === "/projects") return pageOptions[1]; // projects
     if (pathname.startsWith("/articles")) return pageOptions[2]; // articles
-    if (pathname === "/about") return pageOptions[3]; // about
-    if (pathname === "/books") return pageOptions[4]; // books
-    if (pathname === "/ps3") return pageOptions[5]; // ps3
+    if (pathname === "/experience") return pageOptions[3]; // experience
+    if (pathname === "/about") return pageOptions[4]; // about
+    if (pathname === "/books") return pageOptions[5]; // books
+    if (pathname === "/ps3") return pageOptions[6]; // ps3
 
     // Default to home if no match
     return pageOptions[0];
