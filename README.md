@@ -6,6 +6,7 @@
 
 ## Tasks
 
+- Experience: cards com a logo da empresa (na cor da página e com hover, se der)
 - Not found: incluir vídeos meus tocando sax 
 - Expirience (tragetória profissional): copiar do currículo com as palavras-chave
 - Learning (cursos, certificados e etc)
