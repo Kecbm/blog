@@ -3,7 +3,7 @@ import {
   SiLinkedin,
   SiDevdotto,
 } from "@icons-pack/react-simple-icons";
-import { ArrowUpRight, BookOpen } from "lucide-react";
+import { ArrowUpRight, BookOpen, GraduationCap } from "lucide-react";
 import Image from "next/image";
 import ExternalLinkComponent from "@/src/components/ExternalLink";
 
@@ -56,6 +56,13 @@ const externalLinksData = [
     url: "https://mastervocab.vercel.app/",
     icon: <BookOpen />,
     iconType: 'vocabulary' as const,
+  },
+  {
+    name: "My Lattes CV",
+    description: "explore my academic journey",
+    url: "http://lattes.cnpq.br/6486103082445764",
+    icon: <GraduationCap />,
+    iconType: 'lattes' as const,
   }
 ];
 
