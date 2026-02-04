@@ -58,7 +58,7 @@ const externalLinksData = [
     iconType: 'vocabulary' as const,
   },
   {
-    name: "My Lattes CV",
+    name: "Academic CV",
     description: "explore my academic journey",
     url: "http://lattes.cnpq.br/6486103082445764",
     icon: <GraduationCap />,
