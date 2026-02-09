@@ -145,8 +145,8 @@ const books: Book[] = [
     status: "pending",
   },
   {
-    name: "",
-    imageUrl: "",
+    name: "The Pragmatic Programmer",
+    imageUrl: "https://m.media-amazon.com/images/I/911WvX7M98L._AC_UF1000,1000_QL80_.jpg",
     status: "pending",
   },
   {
