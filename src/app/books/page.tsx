@@ -125,13 +125,13 @@ const books: Book[] = [
     status: "in-progress",
   },
   {
-    name: "Classic Computer Science Problems With Python",
-    imageUrl: "https://m.media-amazon.com/images/I/81ltJW5jJmL.jpg",
+    name: "The Pragmatic Programmer",
+    imageUrl: "https://m.media-amazon.com/images/I/911WvX7M98L._AC_UF1000,1000_QL80_.jpg",
     status: "pending",
   },
   {
-    name: "Fluent React",
-    imageUrl: "https://m.media-amazon.com/images/I/71LeIRBPrtL.jpg",
+    name: "Classic Computer Science Problems With Python",
+    imageUrl: "https://m.media-amazon.com/images/I/81ltJW5jJmL.jpg",
     status: "pending",
   },
   {
@@ -140,23 +140,8 @@ const books: Book[] = [
     status: "pending",
   },
   {
-    name: "Clean Code",
-    imageUrl: "https://m.media-amazon.com/images/I/51E2055ZGUL.jpg",
-    status: "pending",
-  },
-  {
-    name: "The Pragmatic Programmer",
-    imageUrl: "https://m.media-amazon.com/images/I/911WvX7M98L._AC_UF1000,1000_QL80_.jpg",
-    status: "pending",
-  },
-  {
-    name: "Learn Domain-Driven Design",
-    imageUrl: "https://m.media-amazon.com/images/I/819gVKYN7HL.jpg",
-    status: "pending",
-  },
-  {
-    name: "Refactoring",
-    imageUrl: "https://m.media-amazon.com/images/I/71e6ndHEwqL.jpg",
+    name: "Fluent React",
+    imageUrl: "https://m.media-amazon.com/images/I/71LeIRBPrtL.jpg",
     status: "pending",
   },
   {
@@ -167,6 +152,21 @@ const books: Book[] = [
   {
     name: "Production-Ready Microservices",
     imageUrl: "https://m.media-amazon.com/images/I/81D4AHNvMsL._UF1000,1000_QL80_.jpg",
+    status: "pending",
+  },
+  {
+    name: "Learn Domain-Driven Design",
+    imageUrl: "https://m.media-amazon.com/images/I/819gVKYN7HL.jpg",
+    status: "pending",
+  },
+  {
+    name: "Clean Code",
+    imageUrl: "https://m.media-amazon.com/images/I/51E2055ZGUL.jpg",
+    status: "pending",
+  },
+  {
+    name: "Refactoring",
+    imageUrl: "https://m.media-amazon.com/images/I/71e6ndHEwqL.jpg",
     status: "pending",
   },
   {
