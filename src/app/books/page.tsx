@@ -145,8 +145,8 @@ const books: Book[] = [
     status: "pending",
   },
   {
-    name: "The Passionate Programmer",
-    imageUrl: "https://m.media-amazon.com/images/I/71FVngNCLGL._UF1000,1000_QL80_.jpg",
+    name: "",
+    imageUrl: "",
     status: "pending",
   },
   {
@@ -168,6 +168,12 @@ const books: Book[] = [
     name: "Production-Ready Microservices",
     imageUrl: "https://m.media-amazon.com/images/I/81D4AHNvMsL._UF1000,1000_QL80_.jpg",
     status: "pending",
+  },
+  {
+    name: "The Passionate Programmer",
+    imageUrl: "https://m.media-amazon.com/images/I/71FVngNCLGL._UF1000,1000_QL80_.jpg",
+    status: "done",
+    highlight: "Don’t define yourself as a programmer for a specific company, but as a contributing member of an organization. In a job interview, nothing beats the interviewer already having heard of you, because they’ve read your articles or books, or seen you speak at a conference. Write on the internet as if you were writing a column for your favorite magazine. Practice the art of writing. You have something to teach.",
   },
   {
     name: "AI-Assisted Programming",
