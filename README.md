@@ -10,6 +10,11 @@
     - Chat
     - Easter Eggs
     - History
+    - Tradução para PT-BR
+    - Experience em formato timeline
+    - Easter Eggs em icones pelo site
+    - Minha bio maior em formato de livro
+    - Página My Stack
     - ...
 
 - Experience: cards com a logo da empresa (na cor da página e com hover, se der)
