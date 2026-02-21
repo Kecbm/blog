@@ -149,11 +149,6 @@ export default function NotFound() {
               />
             ))}
           </div>
-
-          {/* Contador */}
-          <p className="text-sm text-zinc-600 dark:text-zinc-400 mt-4">
-            {currentReel + 1} / {reels.length}
-          </p>
         </div>
       </div>
     </div>
