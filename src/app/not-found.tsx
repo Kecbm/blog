@@ -86,7 +86,7 @@ export default function NotFound() {
 
       {/* Carrossel de Reels */}
       <div className="mt-12">
-        <h2 className="text-2xl font-bold mb-6">Before tech, I spent 10 years as a professional musician. Here are some of the groups I played with! 🎷</h2>
+        <p className="text-sm mb-8">Before tech, I spent 10 years as a professional musician. Here are some of the groups I played with! 🎷</p>
 
         <div className="relative max-w-sm mx-auto">
           {/* Container do Reel */}
