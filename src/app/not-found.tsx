@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { ChevronLeft, ChevronRight, Volume2, VolumeX } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Volume2, VolumeX, Music } from 'lucide-react';
 
 export default function NotFound() {
   const [currentReel, setCurrentReel] = useState(0);
@@ -56,34 +56,14 @@ export default function NotFound() {
   };
   return (
     <div className="mb-16 mt-16 text-center">
-      <h1 className="mb-6 text-5xl max-sm:text-4xl">
-        This page doesn&apos;t exist.
-      </h1>
-      <p className="text-sm mb-8">
-        Oops! It looks like you’ve taken a wrong turn. No worries, you can head back to the{" "}
-        <a
-          href="/"
-          className="notfound-highlight"
-        >
-          Home
-        </a>{" "}
-        page, or if you’re curious, check out the{" "}
-        <a
-          href="/ps3"
-          className="notfound-highlight"
-        >
-          PS3
-        </a>{" "}
-        games I&apos;ve been enjoying lately or the{" "}
-        <a
-          href="/books"
-          className="notfound-highlight"
-        >
-          books
-        </a>{" "}
-        I&apos;m currently reading!
-      </p>
-
+      <div className="flex items-center justify-center gap-4 mb-6">
+        <Music size={80} strokeWidth={2} />
+        <h1 className="notfound-title text-8xl max-sm:text-7xl font-bold">404</h1>
+        <Music size={80} strokeWidth={2} />
+      </div>
+      <h2 className="mb-6 text-5xl max-sm:text-4xl">
+        This page doesn&apos;t exist. But here's something cooler.
+      </h2>
       {/* Carrossel de Reels */}
       <div className="mt-12">
         <p className="text-sm mb-8">Before tech, I spent 10 years as a professional musician. Here are some of the groups I played with! 🎷</p>
