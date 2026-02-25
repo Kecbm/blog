@@ -6,6 +6,7 @@ import { ChevronLeft, ChevronRight, Volume2, VolumeX, Music } from 'lucide-react
 export default function NotFound() {
   const [currentReel, setCurrentReel] = useState(0);
   const [isMuted, setIsMuted] = useState(true);
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
   // Array de reels - você pode substituir pelos seus próprios reels
   const reels = [
@@ -41,18 +42,65 @@ export default function NotFound() {
     },
     {
       id: 6,
-      title: "Volta vai",
+      title: "New York, New York",
       videoUrl: "/reels/6.mp4",
+      description: "Frank Sinatra"
+    },
+    {
+      id: 7,
+      title: "Volta vai",
+      videoUrl: "/reels/7.mp4",
       description: "Simone & Simaria"
+    },
+    {
+      id: 8,
+      title: "",
+      videoUrl: "/reels/8.mp4",
+      description: "Comunidade Católica Shalom"
+    },
+    {
+      id: 9,
+      title: "",
+      videoUrl: "/reels/9.mp4",
+      description: "Orquestra Manoel Rabelo"
+    },
+    {
+      id: 10,
+      title: "",
+      videoUrl: "/reels/10.mp4",
+      description: ""
+    },
+    {
+      id: 11,
+      title: "I Will Always Love You",
+      videoUrl: "/reels/11.mp4",
+      description: "Whitney Houston"
     },
   ];
 
   const nextReel = () => {
-    setCurrentReel((prev) => (prev + 1) % reels.length);
+    setIsTransitioning(true);
+    setTimeout(() => {
+      setCurrentReel((prev) => (prev + 1) % reels.length);
+      setIsTransitioning(false);
+    }, 300);
   };
 
   const prevReel = () => {
-    setCurrentReel((prev) => (prev - 1 + reels.length) % reels.length);
+    setIsTransitioning(true);
+    setTimeout(() => {
+      setCurrentReel((prev) => (prev - 1 + reels.length) % reels.length);
+      setIsTransitioning(false);
+    }, 300);
+  };
+
+  const goToReel = (index: number) => {
+    if (index === currentReel) return;
+    setIsTransitioning(true);
+    setTimeout(() => {
+      setCurrentReel(index);
+      setIsTransitioning(false);
+    }, 300);
   };
   return (
     <div className="mb-16 mt-16 text-center">
@@ -72,8 +120,11 @@ export default function NotFound() {
           {/* Container do Reel */}
           <div className="relative aspect-[9/16] bg-zinc-200 dark:bg-zinc-800 rounded-2xl overflow-hidden shadow-2xl">
             <video
+              key={reels[currentReel].id}
               src={reels[currentReel].videoUrl}
-              className="w-full h-full object-cover transition-opacity duration-300"
+              className={`w-full h-full object-cover transition-opacity duration-500 ${
+                isTransitioning ? 'opacity-0' : 'opacity-100'
+              }`}
               autoPlay
               loop
               muted={isMuted}
@@ -81,7 +132,9 @@ export default function NotFound() {
             />
 
             {/* Overlay com informações */}
-            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 text-white">
+            <div className={`absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 text-white transition-opacity duration-500 ${
+              isTransitioning ? 'opacity-0' : 'opacity-100'
+            }`}>
               <h3 className="text-xl font-bold mb-2">{reels[currentReel].title}</h3>
               <p className="text-sm opacity-90">{reels[currentReel].description}</p>
             </div>
@@ -119,8 +172,8 @@ export default function NotFound() {
             {reels.map((_, index) => (
               <button
                 key={index}
-                onClick={() => setCurrentReel(index)}
-                className={`h-2 rounded-full transition-all ${
+                onClick={() => goToReel(index)}
+                className={`h-2 rounded-full transition-all duration-300 ${
                   index === currentReel
                     ? 'w-8 bg-[#2a67e6] dark:bg-[#6190f9]'
                     : 'w-2 bg-zinc-300 dark:bg-zinc-600 hover:bg-zinc-400 dark:hover:bg-zinc-500'
