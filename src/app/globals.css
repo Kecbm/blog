@@ -392,21 +392,11 @@
   }
 
   /* Not Found Page Components */
-  .notfound-highlight {
-    @apply underline underline-offset-4 transition-all;
-    text-decoration-color: var(--notfound-highlight-decoration-light);
-  }
-
-  .notfound-highlight:hover {
+  .notfound-title {
     color: var(--notfound-highlight-hover-light);
-    font-weight: bold;
   }
 
-  .dark .notfound-highlight {
-    text-decoration-color: var(--notfound-highlight-decoration-dark);
-  }
-
-  .dark .notfound-highlight:hover {
+  .dark .notfound-title {
     color: var(--notfound-highlight-hover-dark);
   }
 
