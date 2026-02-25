@@ -62,7 +62,7 @@ export default function NotFound() {
         <Music size={80} strokeWidth={2} />
       </div>
       <h2 className="mb-6 text-5xl max-sm:text-4xl">
-        This page doesn&apos;t exist. But here's something cooler.
+        This page doesn&apos;t exist. But here&apos;s something cooler.
       </h2>
       {/* Carrossel de Reels */}
       <div className="mt-12">
