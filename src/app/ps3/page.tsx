@@ -6,6 +6,7 @@ import FloatingIcons from "../../components/FloatingIcons";
 import { PlayStationIcons } from "../../components/PlayStationIcons";
 import GameStatusBadge from "../../components/StatusBadge";
 import StatusFilter, { FilterStatus } from "../../components/StatusFilter";
+import { useTranslation } from "@/src/hooks/useTranslation";
 
 interface PS3Game {
   name: string;
@@ -71,7 +72,7 @@ const ps3Games: PS3Game[] = [
   },
 ];
 
-function PS3GameCard({ name, imageUrl, status }: PS3Game) {
+function PS3GameCard({ name, imageUrl, status, badgeLabels }: PS3Game & { badgeLabels: { playing: string; completed: string; pending: string } }) {
   return (
     <div className="flex flex-col overflow-hidden rounded dark:ring-zinc-500 h-[324px] w-[281px] relative">
       <Image
@@ -81,12 +82,20 @@ function PS3GameCard({ name, imageUrl, status }: PS3Game) {
         alt={`Cover for ${name}`}
         className="w-full h-full object-cover"
       />
-      <GameStatusBadge status={status} />
+      <GameStatusBadge
+        status={status}
+        labels={{
+          inProgress: badgeLabels.playing,
+          completed: badgeLabels.completed,
+          pending: badgeLabels.pending,
+        }}
+      />
     </div>
   );
 }
 
 export default function PS3Page() {
+  const { t } = useTranslation();
   const [activeFilter, setActiveFilter] = useState<FilterStatus>("all");
 
   const filteredGames = ps3Games.filter((game) => {
@@ -99,7 +108,7 @@ export default function PS3Page() {
       <FloatingIcons icons={PlayStationIcons} interval={700} />
       <div className="relative">
         <h1 className="mb-8 mt-4 text-center text-5xl max-sm:text-4xl">
-          PS3
+          {t.ps3.title}
         </h1>
 
         {/* Status Filter */}
@@ -107,11 +116,21 @@ export default function PS3Page() {
           activeFilter={activeFilter}
           onFilterChange={setActiveFilter}
           type="games"
+          labels={{
+            all: t.ps3.filter.allGames,
+            pending: t.ps3.filter.pending,
+            inProgress: t.ps3.filter.inProgress,
+            done: t.ps3.filter.done,
+          }}
         />
 
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-6 justify-items-center">
           {filteredGames.map((game) => (
-            <PS3GameCard key={game.name} {...game} />
+            <PS3GameCard
+              key={game.name}
+              {...game}
+              badgeLabels={t.ps3.badges}
+            />
           ))}
         </div>
       </div>
