@@ -61,7 +61,7 @@ function ExperienceCard({ experience }: { experience: Experience }) {
               <p className="text-sm text-zinc-600 dark:text-zinc-400 mb-3">
                 {translatedPeriod}
               </p>
-              {expData.description && (
+              {'description' in expData && expData.description && (
                 <p className="text-zinc-700 dark:text-zinc-300 mb-4 leading-relaxed">
                   {expData.description}
                 </p>
