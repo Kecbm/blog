@@ -4,8 +4,9 @@ import { ChevronLeft, Moon, Sun } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import NavLink from "@/src/components/NavLink";
 import PageSelector from "@/src/components/PageSelector";
+import LanguageToggle from "@/src/components/LanguageToggle";
+import { useTranslation } from "@/src/hooks/useTranslation";
 
 function isThemeSetToDark() {
   if (window == undefined) return;
@@ -21,6 +22,7 @@ export default function Header() {
   const path = usePathname();
   const isHome = path === "/";
   const [isDarkMode, setIsDarkMode] = useState(isThemeSetToDark());
+  const { t } = useTranslation();
 
   useEffect(() => {
     if (isThemeSetToDark()) {
@@ -56,9 +58,9 @@ export default function Header() {
             <ChevronLeft strokeWidth={1.4} />
           </div>
           <div className="flex flex-col max-sm:items-center">
-            Klecianny Melo
+            {t.header.name}
             <span className="text-zinc-500 dark:text-zinc-400">
-              Software Engineer AI First
+              {t.header.role}
             </span>
           </div>
         </Link>
@@ -80,6 +82,7 @@ export default function Header() {
               />
             )}
           </button>
+          <LanguageToggle />
           <PageSelector />
         </div>
       </nav>
