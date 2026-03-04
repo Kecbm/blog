@@ -1,3 +1,5 @@
+"use client";
+
 import {
   SiGithub,
   SiLinkedin,
@@ -6,6 +8,7 @@ import {
 import { ArrowUpRight, BookOpen, GraduationCap } from "lucide-react";
 import Image from "next/image";
 import ExternalLinkComponent from "@/src/components/ExternalLink";
+import { useTranslation } from "@/src/hooks/useTranslation";
 
 const XLogo = ({ className = "" }: { className?: string }) => {
   return (
@@ -21,45 +24,45 @@ const XLogo = ({ className = "" }: { className?: string }) => {
   );
 };
 
-const externalLinksData = [
+const getExternalLinksData = (t: any) => [
   {
     name: "LinkedIn",
-    description: "follow my career",
+    description: t.home.links.linkedin,
     url: "https://linkedin.com/in/kecbm",
     icon: <SiLinkedin />,
     iconType: 'linkedin' as const,
   },
   {
     name: "GitHub",
-    description: "steal my code",
+    description: t.home.links.github,
     url: "https://github.com/Kecbm",
     icon: <SiGithub />,
     iconType: 'github' as const,
   },
   {
     name: "Twitter",
-    description: "read my mind",
+    description: t.home.links.twitter,
     url: "https://x.com/kecbm",
     icon: <XLogo />,
     iconType: 'twitter' as const,
   },
   {
     name: "Dev.to",
-    description: "decode my ideas",
+    description: t.home.links.devto,
     url: "https://dev.to/kecbm",
     icon: <SiDevdotto />,
     iconType: 'dev.to' as const,
   },
   {
     name: "Vocab Master",
-    description: "expand your vocabulary",
+    description: t.home.links.vocab,
     url: "https://mastervocab.vercel.app/",
     icon: <BookOpen />,
     iconType: 'vocabulary' as const,
   },
   {
     name: "Academic CV",
-    description: "explore my academic journey",
+    description: t.home.links.lattes,
     url: "http://lattes.cnpq.br/6486103082445764",
     icon: <GraduationCap />,
     iconType: 'lattes' as const,
@@ -67,6 +70,9 @@ const externalLinksData = [
 ];
 
 export default function HomePage() {
+  const { t } = useTranslation();
+  const externalLinksData = getExternalLinksData(t);
+
   return (
     <div className="flex flex-col gap-6">
       {/* Profile Section */}
@@ -81,7 +87,7 @@ export default function HomePage() {
           />
         </div>
         <div className="flex items-center gap-2">
-          <h2 className="text-xl font-black">Klecianny Melo</h2>
+          <h2 className="text-xl font-black">{t.header.name}</h2>
           <div className="relative">
             <svg
               width="30"
@@ -104,7 +110,7 @@ export default function HomePage() {
         </div>
       </div>
       <p className="text-sm">
-        Brazilian, obsessed with growth. Working as a Software Engineer. I love React, Python, TailwindCSS, playing PS3, and solving problems.
+        {t.home.bio}
       </p>
       <div className="divide-y divide-zinc-400 overflow-hidden rounded ring-1 ring-zinc-400 dark:divide-zinc-500 dark:ring-zinc-500">
         {externalLinksData.map((link) => (
@@ -133,7 +139,7 @@ export default function HomePage() {
                 animation: 'breathe 5s ease-in-out infinite'
               }} />
             </div>
-            <span>Online</span>
+            <span>{t.home.online}</span>
           </div>
         </div>
         <div className="flex flex-col gap-2">
@@ -141,7 +147,7 @@ export default function HomePage() {
             href="mailto:kleciannymelo@gmail.com"
             className="flex flex-row items-center justify-center gap-3 rounded bg-[#4f7e0d]/10 p-4 text-[#4f7e0d] ring-1 ring-[#4f7e0d] transition-all hover:bg-[#68a60a] hover:ring-transparent hover:text-white dark:bg-transparent dark:text-[#8dd909] dark:ring-[#8dd909] dark:hover:bg-[#acf328] dark:hover:text-[#161D2A]"
           >
-            <span className="text-nowrap">Contact Me</span>
+            <span className="text-nowrap">{t.home.contactMe}</span>
             <ArrowUpRight strokeWidth={1.4} className="size-5" />
           </a>
         </div>
