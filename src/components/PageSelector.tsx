@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import { ChevronDown, Home, FolderOpen, FileText, User, BookOpen, Gamepad2, Briefcase } from "lucide-react";
 import { useRouter, usePathname } from "next/navigation";
+import { useTranslation } from "@/src/hooks/useTranslation";
 
 export type PageOption = "home" | "projects" | "articles" | "about" | "books" | "ps3" | "experience";
 
@@ -49,6 +50,7 @@ export default function PageSelector({ className = "" }: PageSelectorProps) {
   const dropdownRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
   const pathname = usePathname();
+  const { t } = useTranslation();
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
@@ -65,13 +67,13 @@ export default function PageSelector({ className = "" }: PageSelectorProps) {
 
   const getPageOptions = (): PageOptionConfig[] => {
     return [
-      { value: "home", label: "Home", icon: <Home size={16} />, href: "/", showInDropdown: true },
-      { value: "projects", label: "Projects", icon: <FolderOpen size={16} />, href: "/projects", showInDropdown: true },
-      { value: "articles", label: "Articles", icon: <FileText size={16} />, href: "/articles", showInDropdown: true },
-      { value: "experience", label: "Experience", icon: <Briefcase size={16} />, href: "/experience", showInDropdown: true },
-      { value: "about", label: "About", icon: <User size={16} />, href: "/about", showInDropdown: true },
-      { value: "books", label: "Books", icon: <BookOpen size={16} />, href: "/books", showInDropdown: false },
-      { value: "ps3", label: "PS3", icon: <Gamepad2 size={16} />, href: "/ps3", showInDropdown: false },
+      { value: "home", label: t.nav.home, icon: <Home size={16} />, href: "/", showInDropdown: true },
+      { value: "projects", label: t.nav.projects, icon: <FolderOpen size={16} />, href: "/projects", showInDropdown: true },
+      { value: "articles", label: t.nav.articles, icon: <FileText size={16} />, href: "/articles", showInDropdown: true },
+      { value: "experience", label: t.nav.experience, icon: <Briefcase size={16} />, href: "/experience", showInDropdown: true },
+      { value: "about", label: t.nav.about, icon: <User size={16} />, href: "/about", showInDropdown: true },
+      { value: "books", label: t.nav.books, icon: <BookOpen size={16} />, href: "/books", showInDropdown: false },
+      { value: "ps3", label: t.nav.ps3, icon: <Gamepad2 size={16} />, href: "/ps3", showInDropdown: false },
     ];
   };
 
