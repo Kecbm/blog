@@ -1,45 +1,41 @@
+"use client";
+
 import { ArrowUpRight } from "lucide-react";
+import { useTranslation } from "@/src/hooks/useTranslation";
 
 interface Experience {
   emoji: string;
-  title: string;
-  company: string;
+  titleKey: "quorum" | "eduzz" | "br24" | "xp";
   period: string;
   technologies: string[];
-  description?: string;
   companyUrl?: string;
 }
 
 const experiences: Experience[] = [
   {
     emoji: "⚖️",
-    title: "Software Engineer AI First",
-    company: "Quorum",
+    titleKey: "quorum",
     period: "05/2025 - present",
     technologies: ["Django", "React", "MUI", "TailwindCSS", "SQL Server", "Jenkins", "Datadog", "Sentry", "Grafana", "Opsgenie"],
     companyUrl: "https://www.quorum.us/"
   },
   {
     emoji: "🎓",
-    title: "Mid-Level Full Stack Developer",
-    company: "Eduzz",
+    titleKey: "eduzz",
     period: "10/2024 - 05/2025",
     technologies: [".NET", "SQL Server", "Redis", "React", "Ant Design", "Jenkins", "Kubernetes"],
     companyUrl: "https://www.eduzz.com/"
   },
   {
     emoji: "⚡",
-    title: "Full Stack Developer",
-    company: "BR24",
+    titleKey: "br24",
     period: "05/2023 - 10/2024",
     technologies: ["React", "TailwindCSS", "PHP", "NestJS"],
-    description: "Introduction of the Codeium AI tool to the development team, resulting in increased efficiency and productivity",
     companyUrl: "https://br24.io/"
   },
   {
     emoji: "🏦",
-    title: "Software Engineer",
-    company: "XP Inc.",
+    titleKey: "xp",
     period: "09/2022 - 03/2023",
     technologies: [".NET", "SQL Server", "React"],
     companyUrl: "https://www.xpi.com.br/"
@@ -47,6 +43,12 @@ const experiences: Experience[] = [
 ];
 
 function ExperienceCard({ experience }: { experience: Experience }) {
+  const { t } = useTranslation();
+  const expData = t.experience.experiences[experience.titleKey];
+
+  // Replace "present" with translated version
+  const translatedPeriod = experience.period.replace("present", t.experience.present);
+
   const CardContent = () => (
     <>
       <div className="p-4">
@@ -54,14 +56,14 @@ function ExperienceCard({ experience }: { experience: Experience }) {
           <div className="flex items-start justify-between gap-4">
             <div className="flex-1">
               <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-100 mb-2">
-                {experience.emoji} {experience.title} - {experience.company}
+                {experience.emoji} {expData.title} - {expData.company}
               </h2>
               <p className="text-sm text-zinc-600 dark:text-zinc-400 mb-3">
-                {experience.period}
+                {translatedPeriod}
               </p>
-              {experience.description && (
+              {expData.description && (
                 <p className="text-zinc-700 dark:text-zinc-300 mb-4 leading-relaxed">
-                  {experience.description}
+                  {expData.description}
                 </p>
               )}
             </div>
@@ -100,10 +102,12 @@ function ExperienceCard({ experience }: { experience: Experience }) {
 }
 
 export default function ExperiencePage() {
+  const { t } = useTranslation();
+
   return (
     <>
       <h1 className="mb-16 mt-4 text-center text-5xl max-sm:text-4xl">
-        Experience
+        {t.experience.title}
       </h1>
       <section className="space-y-6">
         {experiences.map((experience, index) => (
