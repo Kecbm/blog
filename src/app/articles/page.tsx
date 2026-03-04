@@ -1,7 +1,8 @@
+"use client";
+
 import { Article, getArticles } from "@/src/lib/articles";
 import { ArrowUpRight } from "lucide-react";
-
-// Para mais artigos acesse meu perfil no Dev.to
+import { useTranslation } from "@/src/hooks/useTranslation";
 
 function truncateTitle(title: string, tags: string[]): { truncated: string; isLong: boolean } {
   const tagsString = tags.map(tag => `#${tag}`).join(' ');
@@ -18,12 +19,14 @@ function truncateTitle(title: string, tags: string[]): { truncated: string; isLo
   return { truncated, isLong: true };
 }
 
-export default async function ArticlesPage() {
-  const articles = getArticles();
+export default function ArticlesPage() {
+  const { t, language } = useTranslation();
+  const articles = getArticles(language);
+
   return (
     <div>
       <h1 className="mb-16 mt-4 text-center text-5xl max-sm:text-4xl">
-        Articles
+        {t.articles.title}
       </h1>
 
       <section className="flex flex-col divide-y divide-zinc-400 overflow-hidden rounded ring-1 ring-zinc-400 dark:divide-zinc-500 dark:ring-zinc-500">
@@ -61,13 +64,13 @@ export default async function ArticlesPage() {
       </section>
 
       <p className="mt-8 text-center text-zinc-600 dark:text-zinc-400">
-        You&apos;ll find more of my articles on{" "}
+        {t.articles.moreArticles}{" "}
         <a
           href="https://dev.to/kecbm"
           className="underline underline-offset-4 transition-all hover:text-[#9143da] hover:font-bold decoration-[#9143da] dark:hover:text-[#c37cff] dark:decoration-[#c37cff]"
         >
-          my Dev.to profile
-        </a>, take a look!
+          {t.articles.myDevTo}
+        </a>{t.articles.takeLook}
       </p>
     </div>
   );
