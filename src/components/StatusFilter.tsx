@@ -36,12 +36,19 @@ interface StatusFilterProps {
   activeFilter: FilterStatus;
   onFilterChange: (filter: FilterStatus) => void;
   type?: "books" | "games";
+  labels?: {
+    all?: string;
+    pending?: string;
+    inProgress?: string;
+    done?: string;
+  };
 }
 
-export default function StatusFilter({ 
-  activeFilter, 
-  onFilterChange, 
-  type = "books" 
+export default function StatusFilter({
+  activeFilter,
+  onFilterChange,
+  type = "books",
+  labels
 }: StatusFilterProps) {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -61,13 +68,13 @@ export default function StatusFilter({
 
   const getFilterOptions = (): FilterOption[] => {
     const baseIcon = type === "books" ? <BookOpen size={16} /> : <Gamepad2 size={16} />;
-    const allLabel = type === "books" ? "All Books" : "All Games";
-    
+    const allLabel = labels?.all || (type === "books" ? "All Books" : "All Games");
+
     return [
       { value: "all", label: allLabel, icon: baseIcon },
-      { value: "pending", label: "Pending", icon: <Hourglass size={16} /> },
-      { value: "in-progress", label: "In Progress", icon: <Clock size={16} /> },
-      { value: "done", label: "Done", icon: <Check size={16} strokeWidth={3} /> },
+      { value: "pending", label: labels?.pending || "Pending", icon: <Hourglass size={16} /> },
+      { value: "in-progress", label: labels?.inProgress || "In Progress", icon: <Clock size={16} /> },
+      { value: "done", label: labels?.done || "Done", icon: <Check size={16} strokeWidth={3} /> },
     ];
   };
 
