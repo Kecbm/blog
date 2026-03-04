@@ -7,21 +7,28 @@ import StatusBadge from "../../components/StatusBadge";
 import StatusFilter, { FilterStatus } from "../../components/StatusFilter";
 import FloatingIcons from "../../components/FloatingIcons";
 import { ReadingIcons } from "../../components/ReadingIcons";
+import { useTranslation } from "@/src/hooks/useTranslation";
 
 interface Book {
   name: string;
   imageUrl: string;
   status: "in-progress" | "done" | "pending";
   highlight?: string;
+  highlightKey?: string;
+  translatedName?: string;
 }
 
 interface BookModalProps {
   book: Book | null;
   isOpen: boolean;
   onClose: () => void;
+  labels: {
+    closeButton: string;
+    bookFinished: string;
+  };
 }
 
-function BookModal({ book, isOpen, onClose }: BookModalProps) {
+function BookModal({ book, isOpen, onClose, labels }: BookModalProps) {
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
@@ -69,13 +76,13 @@ function BookModal({ book, isOpen, onClose }: BookModalProps) {
         <div className="flex items-start justify-between p-6 border-b border-zinc-200 dark:border-zinc-700">
           <div className="flex-1 pr-4">
             <h2 className="text-2xl font-bold text-zinc-900 dark:text-zinc-100 leading-tight">
-              {book.name}
+              {book.translatedName || book.name}
             </h2>
           </div>
           <button
             onClick={onClose}
             className="flex-shrink-0 p-2 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
-            aria-label="Fechar modal"
+            aria-label={labels.closeButton}
           >
             <X size={20} className="text-zinc-600 dark:text-zinc-400" />
           </button>
@@ -90,7 +97,7 @@ function BookModal({ book, isOpen, onClose }: BookModalProps) {
                 src={book.imageUrl}
                 width={160}
                 height={200}
-                alt={`Cover for ${book.name}`}
+                alt={`Cover for ${book.translatedName || book.name}`}
                 className="rounded shadow-lg"
               />
             </div>
@@ -109,7 +116,7 @@ function BookModal({ book, isOpen, onClose }: BookModalProps) {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2 text-sm text-zinc-600 dark:text-zinc-400">
               <Check size={16} className="text-[#68a60a] dark:text-[#acf328]" strokeWidth={3} />
-              <span>Book finished</span>
+              <span>{labels.bookFinished}</span>
             </div>
           </div>
         </div>
@@ -173,34 +180,40 @@ const books: Book[] = [
     name: "The Passionate Programmer",
     imageUrl: "https://m.media-amazon.com/images/I/71FVngNCLGL._UF1000,1000_QL80_.jpg",
     status: "done",
-    highlight: "Don’t define yourself as a programmer for a specific company, but as a contributing member of an organization. In a job interview, nothing beats the interviewer already having heard of you, because they’ve read your articles or books, or seen you speak at a conference. Write on the internet as if you were writing a column for your favorite magazine. Practice the art of writing. You have something to teach.",
+    highlightKey: "thePassionateProgrammer",
   },
   {
     name: "AI-Assisted Programming",
     imageUrl: "https://m.media-amazon.com/images/I/81Q1ydwpYLL._UF1000,1000_QL80_.jpg",
     status: "done",
-    highlight: "AI-powered programming tools are powerful, but they’re not here to replace you. They’re more like assistants, designed to help you become an even better programmer.",
+    highlightKey: "aiAssistedProgramming",
   },
   {
     name: "Product Backlog Building",
     imageUrl: "https://m.media-amazon.com/images/I/81RZV-FcqDS._UF1000,1000_QL80_.jpg",
     status: "done",
-    highlight: "Agile teams work with continuous refinement and continuous delivery, and PBB makes this journey toward success easier.",
+    highlightKey: "productBacklogBuilding",
   },
   {
     name: "14 Habits of Highly Productive Developers",
     imageUrl: "https://m.media-amazon.com/images/I/719Siqxb0eL._UF894,1000_QL80_.jpg",
     status: "done",
-    highlight: "Learning the fundamentals will prepare you for the future. If you decide to become a great developer, it’s important to understand the key concepts such as algorithms, logic, networking, accessibility, security, and user experience. You don’t necessarily need them to build your first app, but knowing them will help you create the next complex applications you’ll build in the future.",
+    highlightKey: "fourteenHabits",
   },
 ];
 
 interface BookCardProps extends Book {
   onClick?: () => void;
+  badgeLabels: {
+    reading: string;
+    completed: string;
+    pending: string;
+  };
 }
 
-function BookCard({ name, imageUrl, status, onClick }: BookCardProps) {
+function BookCard({ name, imageUrl, status, onClick, badgeLabels, translatedName }: BookCardProps) {
   const isDone = status === "done";
+  const displayName = translatedName || name;
 
   return (
     <div
@@ -213,10 +226,17 @@ function BookCard({ name, imageUrl, status, onClick }: BookCardProps) {
         src={imageUrl}
         width={280}
         height={324}
-        alt={`Cover for ${name}`}
+        alt={`Cover for ${displayName}`}
         className="absolute inset-0 w-full h-full"
       />
-      <StatusBadge status={status} inProgressLabel={"Reading"} />
+      <StatusBadge
+        status={status}
+        labels={{
+          inProgress: badgeLabels.reading,
+          completed: badgeLabels.completed,
+          pending: badgeLabels.pending,
+        }}
+      />
 
       {/* External Link Icon for completed books */}
       {isDone && (
@@ -233,11 +253,22 @@ function BookCard({ name, imageUrl, status, onClick }: BookCardProps) {
 }
 
 export default function BooksPage() {
+  const { t } = useTranslation();
   const [activeFilter, setActiveFilter] = useState<FilterStatus>("all");
   const [selectedBook, setSelectedBook] = useState<Book | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const filteredBooks = books.filter((book) => {
+  // Add translated highlights and titles to books
+  const booksWithTranslations = books.map((book) => {
+    if (book.highlightKey) {
+      const highlight = t.books.highlights[book.highlightKey as keyof typeof t.books.highlights];
+      const translatedName = t.books.bookTitles[book.highlightKey as keyof typeof t.books.bookTitles];
+      return { ...book, highlight, translatedName };
+    }
+    return book;
+  });
+
+  const filteredBooks = booksWithTranslations.filter((book) => {
     if (activeFilter === "all") return true;
     return book.status === activeFilter;
   });
@@ -261,7 +292,7 @@ export default function BooksPage() {
 
       <div className="relative">
         <h1 className="mb-8 mt-4 text-center text-5xl max-sm:text-4xl">
-          Books
+          {t.books.title}
         </h1>
 
         {/* Status Filter */}
@@ -269,6 +300,12 @@ export default function BooksPage() {
           activeFilter={activeFilter}
           onFilterChange={setActiveFilter}
           type="books"
+          labels={{
+            all: t.books.filter.allBooks,
+            pending: t.books.filter.pending,
+            inProgress: t.books.filter.inProgress,
+            done: t.books.filter.done,
+          }}
         />
 
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-6 justify-items-center">
@@ -277,6 +314,7 @@ export default function BooksPage() {
               key={book.name}
               {...book}
               onClick={() => handleBookClick(book)}
+              badgeLabels={t.books.badges}
             />
           ))}
         </div>
@@ -287,6 +325,7 @@ export default function BooksPage() {
         book={selectedBook}
         isOpen={isModalOpen}
         onClose={handleCloseModal}
+        labels={t.books.modal}
       />
     </>
   );
