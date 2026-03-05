@@ -16,6 +16,10 @@
     - Página My Stack
     - ...
 
+- https://justin.poehnelt.com/
+    - Página de atividade fisica
+    - Métricas de código
+
 - Experience: cards com a logo da empresa (na cor da página e com hover, se der)
 - Learning (cursos, certificados e etc)
 - Community Work (abrir minha agenda 1x no mês para trocar ideia com a galera e metrificar como Mentoring)
