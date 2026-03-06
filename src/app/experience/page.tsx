@@ -16,21 +16,21 @@ const experiences: Experience[] = [
     emoji: "⚖️",
     titleKey: "quorum",
     period: "05/2025 - present",
-    technologies: ["Django", "React", "MUI", "TailwindCSS", "SQL Server", "Jenkins", "Datadog", "Sentry", "Grafana", "Opsgenie"],
+    technologies: ["AI", "Django", "React", "MUI", "TailwindCSS", "SQL Server", "Jenkins", "Datadog", "Sentry", "Grafana", "Opsgenie"],
     companyUrl: "https://www.quorum.us/"
   },
   {
     emoji: "🎓",
     titleKey: "eduzz",
     period: "10/2024 - 05/2025",
-    technologies: [".NET", "SQL Server", "Redis", "React", "Ant Design", "Jenkins", "Kubernetes"],
+    technologies: ["AI", ".NET", "SQL Server", "Redis", "React", "Ant Design", "Jenkins", "Kubernetes"],
     companyUrl: "https://www.eduzz.com/"
   },
   {
     emoji: "⚡",
     titleKey: "br24",
     period: "05/2023 - 10/2024",
-    technologies: ["React", "TailwindCSS", "PHP", "NestJS"],
+    technologies: ["AI", "React", "TailwindCSS", "PHP", "NestJS"],
     companyUrl: "https://br24.io/"
   },
   {
