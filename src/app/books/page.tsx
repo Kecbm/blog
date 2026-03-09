@@ -16,6 +16,7 @@ interface Book {
   highlight?: string;
   highlightKey?: string;
   translatedName?: string;
+  githubUrl?: string;
 }
 
 interface BookModalProps {
@@ -135,11 +136,13 @@ const books: Book[] = [
     name: "Fluent Python Vol. 1",
     imageUrl: "https://zstores.shop/cdn/shop/files/capa-LR-3-vol1.jpg?v=1760451729&width=533",
     status: "in-progress",
+    githubUrl: "https://github.com/Kecbm/fluent-python",
   },
   {
     name: "Django 5 by Example",
     imageUrl: "https://m.media-amazon.com/images/I/81vUrx78p9L.jpg",
     status: "pending",
+    githubUrl: "https://github.com/Kecbm/django-5-by-example",
   },
   {
     name: "The Pragmatic Programmer",
@@ -221,16 +224,16 @@ interface BookCardProps extends Book {
   };
 }
 
-function BookCard({ name, imageUrl, status, onClick, badgeLabels, translatedName }: BookCardProps) {
-  const isDone = status === "done";
+function BookCard({ name, imageUrl, status, onClick, badgeLabels, translatedName, githubUrl, highlight }: BookCardProps) {
+  const hasInteraction = (status === "done" && highlight) || githubUrl;
   const displayName = translatedName || name;
 
   return (
     <div
       className={`flex flex-col overflow-hidden rounded dark:ring-zinc-500 h-[324px] w-[280px] relative ${
-        isDone ? 'cursor-pointer hover:scale-105 transition-transform duration-200' : ''
+        hasInteraction ? 'cursor-pointer hover:scale-105 transition-transform duration-200' : ''
       }`}
-      onClick={isDone ? onClick : undefined}
+      onClick={hasInteraction ? onClick : undefined}
     >
       <Image
         src={imageUrl}
@@ -248,8 +251,8 @@ function BookCard({ name, imageUrl, status, onClick, badgeLabels, translatedName
         }}
       />
 
-      {/* External Link Icon for completed books */}
-      {isDone && (
+      {/* External Link Icon - shows if book has githubUrl OR if completed with highlight */}
+      {hasInteraction && (
         <div className="absolute bottom-3 right-3 bg-[#68a60a]/90 dark:bg-[#acf328]/90 p-2 rounded-full shadow-lg hover:bg-[#68a60a] dark:hover:bg-[#acf328] transition-colors">
           <ExternalLink
             size={16}
@@ -284,7 +287,12 @@ export default function BooksPage() {
   });
 
   const handleBookClick = (book: Book) => {
-    if (book.status === "done" && book.highlight) {
+    // Se tem githubUrl, redireciona para o GitHub (independente do status)
+    if (book.githubUrl) {
+      window.open(book.githubUrl, '_blank');
+    }
+    // Se não tem githubUrl mas tem highlight e está done, abre o modal
+    else if (book.status === "done" && book.highlight) {
       setSelectedBook(book);
       setIsModalOpen(true);
     }
