@@ -125,11 +125,21 @@ function BookModal({ book, isOpen, onClose, labels }: BookModalProps) {
   );
 }
 
+/*
+  Fluent Python Vol 2: https://zstores.shop/cdn/shop/files/capa_python_fluente_Python_Fluente_estudo_de_capa_op1_vol_2.png?v=1760976570&width=1946
+  Fluent Python Vol 3: https://zstores.shop/cdn/shop/files/capa_python_fluente_Python_Fluente_estudo_de_capa_op1_vol_3.png?v=1760976626&width=990
+*/
+
 const books: Book[] = [
+  {
+    name: "Fluent Python Vol. 1",
+    imageUrl: "https://zstores.shop/cdn/shop/files/capa-LR-3-vol1.jpg?v=1760451729&width=533",
+    status: "in-progress",
+  },
   {
     name: "Django 5 by Example",
     imageUrl: "https://m.media-amazon.com/images/I/81vUrx78p9L.jpg",
-    status: "in-progress",
+    status: "pending",
   },
   {
     name: "The Pragmatic Programmer",
