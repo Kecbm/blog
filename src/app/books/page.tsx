@@ -144,11 +144,13 @@ const books: Book[] = [
     status: "pending",
     githubUrl: "https://github.com/Kecbm/django-5-by-example",
   },
+  /*
   {
     name: "The Pragmatic Programmer",
     imageUrl: "https://m.media-amazon.com/images/I/911WvX7M98L._AC_UF1000,1000_QL80_.jpg",
     status: "pending",
   },
+  */
   {
     name: "Classic Computer Science Problems With Python",
     imageUrl: "https://m.media-amazon.com/images/I/81ltJW5jJmL.jpg",
@@ -228,6 +230,32 @@ function BookCard({ name, imageUrl, status, onClick, badgeLabels, translatedName
   const hasInteraction = (status === "done" && highlight) || githubUrl;
   const displayName = translatedName || name;
 
+  // Define cores do ícone baseado no status
+  const getIconColors = () => {
+    if (status === "done") {
+      return {
+        bg: "bg-[#68a60a]/80 dark:bg-[#88d012]/80",
+        hoverBg: "hover:bg-[#68a60a] dark:hover:bg-[#88d012]",
+        iconColor: "text-[#1b2f04]"
+      };
+    }
+    if (status === "in-progress") {
+      return {
+        bg: "bg-[#c59009]/80 dark:bg-[#e4b90e]/80",
+        hoverBg: "hover:bg-[#c59009] dark:hover:bg-[#e4b90e]",
+        iconColor: "text-[#402208]"
+      };
+    }
+    // pending
+    return {
+      bg: "bg-[#7f87ac]/80 dark:bg-[#96a0be]/80",
+      hoverBg: "hover:bg-[#7f87ac] dark:hover:bg-[#96a0be]",
+      iconColor: "text-[#2c2e3a]"
+    };
+  };
+
+  const iconColors = getIconColors();
+
   return (
     <div
       className={`flex flex-col overflow-hidden rounded dark:ring-zinc-500 h-[324px] w-[280px] relative ${
@@ -253,10 +281,10 @@ function BookCard({ name, imageUrl, status, onClick, badgeLabels, translatedName
 
       {/* External Link Icon - shows if book has githubUrl OR if completed with highlight */}
       {hasInteraction && (
-        <div className="absolute bottom-3 right-3 bg-[#68a60a]/90 dark:bg-[#acf328]/90 p-2 rounded-full shadow-lg hover:bg-[#68a60a] dark:hover:bg-[#acf328] transition-colors">
+        <div className={`absolute bottom-3 right-3 ${iconColors.bg} ${iconColors.hoverBg} p-2 rounded-full shadow-lg transition-colors`}>
           <ExternalLink
             size={16}
-            className="text-white dark:text-[#161D2A]"
+            className={iconColors.iconColor}
             strokeWidth={2.5}
           />
         </div>
