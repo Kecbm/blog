@@ -133,16 +133,16 @@ function BookModal({ book, isOpen, onClose, labels }: BookModalProps) {
 
 const books: Book[] = [
   {
-    name: "Fluent Python Vol. 1",
-    imageUrl: "https://zstores.shop/cdn/shop/files/capa-LR-3-vol1.jpg?v=1760451729&width=533",
-    status: "in-progress",
-    githubUrl: "https://github.com/Kecbm/fluent-python",
-  },
-  {
     name: "Django 5 by Example",
     imageUrl: "https://m.media-amazon.com/images/I/81vUrx78p9L.jpg",
-    status: "pending",
+    status: "in-progress",
     githubUrl: "https://github.com/Kecbm/django-5-by-example",
+  },
+  {
+    name: "Fluent Python Vol. 1",
+    imageUrl: "https://zstores.shop/cdn/shop/files/capa-LR-3-vol1.jpg?v=1760451729&width=533",
+    status: "pending",
+    githubUrl: "https://github.com/Kecbm/fluent-python",
   },
   /*
   {
