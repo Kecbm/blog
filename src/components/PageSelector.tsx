@@ -5,7 +5,7 @@ import { ChevronDown, Home, FolderOpen, FileText, User, BookOpen, Gamepad2, Brie
 import { useRouter, usePathname } from "next/navigation";
 import { useTranslation } from "@/src/hooks/useTranslation";
 
-export type PageOption = "home" | "projects" | "articles" | "about" | "books" | "ps3" | "experience";
+export type PageOption = "home" | "projects" | "articles" | "about" | "books" | "games" | "experience";
 
 interface PageOptionConfig {
   value: PageOption;
@@ -73,7 +73,7 @@ export default function PageSelector({ className = "" }: PageSelectorProps) {
       { value: "experience", label: t.nav.experience, icon: <Briefcase size={16} />, href: "/experience", showInDropdown: true },
       { value: "about", label: t.nav.about, icon: <User size={16} />, href: "/about", showInDropdown: true },
       { value: "books", label: t.nav.books, icon: <BookOpen size={16} />, href: "/books", showInDropdown: false },
-      { value: "ps3", label: t.nav.ps3, icon: <Gamepad2 size={16} />, href: "/ps3", showInDropdown: false },
+      { value: "games", label: t.nav.games, icon: <Gamepad2 size={16} />, href: "/games", showInDropdown: false },
     ];
   };
 
@@ -86,7 +86,7 @@ export default function PageSelector({ className = "" }: PageSelectorProps) {
     if (pathname === "/experience") return pageOptions[3]; // experience
     if (pathname === "/about") return pageOptions[4]; // about
     if (pathname === "/books") return pageOptions[5]; // books
-    if (pathname === "/ps3") return pageOptions[6]; // ps3
+    if (pathname === "/games") return pageOptions[6]; // games
 
     // Default to home if no match
     return pageOptions[0];
