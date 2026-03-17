@@ -110,10 +110,10 @@ export default function AboutPage() {
         <p>
           {t.about.paragraph9Start}{" "}
           <a
-            href="/ps3"
+            href="/games"
             className="about-highlight"
           >
-            {t.about.ps3}
+            {t.about.games}
           </a>{t.about.paragraph9Middle}{" "}
           <a
             href="https://www.strava.com/athletes/kecbm"
@@ -131,7 +131,7 @@ export default function AboutPage() {
             href="/books"
             className="about-highlight"
           >
-            {t.about.reading}
+            {t.about.reading}{" "}
           </a>{t.about.paragraph9End}
         </p>
         <p>
