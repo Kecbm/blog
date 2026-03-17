@@ -13,7 +13,7 @@ export const translations = {
       projects: "Projects",
       articles: "Articles",
       books: "Books",
-      ps3: "PS3",
+      games: "Games",
     },
     // Home Page
     home: {
@@ -116,9 +116,9 @@ export const translations = {
         fourteenHabits: "Learning the fundamentals will prepare you for the future. If you decide to become a great developer, it's important to understand the key concepts such as algorithms, logic, networking, accessibility, security, and user experience. You don't necessarily need them to build your first app, but knowing them will help you create the next complex applications you'll build in the future.",
       },
     },
-    // PS3 Page
-    ps3: {
-      title: "PS3",
+    // Games Page
+    games: {
+      title: "Games",
       filter: {
         allGames: "All Games",
         pending: "Pending",
@@ -188,7 +188,7 @@ export const translations = {
       paragraph8Middle: ", and I had the honor of presenting its key takeaways at",
       githubBrasil: "GitHub Brasil",
       paragraph9Start: "I have nine pets: one pinscher and eight cats. In my free time, I enjoy playing",
-      ps3: "PS3",
+      games: "games",
       paragraph9Middle: ", riding my",
       bike: "bike",
       paragraph9Middle2: ", going to the",
@@ -217,7 +217,7 @@ export const translations = {
       projects: "Projetos",
       articles: "Artigos",
       books: "Livros",
-      ps3: "PS3",
+      games: "Jogos",
     },
     // Home Page
     home: {
@@ -320,9 +320,9 @@ export const translations = {
         fourteenHabits: "Aprender os fundamentos irá prepará-lo para o futuro. Se você decidir se tornar um grande desenvolvedor, é importante entender os conceitos-chave como algoritmos, lógica, redes, acessibilidade, segurança e experiência do usuário. Você não necessariamente precisa deles para construir seu primeiro aplicativo, mas conhecê-los ajudará você a criar as próximas aplicações complexas que construirá no futuro.",
       },
     },
-    // PS3 Page
-    ps3: {
-      title: "PS3",
+    // Games Page
+    games: {
+      title: "Jogos",
       filter: {
         allGames: "Todos",
         pending: "Pendentes",
@@ -392,7 +392,7 @@ export const translations = {
       paragraph8Middle: ", e tive a honra de apresentar seus principais pontos no",
       githubBrasil: "GitHub Brasil",
       paragraph9Start: "Tenho nove pets: um pinscher e oito gatos. No meu tempo livre, gosto de jogar",
-      ps3: "PS3",
+      games: "jogos",
       paragraph9Middle: ", andar de",
       bike: "bicicleta",
       paragraph9Middle2: ", ir à",
