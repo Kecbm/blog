@@ -6,6 +6,11 @@
 
 ## Tasks
 
+- Página de esportes
+    - Consumir dados da api do Strava
+    - Página com tipo de esporte, todas as metricas, icone e 3 ultimas atividades do esporte
+    - Ordem crescente do tempo de pratica do esporte
+
 - https://www.tsunode.com/
     - Chat
     - Easter Eggs
