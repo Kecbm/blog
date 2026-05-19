@@ -140,7 +140,7 @@ const books: Book[] = [
   },
   {
     name: "Fluent Python Vol. 1",
-    imageUrl: "https://zstores.shop/cdn/shop/files/capa-LR-3-vol1.jpg?v=1760451729&width=533",
+    imageUrl: "https://zstores.shop/cdn/shop/files/covers-sliced_2FUKRMmwfSZCvYx4nZDHnB_2Fdac3b5b176365e54_2Fcover_grande.png?v=1776434704",
     status: "pending",
     githubUrl: "https://github.com/Kecbm/fluent-python",
   },
