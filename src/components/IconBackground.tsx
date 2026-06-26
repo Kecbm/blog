@@ -3,44 +3,49 @@
 import React, { useEffect, useState } from "react";
 import {
   // Programação
-  Terminal, FileCode, Binary, Bot, Bug, Database, CodeXml, Home, GitBranch, Coffee, SquareTerminal, BrainIcon, Server, Cpu,
+  Binary, Bot, Bug, Database, CodeXml, Home, GitBranch, SquareTerminal, Server, Cpu,
 
   // Tecnologia
-  Monitor, Smartphone, Wifi, Earth, FlaskConical, TestTubeDiagonal, Satellite, SigmaIcon, Fingerprint, Router,
+  Monitor, Smartphone, Wifi, Earth, TestTubeDiagonal, Satellite, SigmaIcon, Fingerprint, Router,
 
   // Estudos
-  BookOpen, GraduationCap, Lightbulb, Brain, Library,
+  GraduationCap, Lightbulb, Brain,
 
   // Leitura
-  Book, BookMarked, Bookmark, Glasses, Newspaper,
+  Book, Glasses,
 
   // Academia
-  Dumbbell, Activity, Heart, Zap, Target, Timer, TrendingUp, Award, Trophy, Medal,
+  Dumbbell, Activity, Heart, Zap, Target, Trophy,
 
   // Bicicleta
-  Bike, MapPin, Compass, Mountain, Wind, Route, Navigation, Map, Flag, Milestone,
+  Bike, Mountain, Wind, Route, Map, Milestone,
 
   // Animais
   Cat, PawPrint, Dog,
 
   // Jogos
-  Castle, Gamepad2, Ghost, Sword, Star, Joystick, Gamepad, Shapes,
+  Castle, Gamepad2, Ghost, Sword, Star,
 
   // Música
-  Mic, Volume2, Headphones, Drum, KeyboardMusic, PianoIcon, FileMusic, Guitar, Disc3Icon, Music, Music2, Music3, Music4,
+  Mic, Volume2, Headphones, FileMusic, Disc3Icon, Music,
 } from "lucide-react";
 
-// Lista de todos os ícones disponíveis
-const allIcons = [
-  Terminal, Monitor, BookOpen, Dumbbell, Bike, Cat, Castle, Mic, SquareTerminal, Gamepad,
-  FileCode, Smartphone, GraduationCap, Activity, MapPin, PawPrint, Gamepad2, Volume2, Newspaper, Music,
-  Binary, Wifi, Lightbulb, Heart, Compass, Dog, Ghost, Headphones, Trophy, Shapes,
-  Bot, Earth, Brain, Zap, Mountain, Wind, Drum, Home, Medal, Music2,
-  Bug, FlaskConical, Library, Target, Route, Sword, KeyboardMusic, Fingerprint, Flag, Music3,
-  Database, TestTubeDiagonal, Book, Timer, Navigation, Star, PianoIcon, Bookmark, Disc3Icon, Music4,
-  CodeXml, Satellite, SigmaIcon, BookMarked, TrendingUp, Map, Joystick, FileMusic, BrainIcon, Server,
-  GitBranch, Router, Glasses, Award, Mountain, Milestone, Guitar, Coffee, Milestone, Cpu,
-];
+// Agrupamento de ícones por tema
+// TODO: Remover 2
+const iconGroups = {
+  "Programação": [Binary, Bot, Bug, Database, CodeXml, Home, GitBranch, SquareTerminal, Server, Cpu],
+  "Tecnologia": [Monitor, Smartphone, Wifi, Earth, TestTubeDiagonal, Satellite, SigmaIcon, Fingerprint, Router],
+  "Estudos": [GraduationCap, Lightbulb, Brain],
+  "Leitura": [Book, Glasses],
+  "Academia": [Dumbbell, Activity, Heart, Zap, Target, Trophy],
+  "Bicicleta": [Bike, Mountain, Wind, Route, Map, Milestone],
+  "Animais": [Cat, PawPrint, Dog],
+  "Jogos": [Castle, Gamepad2, Ghost, Sword, Star],
+  "Música": [Mic, Volume2, Headphones, FileMusic, Disc3Icon, Music],
+};
+
+// Lista plana de todos os ícones (mantida para compatibilidade)
+const allIcons = Object.values(iconGroups).flat();
 
 // Configurações da grade para distribuição uniforme
 const GRID_ROWS = 10;
@@ -83,41 +88,99 @@ export default function IconBackground() {
   const [isClient, setIsClient] = useState(false);
   const [icons, setIcons] = useState<BackgroundIcon[]>([]);
 
-  // 1. Geração de Ícones e Posições (apenas casas pretas)
+  // 1. Geração de Ícones e Posições (apenas casas pretas, sem repetição, com distribuição por grupos)
   const generateIcons = () => {
     const generated: BackgroundIcon[] = [];
-    let iconIndex = 0; // Contador separado para os ícones
+    const groupNames = Object.keys(iconGroups) as Array<keyof typeof iconGroups>;
+    const groupCount = groupNames.length; // 9 grupos
 
-    for (let i = 0; i < TOTAL_POSITIONS; i++) {
-      // Determina a posição na grade (0 a 100%)
-      const row = Math.floor(i / GRID_COLS);
-      const col = i % GRID_COLS;
+    // Rastreia quais índices de cada grupo já foram usados
+    const usedIndicesPerGroup: Record<string, Set<number>> = {};
+    groupNames.forEach(group => {
+      usedIndicesPerGroup[group] = new Set();
+    });
 
-      // Determina se é uma casa clara ou escura (padrão xadrez)
-      // Casa escura quando a soma de row + col é ímpar
-      const isLightSquare = (row + col) % 2 === 0;
+    // Rastreia todos os ícones usados globalmente (para garantir unicidade)
+    const allUsedIcons: React.ElementType[] = [];
 
-      // Só adiciona ícones nas casas escuras (pretas)
-      if (!isLightSquare) {
-        // Distribuição percentual com margem (5% a 95%)
-        const xPercent = 5 + (col / (GRID_COLS - 1)) * 90;
-        const yPercent = 5 + (row / (GRID_ROWS - 1)) * 90;
+    // Função para obter próximo ícone disponível de um grupo
+    const getNextAvailableIcon = (groupName: keyof typeof iconGroups): React.ElementType | null => {
+      const groupIcons = iconGroups[groupName];
+      const usedInGroup = usedIndicesPerGroup[groupName as string];
+      
+      // Procura por um ícone não usado neste grupo
+      for (let i = 0; i < groupIcons.length; i++) {
+        const randomIndex = Math.floor(Math.random() * groupIcons.length);
+        const candidateIcon = groupIcons[randomIndex];
+        
+        if (!usedInGroup.has(randomIndex) && !allUsedIcons.includes(candidateIcon)) {
+          usedInGroup.add(randomIndex);
+          allUsedIcons.push(candidateIcon);
+          return candidateIcon;
+        }
+      }
+      
+      // Se não encontrou neste grupo, retorna null
+      return null;
+    };
 
-        // Seleciona um ícone da lista, repetindo se necessário (loop)
-        const IconComponent = allIcons[iconIndex % ICON_COUNT];
+    // Função para obter ícone de qualquer grupo disponível
+    const getIconFromAnyAvailableGroup = (startGroupIndex: number): React.ElementType | null => {
+      // Tenta a partir do grupo atual e avança para os próximos
+      for (let offset = 0; offset < groupCount; offset++) {
+        const groupIndex = (startGroupIndex + offset) % groupCount;
+        const groupName = groupNames[groupIndex];
+        const icon = getNextAvailableIcon(groupName);
+        
+        if (icon !== null) {
+          return icon;
+        }
+      }
+      
+      // Se nenhum grupo tem ícones disponíveis, retorna null
+      return null;
+    };
 
-        // Randomiza apenas a rotação inicial
-        const randomRotation = Math.floor(Math.random() * 360);
+    for (let row = 0; row < GRID_ROWS; row++) {
+      let groupIndex = 0; // Reinicia o índice de grupo para cada linha
+      
+      for (let col = 0; col < GRID_COLS; col++) {
+        // Determina se é uma casa clara ou escura (padrão xadrez)
+        // Casa escura quando a soma de row + col é ímpar
+        const isLightSquare = (row + col) % 2 === 0;
 
-        generated.push({
-          IconComponent,
-          x: xPercent,
-          y: yPercent,
-          rotation: randomRotation,
-          isLightSquare: false, // Sempre false, pois só geramos casas escuras
-        });
+        // Só adiciona ícones nas casas escuras (pretas)
+        if (!isLightSquare) {
+          // Distribuição percentual com margem (5% a 95%)
+          const xPercent = 5 + (col / (GRID_COLS - 1)) * 90;
+          const yPercent = 5 + (row / (GRID_ROWS - 1)) * 90;
 
-        iconIndex++; // Incrementa apenas quando adiciona um ícone
+          // Tenta pegar ícone do grupo atual, ou de outros grupos se necessário
+          let IconComponent = getNextAvailableIcon(groupNames[groupIndex % groupCount]);
+          
+          // Se o grupo atual não tem ícones disponíveis, procura em outros grupos
+          if (IconComponent === null) {
+            IconComponent = getIconFromAnyAvailableGroup(groupIndex);
+          }
+
+          // Se ainda não encontrou (todos os ícones foram usados), para de gerar
+          if (IconComponent === null) {
+            return generated;
+          }
+
+          // Randomiza apenas a rotação inicial
+          const randomRotation = Math.floor(Math.random() * 360);
+
+          generated.push({
+            IconComponent,
+            x: xPercent,
+            y: yPercent,
+            rotation: randomRotation,
+            isLightSquare: false, // Sempre false, pois só geramos casas escuras
+          });
+
+          groupIndex++; // Avança para o próximo grupo
+        }
       }
     }
 
