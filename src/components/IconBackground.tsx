@@ -31,7 +31,6 @@ import {
 } from "lucide-react";
 
 // Agrupamento de ícones por tema
-// TODO: Remover 2
 const iconGroups = {
   "Programação": [Binary, Bot, Bug, Database, CodeXml, Home, GitBranch, SquareTerminal, Server, Cpu],
   "Tecnologia": [Monitor, Smartphone, Wifi, Earth, TestTubeDiagonal, Satellite, SigmaIcon, Fingerprint, Router],
