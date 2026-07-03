@@ -6,6 +6,8 @@
 
 ## Tasks
 
+- Skleton no loading
+
 - Página de esportes
     - Consumir dados da api do Strava
     - Página com tipo de esporte, todas as metricas, icone e 3 ultimas atividades do esporte
