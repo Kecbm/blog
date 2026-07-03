@@ -3,7 +3,7 @@ export const translations = {
     // Header
     header: {
       name: "Klecianny Melo",
-      role: "Software Engineer AI First",
+      role: "Software Engineer",
     },
     // Navigation
     nav: {
@@ -17,7 +17,7 @@ export const translations = {
     },
     // Home Page
     home: {
-      bio: "Brazilian, obsessed with growth. Working as a Software Engineer AI First. I love React, Python, TailwindCSS, playing PS3, and solving problems.",
+      bio: "Brazilian, obsessed with growth. Working as a Software Engineer. I love React, Python, TailwindCSS, playing PS3, and solving problems.",
       online: "Online",
       contactMe: "Contact Me",
       links: {
@@ -137,7 +137,7 @@ export const translations = {
       present: "present",
       experiences: {
         quorum: {
-          title: "Software Engineer AI First",
+          title: "Software Engineer",
           company: "Quorum",
         },
         eduzz: {
@@ -207,7 +207,7 @@ export const translations = {
     // Header
     header: {
       name: "Klecianny Melo",
-      role: "Engenheira de Software AI First",
+      role: "Engenheira de Software",
     },
     // Navigation
     nav: {
@@ -221,7 +221,7 @@ export const translations = {
     },
     // Home Page
     home: {
-      bio: "Brasileira, obcecada por crescimento. Trabalhando como Engenheira de Software AI First. Amo React, Python, TailwindCSS, jogar PS3 e resolver problemas.",
+      bio: "Brasileira, obcecada por crescimento. Trabalhando como Engenheira de Software. Amo React, Python, TailwindCSS, jogar PS3 e resolver problemas.",
       online: "Online",
       contactMe: "Fale Comigo",
       links: {
@@ -341,7 +341,7 @@ export const translations = {
       present: "presente",
       experiences: {
         quorum: {
-          title: "Engenheira de Software AI First",
+          title: "Engenheira de Software",
           company: "Quorum",
         },
         eduzz: {
