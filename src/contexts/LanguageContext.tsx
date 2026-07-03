@@ -30,9 +30,13 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     localStorage.setItem("language", newLanguage);
   };
 
-  // Prevent hydration mismatch
+  // Prevent hydration mismatch by providing default value during SSR
   if (!mounted) {
-    return <>{children}</>;
+    return (
+      <LanguageContext.Provider value={{ language: "en", toggleLanguage: () => {} }}>
+        {children}
+      </LanguageContext.Provider>
+    );
   }
 
   return (
