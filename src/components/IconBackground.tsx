@@ -1,6 +1,4 @@
-"use client";
-
-import React, { useEffect, useState } from "react";
+import React from "react";
 import {
   // Programação
   Binary, Bot, Bug, Database, CodeXml, Home, GitBranch, SquareTerminal, Server, Cpu,
@@ -83,121 +81,107 @@ const customCss = `
   }
 `;
 
-export default function IconBackground() {
-  const [isClient, setIsClient] = useState(false);
-  const [icons, setIcons] = useState<BackgroundIcon[]>([]);
+// Gera ícones de forma determinística (client-side, mas sem aleatoriedade)
+const generateIcons = (): BackgroundIcon[] => {
+  const generated: BackgroundIcon[] = [];
+  const groupNames = Object.keys(iconGroups) as Array<keyof typeof iconGroups>;
+  const groupCount = groupNames.length; // 9 grupos
 
-  // 1. Geração de Ícones e Posições (apenas casas pretas, sem repetição, com distribuição por grupos)
-  const generateIcons = () => {
-    const generated: BackgroundIcon[] = [];
-    const groupNames = Object.keys(iconGroups) as Array<keyof typeof iconGroups>;
-    const groupCount = groupNames.length; // 9 grupos
+  // Rastreia quais índices de cada grupo já foram usados
+  const usedIndicesPerGroup: Record<string, Set<number>> = {};
+  groupNames.forEach(group => {
+    usedIndicesPerGroup[group] = new Set();
+  });
 
-    // Rastreia quais índices de cada grupo já foram usados
-    const usedIndicesPerGroup: Record<string, Set<number>> = {};
-    groupNames.forEach(group => {
-      usedIndicesPerGroup[group] = new Set();
-    });
+  // Rastreia todos os ícones usados globalmente (para garantir unicidade)
+  const allUsedIcons: React.ElementType[] = [];
 
-    // Rastreia todos os ícones usados globalmente (para garantir unicidade)
-    const allUsedIcons: React.ElementType[] = [];
-
-    // Função para obter próximo ícone disponível de um grupo
-    const getNextAvailableIcon = (groupName: keyof typeof iconGroups): React.ElementType | null => {
-      const groupIcons = iconGroups[groupName];
-      const usedInGroup = usedIndicesPerGroup[groupName as string];
+  // Função para obter próximo ícone disponível de um grupo (seleção determinística)
+  const getNextAvailableIcon = (groupName: keyof typeof iconGroups): React.ElementType | null => {
+    const groupIcons = iconGroups[groupName];
+    const usedInGroup = usedIndicesPerGroup[groupName as string];
+    
+    // Procura por um ícone não usado neste grupo (ordem sequencial, sem aleatoriedade)
+    for (let i = 0; i < groupIcons.length; i++) {
+      const candidateIcon = groupIcons[i];
       
-      // Procura por um ícone não usado neste grupo
-      for (let i = 0; i < groupIcons.length; i++) {
-        const randomIndex = Math.floor(Math.random() * groupIcons.length);
-        const candidateIcon = groupIcons[randomIndex];
-        
-        if (!usedInGroup.has(randomIndex) && !allUsedIcons.includes(candidateIcon)) {
-          usedInGroup.add(randomIndex);
-          allUsedIcons.push(candidateIcon);
-          return candidateIcon;
-        }
-      }
-      
-      // Se não encontrou neste grupo, retorna null
-      return null;
-    };
-
-    // Função para obter ícone de qualquer grupo disponível
-    const getIconFromAnyAvailableGroup = (startGroupIndex: number): React.ElementType | null => {
-      // Tenta a partir do grupo atual e avança para os próximos
-      for (let offset = 0; offset < groupCount; offset++) {
-        const groupIndex = (startGroupIndex + offset) % groupCount;
-        const groupName = groupNames[groupIndex];
-        const icon = getNextAvailableIcon(groupName);
-        
-        if (icon !== null) {
-          return icon;
-        }
-      }
-      
-      // Se nenhum grupo tem ícones disponíveis, retorna null
-      return null;
-    };
-
-    for (let row = 0; row < GRID_ROWS; row++) {
-      let groupIndex = 0; // Reinicia o índice de grupo para cada linha
-      
-      for (let col = 0; col < GRID_COLS; col++) {
-        // Determina se é uma casa clara ou escura (padrão xadrez)
-        // Casa escura quando a soma de row + col é ímpar
-        const isLightSquare = (row + col) % 2 === 0;
-
-        // Só adiciona ícones nas casas escuras (pretas)
-        if (!isLightSquare) {
-          // Distribuição percentual com margem (5% a 95%)
-          const xPercent = 5 + (col / (GRID_COLS - 1)) * 90;
-          const yPercent = 5 + (row / (GRID_ROWS - 1)) * 90;
-
-          // Tenta pegar ícone do grupo atual, ou de outros grupos se necessário
-          let IconComponent = getNextAvailableIcon(groupNames[groupIndex % groupCount]);
-          
-          // Se o grupo atual não tem ícones disponíveis, procura em outros grupos
-          if (IconComponent === null) {
-            IconComponent = getIconFromAnyAvailableGroup(groupIndex);
-          }
-
-          // Se ainda não encontrou (todos os ícones foram usados), para de gerar
-          if (IconComponent === null) {
-            return generated;
-          }
-
-          // Randomiza apenas a rotação inicial
-          const randomRotation = Math.floor(Math.random() * 360);
-
-          generated.push({
-            IconComponent,
-            x: xPercent,
-            y: yPercent,
-            rotation: randomRotation,
-            isLightSquare: false, // Sempre false, pois só geramos casas escuras
-          });
-
-          groupIndex++; // Avança para o próximo grupo
-        }
+      if (!usedInGroup.has(i) && !allUsedIcons.includes(candidateIcon)) {
+        usedInGroup.add(i);
+        allUsedIcons.push(candidateIcon);
+        return candidateIcon;
       }
     }
-
-    return generated;
+    
+    // Se não encontrou neste grupo, retorna null
+    return null;
   };
 
-  useEffect(() => {
-    setIsClient(true);
-    // Cria ícones apenas uma vez no cliente
-    if (typeof window !== 'undefined') {
-      setIcons(generateIcons());
+  // Função para obter ícone de qualquer grupo disponível
+  const getIconFromAnyAvailableGroup = (startGroupIndex: number): React.ElementType | null => {
+    // Tenta a partir do grupo atual e avança para os próximos
+    for (let offset = 0; offset < groupCount; offset++) {
+      const groupIndex = (startGroupIndex + offset) % groupCount;
+      const groupName = groupNames[groupIndex];
+      const icon = getNextAvailableIcon(groupName);
+      
+      if (icon !== null) {
+        return icon;
+      }
     }
-  }, []);
-
-  // 2. Renderização
-  if (!isClient) {
+    
+    // Se nenhum grupo tem ícones disponíveis, retorna null
     return null;
+  };
+
+  for (let row = 0; row < GRID_ROWS; row++) {
+    let groupIndex = 0; // Reinicia o índice de grupo para cada linha
+    
+    for (let col = 0; col < GRID_COLS; col++) {
+      // Determina se é uma casa clara ou escura (padrão xadrez)
+      // Casa escura quando a soma de row + col é ímpar
+      const isLightSquare = (row + col) % 2 === 0;
+
+      // Só adiciona ícones nas casas escuras (pretas)
+      if (!isLightSquare) {
+        // Distribuição percentual com margem (5% a 95%)
+        const xPercent = 5 + (col / (GRID_COLS - 1)) * 90;
+        const yPercent = 5 + (row / (GRID_ROWS - 1)) * 90;
+
+        // Tenta pegar ícone do grupo atual, ou de outros grupos se necessário
+        let IconComponent = getNextAvailableIcon(groupNames[groupIndex % groupCount]);
+        
+        // Se o grupo atual não tem ícones disponíveis, procura em outros grupos
+        if (IconComponent === null) {
+          IconComponent = getIconFromAnyAvailableGroup(groupIndex);
+        }
+
+        // Se ainda não encontrou (todos os ícones foram usados), para de gerar
+        if (IconComponent === null) {
+          return generated;
+        }
+
+        // Rotação fixa baseada na posição (determinística)
+        const fixedRotation = ((row * GRID_COLS + col) * 37) % 360;
+
+        generated.push({
+          IconComponent,
+          x: xPercent,
+          y: yPercent,
+          rotation: fixedRotation,
+          isLightSquare: false, // Sempre false, pois só geramos casas escuras
+        });
+
+        groupIndex++; // Avança para o próximo grupo
+      }
+    }
   }
+
+  return generated;
+};
+
+export default function IconBackground() {
+  // Gera ícones no servidor (determinístico, sem Math.random)
+  const icons = generateIcons();
 
   return (
     <>
