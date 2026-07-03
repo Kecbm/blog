@@ -2,10 +2,8 @@
 
 import { LanguageProvider } from "../contexts/LanguageContext";
 import { ScrollToTop } from "./scroll-to-top";
+import Header from "../app/Header";
 import Footer from "./Footer";
-import dynamic from "next/dynamic";
-
-const Header = dynamic(() => import("../app/Header"), { ssr: false });
 
 export default function ClientLayout({ children }: { children: React.ReactNode }) {
   return (
