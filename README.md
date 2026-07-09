@@ -6,6 +6,13 @@
 
 ## Tasks
 
+- Fotos
+    /about
+    Eu jovem, Manoel Rabelo, UFAPE, Trybe, Globo, GitHub Brasil, PS3, bike, gym, leitura
+
+    /games (com IA)
+    GTA, Guitar Hero, Counter Strike, NFS
+
 - Skleton no loading
 
 - Página de esportes
