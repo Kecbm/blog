@@ -79,10 +79,10 @@ export default function HomePage() {
       <div className="flex flex-col items-center gap-4">
         <div className="relative">
           <Image
-            src="https://avatars.githubusercontent.com/u/67391952?v=4&s=400"
+            src="/Profile.jpeg"
             alt="Klecianny Melo"
-            width={120}
-            height={120}
+            width={220}
+            height={220}
             className="rounded-full object-cover ring-4 ring-[#68a60a] dark:ring-[#acf328] transition-all"
           />
         </div>
