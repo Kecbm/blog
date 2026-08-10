@@ -137,20 +137,20 @@ export const translations = {
       present: "present",
       experiences: {
         quorum: {
-          title: "Software Engineer",
+          title: "Full Stack Software Engineer",
           company: "Quorum",
         },
         eduzz: {
-          title: "Mid-Level Full Stack Developer",
+          title: "Full Stack Software Engineer",
           company: "Eduzz",
         },
         br24: {
-          title: "Full Stack Developer",
+          title: "Full Stack Software Engineer",
           company: "BR24",
           description: "Introduction of the Codeium AI tool to the development team, resulting in increased efficiency and productivity",
         },
         xp: {
-          title: "Software Engineer",
+          title: "Full Stack Software Engineer",
           company: "XP Inc.",
         },
       },
@@ -341,20 +341,20 @@ export const translations = {
       present: "presente",
       experiences: {
         quorum: {
-          title: "Engenheira de Software",
+          title: "Engenheira de Software Full Stack",
           company: "Quorum",
         },
         eduzz: {
-          title: "Desenvolvedora Full Stack Pleno",
+          title: "Engenheira de Software Full Stack",
           company: "Eduzz",
         },
         br24: {
-          title: "Desenvolvedora Full Stack",
+          title: "Engenheira de Software Full Stack",
           company: "BR24",
           description: "Introdução da ferramenta de IA Codeium para a equipe de desenvolvimento, resultando em aumento de eficiência e produtividade",
         },
         xp: {
-          title: "Engenheira de Software",
+          title: "Engenheira de Software Full Stack",
           company: "XP Inc.",
         },
       },
