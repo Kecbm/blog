@@ -34,9 +34,8 @@ elegant, modern interface.
 | Framework | <img src="https://cdn.simpleicons.org/nextdotjs" width="24" alt="Next.js" /> [Next.js 14](https://nextjs.org/) (App Router) |
 | UI | <img src="https://cdn.simpleicons.org/react" width="24" alt="React" /> [React 18](https://react.dev/) + <img src="https://cdn.simpleicons.org/tailwindcss" width="24" alt="Tailwind CSS" /> [Tailwind CSS 3](https://tailwindcss.com/) + <img src="https://cdn.simpleicons.org/lucide" width="24" alt="Lucide" /> [lucide-react](https://lucide.dev/) |
 | Icons | <img src="https://cdn.simpleicons.org/simpleicons" width="24" alt="Simple Icons" /> [@icons-pack/react-simple-icons](https://github.com/icon-pack/react-simple-icons) |
-| Language | <img src="https://cdn.simpleicons.org/typescript" width="24" alt="TypeScript" /> [TypeScript 5](https://www.typescriptlang.org/) (strict) |
+| Language | <img src="https://cdn.simpleicons.org/typescript" width="24" alt="TypeScript" /> [TypeScript 5](https://www.typescriptlang.org/) |
 | Styling | <img src="https://cdn.simpleicons.org/postcss" width="24" alt="PostCSS" /> [PostCSS](https://postcss.org/) + [Prettier](https://prettier.io/) |
-| Analytics | <img src="https://cdn.simpleicons.org/vercel" width="24" alt="Vercel" /> [Vercel Analytics](https://vercel.com/analytics) |
 | Hosting | <img src="https://cdn.simpleicons.org/vercel" width="24" alt="Vercel" /> [Vercel](https://vercel.com/) |
 
 ## 📁 Project Structure
