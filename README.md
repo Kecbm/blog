@@ -1,141 +1,129 @@
-# Meu portfolio
+# 🚀 Klecianny Melo — Personal Blog
 
-## Referências
+> A modern, multilingual personal blog and portfolio built with Next.js and
+> TypeScript. Features a clean design with dark mode support, smooth animations,
+> and a fully responsive layout.
 
-- https://lucasmagnum.com.br/
+## 🌐 Live Demo
 
-## Tasks
+- **Website**: https://kecbm.vercel.app/
 
-- Fotos
-    /about
-    Eu jovem, Manoel Rabelo, UFAPE, Trybe, Globo, GitHub Brasil, PS3, bike, gym, leitura
+## 📋 Summary
 
-    /games (com IA)
-    GTA, Guitar Hero, Counter Strike, NFS
+A personal blog and portfolio website built with Next.js 14, featuring
+multi-language support (English/Portuguese), dark/light theme switching, and
+smooth animations. The project showcases professional experience, published
+articles, book recommendations, gaming progress, and personal projects with an
+elegant, modern interface.
 
-- Skleton no loading
+## 🛠️ What Was Built
 
-- Página de esportes
-    - Consumir dados da api do Strava
-    - Página com tipo de esporte, todas as metricas, icone e 3 ultimas atividades do esporte
-    - Ordem crescente do tempo de pratica do esporte
+- **Home**: Personal introduction with profile image, bio, and external links
+- **About**: Detailed personal story with external references and links
+- **Articles**: Curated list of technical articles from Dev.to with tags and dates
+- **Books**: Reading list with book recommendations
+- **Experience**: Professional work history with company links and tech stacks
+- **Games**: Gaming progress tracker with status filters (Playing/Completed/Pending)
+  and pagination
+- **Projects**: Portfolio showcase with animated GIF demonstrations                   |
 
-- https://www.tsunode.com/
-    - Chat
-    - Easter Eggs
-    - History
-    - Experience em formato timeline
-    - Easter Eggs em icones pelo site
-    - Minha bio maior em formato de livro
-    - Página My Stack
-    - ...
+## 🧰 Tech Stack
 
-- https://justin.poehnelt.com/
-    - Página de atividade fisica
-    - Métricas de código
+| Layer | Technology |
+|---|---|
+| Framework | <img src="https://cdn.simpleicons.org/nextdotjs" width="24" alt="Next.js" /> [Next.js 14](https://nextjs.org/) (App Router) |
+| UI | <img src="https://cdn.simpleicons.org/react" width="24" alt="React" /> [React 18](https://react.dev/) + <img src="https://cdn.simpleicons.org/tailwindcss" width="24" alt="Tailwind CSS" /> [Tailwind CSS 3](https://tailwindcss.com/) + <img src="https://cdn.simpleicons.org/lucide" width="24" alt="Lucide" /> [lucide-react](https://lucide.dev/) |
+| Icons | <img src="https://cdn.simpleicons.org/simpleicons" width="24" alt="Simple Icons" /> [@icons-pack/react-simple-icons](https://github.com/icon-pack/react-simple-icons) |
+| Language | <img src="https://cdn.simpleicons.org/typescript" width="24" alt="TypeScript" /> [TypeScript 5](https://www.typescriptlang.org/) (strict) |
+| Styling | <img src="https://cdn.simpleicons.org/postcss" width="24" alt="PostCSS" /> [PostCSS](https://postcss.org/) + [Prettier](https://prettier.io/) |
+| Analytics | <img src="https://cdn.simpleicons.org/vercel" width="24" alt="Vercel" /> [Vercel Analytics](https://vercel.com/analytics) |
+| Hosting | <img src="https://cdn.simpleicons.org/vercel" width="24" alt="Vercel" /> [Vercel](https://vercel.com/) |
 
-- Experience: cards com a logo da empresa (na cor da página e com hover, se der)
-- Learning (cursos, certificados e etc)
-- Community Work (abrir minha agenda 1x no mês para trocar ideia com a galera e metrificar como Mentoring)
-- Awards (badge da XP, minha placa de graduação)
+## 📁 Project Structure
 
-- Novo tema
-    - Liquid glass
-    - Categorias: natureza, cidade, mar, terra
-    - Versão 1: imagens
-    - Versão 2: GIF`s
+```
+├── public/
+│   ├── Profile.jpeg                 # Profile image
+│   ├── projects/                    # Project demo GIFs
+│   │   ├── 1.add.gif
+│   │   ├── 2.edit.gif
+│   │   ├── 3.filters.gif
+│   │   └── 4.pronuciation.mp4
+│   └── reels/                       # Project demo videos
+│       ├── 1.mp4 - 11.mp4
+│       └── additional reels
+├── src/
+│   ├── app/
+│   │   ├── layout.tsx               # Root layout with theme provider
+│   │   ├── page.tsx                 # Home page
+│   │   ├── about/page.tsx           # About me section
+│   │   ├── articles/page.tsx        # Technical articles from Dev.to
+│   │   ├── books/page.tsx           # Book recommendations
+│   │   ├── experience/page.tsx      # Professional experience timeline
+│   │   ├── games/page.tsx           # Gaming progress tracker
+│   │   ├── projects/page.tsx        # Portfolio projects showcase
+│   │   └── globals.css              # Global styles and Tailwind imports
+│   ├── components/
+│   │   ├── ClientLayout.tsx         # Client-side layout wrapper
+│   │   ├── ExternalLink.tsx         # External link component
+│   │   ├── FloatingIcons.tsx        # Animated floating background icons
+│   │   ├── Footer.tsx               # Site footer
+│   │   ├── IconBackground.tsx       # Icon background component
+│   │   ├── LanguageToggle.tsx       # Language switcher (EN/PT)
+│   │   ├── NavLink.tsx              # Navigation link component
+│   │   ├── PageSelector.tsx         # Page navigation selector
+│   │   ├── PlayStationIcons.tsx     # PlayStation button icons
+│   │   ├── ProjectButton.tsx        # Project card button
+│   │   ├── ProjectTag.tsx           # Project tag component
+│   │   ├── ReadingIcons.tsx         # Reading-themed icons
+│   │   ├── scroll-to-top.tsx        # Scroll to top button
+│   │   ├── StatusBadge.tsx          # Status badge component
+│   │   └── StatusFilter.tsx         # Filter component for games
+│   ├── contexts/
+│   │   └── LanguageContext.tsx      # Language context provider
+│   ├── hooks/
+│   │   └── useTranslation.ts        # Translation hook
+│   ├── lib/
+│   │   └── articles.ts              # Articles data and utilities
+│   └── translations/
+│       └── index.ts                 # Translation files (EN/PT)
+├── .eslintrc.json                   # ESLint configuration
+├── .prettierrc.js                   # Prettier configuration
+├── next.config.js                   # Next.js configuration
+├── package.json                     # Dependencies and scripts
+├── postcss.config.js                # PostCSS configuration
+├── tailwind.config.ts               # Tailwind CSS configuration
+├── tsconfig.json                    # TypeScript configuration
+└── README.md                        # Project documentation
+```
 
-- **Referência**: https://www.lukeberrypi.com/
-- Botão para mudar tema (default/liquid glass)
-    - Liquid Glass: https://github.com/rdev/liquid-glass-react
-    - Backgroud Mac Book themes
-    - Metalic: https://github.com/zarifpour/liquid-image
-- Dados de visitacao na Vercel
-- Esteira de deploy no repositório
-    - Commit direto na main bloqueado: https://lucasmarques.dev/protegendo-sua-branch-principal-de-commits-diretos
-    - Pull request pra main
-    - Antes de auto aprovar o PR, verificar se o lint passa
-- Contagem de visitas no portfolio (igual o badge de contagem de visitas do Readme do meu perfil no GitHub)
+## 💻 Run Locally
 
-- Analytics na Vercel: https://vercel.com/docs/analytics/quickstart
+Requirements: **Node.js 18+** and **npm** (or **yarn** / **pnpm**).
 
-- Url Vercel: kecbm.vercel.app
+```bash
+# 1. Install dependencies
+npm install
 
-# Pallete of collors
+# 2. Start development server
+npm run dev
+```
 
-**Light Theme**
-    - Verde: #68a60a > #4f7e0d
-    - Hover: #88d012 > #68a60a
-**Dark Theme**
-    - Verde: #B1EC4A > #8dd909
-    - Hover: #C4FC55 > #acf328
+Then open [http://localhost:3000](http://localhost:3000).
 
-- Cinza
-    **Light Theme**
-        - #7f87ac
-        - hover: #95a0bf
-    **Dark Theme**
-        - #A5B1CA
-        - hover: #C6D0E9
+### ⚙️ Useful Scripts
 
-Home
-    - Vermelho
-        **Light Theme**
-            - #ad2e28
-            - hover: #ce3a34
-        **Dark Theme**
-            - #EF8A86 > #ea5049
-            - hover: #EA5049 > #f47b75
+| Command                | What it does                              |
+|------------------------|-------------------------------------------|
+| `npm run dev`          | Start development server with hot reload  |
+| `npm run build`        | Build production bundle                   |
+| `npm run start`        | Start production server                   |
+| `npm run lint`         | Run ESLint for code quality               |
 
-Projects
-    - Laranja
-        **Light Theme**
-            - #f2ad2d > #ad4910
-            - hover: #eb8c15 > #d0680f
-        **Dark Theme**
-            - #F6CD6F > #de8414
-            - hover: #F2B13E > #ee9c21
+## 🤝 Connect
 
-- Verde
-    **Light Theme**
-        - #6ca20e > #527b10
-        - hover: #527b10 > #6ca20e
-    **Dark Theme**
-        - #CDF37B > #85d012
-        - hover: #AFEC4A > #afec4a
-
-About
-    - Verde 2
-        **Light Theme**
-            - #39cea2 > #08745d
-            - hover: #15b48a > #0a9170
-        **Dark Theme**
-            - #85E7C7 > #14b584
-            - hover: #71E4B9 > #38cf9b
-
-Not found
-    - Azul
-        **Light Theme**
-        - #4085f1 > #2252d3
-        - hover: #2a67e6 > #2a67e6
-        **Dark Theme**
-        - #72AFF7 > #3e6af5
-        - hover: #3E6AF5 > #6190f9
-
-Articles
-    - Roxo
-        **Light Theme**
-        - #a763e9 > #7c31bf
-        - hover: #9142db > #9143da
-        **Dark Theme**
-        - #C08FF2 > #ab4bff
-        - hover: #921CF5 > #c37cff
-
-Expirience
-    - Amarelo
-        **Light Theme**
-        - #c59009
-        - hover: #f1c40f
-        **Dark Theme**
-        - #eca414
-        - hover: #f3c22c
+- **LinkedIn**: [linkedin.com/in/kecbm](https://linkedin.com/in/kecbm)
+- **GitHub**: [github.com/Kecbm](https://github.com/Kecbm)
+- **Twitter**: [x.com/kecbm](https://x.com/kecbm)
+- **Dev.to**: [dev.to/kecbm](https://dev.to/kecbm)
+- **Email**: kleciannymelo@gmail.com
