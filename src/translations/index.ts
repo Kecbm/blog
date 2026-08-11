@@ -147,7 +147,6 @@ export const translations = {
         br24: {
           title: "Full Stack Software Engineer",
           company: "BR24",
-          description: "Introduction of the Codeium AI tool to the development team, resulting in increased efficiency and productivity",
         },
         xp: {
           title: "Full Stack Software Engineer",
@@ -351,7 +350,6 @@ export const translations = {
         br24: {
           title: "Engenheira de Software Full Stack",
           company: "BR24",
-          description: "Introdução da ferramenta de IA Codeium para a equipe de desenvolvimento, resultando em aumento de eficiência e produtividade",
         },
         xp: {
           title: "Engenheira de Software Full Stack",

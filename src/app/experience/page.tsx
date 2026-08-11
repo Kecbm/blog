@@ -61,11 +61,6 @@ function ExperienceCard({ experience }: { experience: Experience }) {
               <p className="text-sm text-zinc-600 dark:text-zinc-400 mb-3">
                 {translatedPeriod}
               </p>
-              {'description' in expData && expData.description && (
-                <p className="text-zinc-700 dark:text-zinc-300 mb-4 leading-relaxed">
-                  {expData.description}
-                </p>
-              )}
             </div>
             <ArrowUpRight className="size-5 shrink-0 text-[#c59009] transition-all group-hover:rotate-45 group-hover:text-[#f1c40f] dark:text-[#eca414] dark:group-hover:text-[#f3c22c]" />
           </div>
