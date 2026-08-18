@@ -6,6 +6,9 @@
 
 ## Tasks
 
+- Jogo
+    Como esse no final dessa página: https://departuremono.com/
+
 - Fotos
     /about
     Eu jovem, Manoel Rabelo, UFAPE, Trybe, Globo, GitHub Brasil, PS3, bike, gym, leitura
