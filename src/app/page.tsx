@@ -5,7 +5,7 @@ import {
   SiLinkedin,
   SiDevdotto,
 } from "@icons-pack/react-simple-icons";
-import { ArrowUpRight, BookOpen, GraduationCap } from "lucide-react";
+import { BookOpen, GraduationCap, Download } from "lucide-react";
 import Image from "next/image";
 import ExternalLinkComponent from "@/src/components/ExternalLink";
 import { useTranslation } from "@/src/hooks/useTranslation";
@@ -144,11 +144,14 @@ export default function HomePage() {
         </div>
         <div className="flex flex-col gap-2">
           <a
-            href="mailto:kleciannymelo@gmail.com"
+            href="/Klecianny Melo - Full Stack Software Engineer.pdf"
+            download="Klecianny_Melo_Full_Stack_Software_Engineer.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex flex-row items-center justify-center gap-3 rounded bg-[#4f7e0d]/10 p-4 text-[#4f7e0d] ring-1 ring-[#4f7e0d] transition-all hover:bg-[#68a60a] hover:ring-transparent hover:text-white dark:bg-transparent dark:text-[#8dd909] dark:ring-[#8dd909] dark:hover:bg-[#acf328] dark:hover:text-[#161D2A]"
           >
             <span className="text-nowrap">{t.home.contactMe}</span>
-            <ArrowUpRight strokeWidth={1.4} className="size-5" />
+            <Download strokeWidth={1.4} className="size-5" />
           </a>
         </div>
       </div>
