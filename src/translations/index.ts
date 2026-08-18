@@ -19,7 +19,7 @@ export const translations = {
     home: {
       bio: "Brazilian, obsessed with growth. Working as a Software Engineer. I love React, Python, TailwindCSS, playing PS3, and solving problems.",
       online: "Online",
-      contactMe: "Contact Me",
+      contactMe: "Download my CV",
       links: {
         linkedin: "follow my career",
         github: "steal my code",
@@ -222,7 +222,7 @@ export const translations = {
     home: {
       bio: "Brasileira, obcecada por crescimento. Trabalhando como Engenheira de Software. Amo React, Python, TailwindCSS, jogar PS3 e resolver problemas.",
       online: "Online",
-      contactMe: "Fale Comigo",
+      contactMe: "Baixe meu currículo",
       links: {
         linkedin: "acompanhe minha carreira",
         github: "roube meu código",
