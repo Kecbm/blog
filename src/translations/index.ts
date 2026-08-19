@@ -28,6 +28,14 @@ export const translations = {
         vocab: "expand your vocabulary",
         lattes: "explore my academic journey",
       },
+      names: {
+        linkedin: "LinkedIn",
+        github: "GitHub",
+        twitter: "Twitter",
+        devto: "Dev.to",
+        vocab: "Vocab Master",
+        academicCv: "Academic CV",
+      },
     },
     // Footer
     footer: {
@@ -230,6 +238,14 @@ export const translations = {
         devto: "decodifique minhas ideias",
         vocab: "expanda seu vocabulário",
         lattes: "explore minha jornada acadêmica",
+      },
+      names: {
+        linkedin: "LinkedIn",
+        github: "GitHub",
+        twitter: "Twitter",
+        devto: "Dev.to",
+        vocab: "Vocab Master",
+        academicCv: "Currículo Acadêmico",
       },
     },
     // Footer

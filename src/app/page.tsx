@@ -61,7 +61,7 @@ const getExternalLinksData = (t: any) => [
     iconType: 'vocabulary' as const,
   },
   {
-    name: "Academic CV",
+    name: t.home.names.academicCv,
     description: t.home.links.lattes,
     url: "http://lattes.cnpq.br/6486103082445764",
     icon: <GraduationCap />,
@@ -81,8 +81,8 @@ export default function HomePage() {
           <Image
             src="/Profile.jpeg"
             alt="Klecianny Melo"
-            width={220}
-            height={220}
+            width={300}
+            height={300}
             className="rounded-full object-cover ring-4 ring-[#68a60a] dark:ring-[#acf328] transition-all"
           />
         </div>
