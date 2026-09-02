@@ -2,8 +2,10 @@
 
 import { useState } from 'react';
 import { ChevronLeft, ChevronRight, Volume2, VolumeX, Music } from 'lucide-react';
+import { useTranslation } from '@/src/hooks/useTranslation';
 
 export default function NotFound() {
+  const { t } = useTranslation();
   const [currentReel, setCurrentReel] = useState(0);
   const [isMuted, setIsMuted] = useState(true);
   const [isTransitioning, setIsTransitioning] = useState(false);
@@ -12,67 +14,67 @@ export default function NotFound() {
   const reels = [
     {
       id: 1,
-      title: "Ressuscitou",
+      title: t.notFound.reels.reel1,
       videoUrl: "/reels/1.mp4",
       description: "Comunidade Católica Shalom"
     },
     {
       id: 2,
-      title: "",
+      title: t.notFound.reels.reel2,
       videoUrl: "/reels/2.mp4",
       description: "Orquestra Manoel Rabelo"
     },
     {
       id: 3,
-      title: "",
+      title: t.notFound.reels.reel3,
       videoUrl: "/reels/3.mp4",
       description: ""
     },
     {
       id: 4,
-      title: "Cavalgada",
+      title: t.notFound.reels.reel4,
       videoUrl: "/reels/4.mp4",
       description: "Roberto Carlos"
     },
     {
       id: 5,
-      title: "Boate Azul",
+      title: t.notFound.reels.reel5,
       videoUrl: "/reels/5.mp4",
       description: "Bruno & Marrone"
     },
     {
       id: 6,
-      title: "New York, New York",
+      title: t.notFound.reels.reel6,
       videoUrl: "/reels/6.mp4",
       description: "Frank Sinatra"
     },
     {
       id: 7,
-      title: "Volta vai",
+      title: t.notFound.reels.reel7,
       videoUrl: "/reels/7.mp4",
       description: "Simone & Simaria"
     },
     {
       id: 8,
-      title: "",
+      title: t.notFound.reels.reel8,
       videoUrl: "/reels/8.mp4",
       description: "Comunidade Católica Shalom"
     },
     {
       id: 9,
-      title: "",
+      title: t.notFound.reels.reel9,
       videoUrl: "/reels/9.mp4",
       description: "Orquestra Manoel Rabelo"
     },
     {
       id: 10,
-      title: "",
+      title: t.notFound.reels.reel10,
       videoUrl: "/reels/10.mp4",
       description: ""
     },
     {
       id: 11,
-      title: "I Will Always Love You",
+      title: t.notFound.reels.reel11,
       videoUrl: "/reels/11.mp4",
       description: "Whitney Houston"
     },
@@ -110,11 +112,11 @@ export default function NotFound() {
         <Music size={80} strokeWidth={2} />
       </div>
       <h2 className="mb-6 text-5xl max-sm:text-4xl">
-        This page doesn&apos;t exist. But here&apos;s something cooler.
+        {t.notFound.title}
       </h2>
       {/* Carrossel de Reels */}
       <div className="mt-12">
-        <p className="text-sm mb-8">Before tech, I spent 10 years as a professional musician. Here are some of the groups I played with! 🎷</p>
+        <p className="text-sm mb-8">{t.notFound.intro}</p>
 
         <div className="relative max-w-sm mx-auto">
           {/* Container do Reel */}
@@ -143,7 +145,7 @@ export default function NotFound() {
             <button
               onClick={() => setIsMuted(!isMuted)}
               className="absolute top-4 right-4 bg-black/30 hover:bg-black/40 text-white rounded-full p-2.5 transition-all hover:scale-105 backdrop-blur-sm"
-              aria-label={isMuted ? "Ativar som" : "Desativar som"}
+              aria-label={isMuted ? t.notFound.unmuteAriaLabel : t.notFound.muteAriaLabel}
             >
               {isMuted ? <VolumeX className="w-5 h-5" /> : <Volume2 className="w-5 h-5" />}
             </button>
@@ -152,7 +154,7 @@ export default function NotFound() {
             <button
               onClick={prevReel}
               className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/40 text-white rounded-full p-2.5 transition-all hover:scale-105 backdrop-blur-sm"
-              aria-label="Reel anterior"
+              aria-label={t.notFound.previousReelAriaLabel}
             >
               <ChevronLeft className="w-5 h-5" />
             </button>
@@ -161,7 +163,7 @@ export default function NotFound() {
             <button
               onClick={nextReel}
               className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/40 text-white rounded-full p-2.5 transition-all hover:scale-105 backdrop-blur-sm"
-              aria-label="Próximo reel"
+              aria-label={t.notFound.nextReelAriaLabel}
             >
               <ChevronRight className="w-5 h-5" />
             </button>
@@ -178,7 +180,7 @@ export default function NotFound() {
                     ? 'w-8 bg-[#2a67e6] dark:bg-[#6190f9]'
                     : 'w-2 bg-zinc-300 dark:bg-zinc-600 hover:bg-zinc-400 dark:hover:bg-zinc-500'
                 }`}
-                aria-label={`Ir para reel ${index + 1}`}
+                aria-label={`${t.notFound.goToReelAriaLabel} ${index + 1}`}
               />
             ))}
           </div>
