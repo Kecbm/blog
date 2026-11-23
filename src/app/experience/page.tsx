@@ -16,28 +16,28 @@ const experiences: Experience[] = [
     emoji: "⚖️",
     titleKey: "quorum",
     period: "05/2025 - present",
-    technologies: ["AI", "Django", "React", "MUI", "TailwindCSS", "SQL Server", "Jenkins", "Datadog", "Sentry", "Grafana", "Opsgenie"],
+    technologies: ["Python", "Django", "TypeScript", "React", "SQL", "Sentry", "Datadog", "AI-Assisted Development"],
     companyUrl: "https://www.quorum.us/"
   },
   {
     emoji: "🎓",
     titleKey: "eduzz",
     period: "10/2024 - 05/2025",
-    technologies: ["AI", ".NET", "SQL Server", "Redis", "React", "Ant Design", "Jenkins", "Kubernetes"],
+    technologies: ["React", ".NET", "Ant Design", "SQL Server", "SQL", "Redis", "Jenkins", "AI-Assisted Development"],
     companyUrl: "https://www.eduzz.com/"
   },
   {
     emoji: "⚡",
     titleKey: "br24",
     period: "05/2023 - 10/2024",
-    technologies: ["AI", "React", "TailwindCSS", "PHP", "NestJS"],
+    technologies: ["React", "PHP", "AWS", "Tailwind CSS", "Ant Design", "Automated Testing", "RBAC", "AI-Assisted Development"],
     companyUrl: "https://br24.io/"
   },
   {
     emoji: "🏦",
     titleKey: "xp",
     period: "09/2022 - 03/2023",
-    technologies: [".NET", "SQL Server", "React"],
+    technologies: [".NET", "TypeScript", "React", "Jenkins", "Sentry", "CRM", "Debugging", "Scrum"],
     companyUrl: "https://www.xpi.com.br/"
   }
 ];
