@@ -144,7 +144,7 @@ export default function HomePage() {
         </div>
         <div className="flex flex-col gap-2">
           <a
-            href="/Klecianny Melo - Full Stack Software Engineer.pdf"
+            href="/Klecianny_Melo_Full_Stack_Software_Engineer.pdf"
             download="Klecianny_Melo_Full_Stack_Software_Engineer.pdf"
             target="_blank"
             rel="noopener noreferrer"
